@@ -1,8 +1,8 @@
 """
 Job Search Agent for Harini Prasad Vasisht
-Runs daily via GitHub Actions — searches Adzuna Jobs API (aggregates
-LinkedIn, Indeed, Glassdoor, company career pages, etc. — 100% free),
-checks H1-B sponsorship history, scores with Gemini, outputs to GitHub Pages.
+Runs daily via GitHub Actions — searches Adzuna Jobs API + Greenhouse ATS
+(directly queries 60+ top tech companies' career pages), checks H1-B
+sponsorship history, scores with Gemini, outputs to GitHub Pages.
 """
 
 import os
@@ -50,6 +50,37 @@ EXCLUDE_WORDS = [
     "10+ years", "4+ years", "4 years experience",
 ]
 
+# Keywords that must appear in Greenhouse job titles to be included
+GREENHOUSE_KEYWORDS = [
+    "data analyst", "data scientist", "machine learning", "ml engineer",
+    "analytics engineer", "data engineer", "ai engineer", "business intelligence",
+    "bi analyst", "applied scientist", "research scientist", "quantitative analyst",
+]
+
+# 60+ top tech/data companies that use Greenhouse ATS and are known H1-B sponsors
+GREENHOUSE_COMPANIES = [
+    # Big Tech / Cloud
+    "airbnb", "lyft", "pinterest", "reddit", "quora", "dropbox",
+    "twilio", "stripe", "plaid", "brex", "robinhood", "coinbase",
+    # Data / AI / ML
+    "databricks", "snowflake", "confluent", "fivetran", "dbt-labs",
+    "dataiku", "weights-biases", "huggingface", "scale-ai", "cohere",
+    "anthropic", "openai", "mistral", "adept", "inflection",
+    # Enterprise SaaS
+    "zendesk", "hubspot", "intercom", "asana", "notion", "figma",
+    "miro", "airtable", "linear", "segment", "amplitude",
+    # Healthcare / Biotech
+    "tempus", "color", "flatiron", "komodo-health",
+    # Fintech
+    "chime", "affirm", "klarna", "marqeta", "rippling", "gusto",
+    # E-commerce / Marketplace
+    "doordash", "instacart", "faire", "offerup", "poshmark",
+    # Other tech
+    "discord", "duolingo", "squarespace", "wix", "canva",
+    "cloudflare", "hashicorp", "cockroachdb", "planetscale",
+    "vercel", "netlify", "grafana", "sentry", "postman",
+]
+
 # ── Adzuna Search ─────────────────────────────────────────────────────────────
 
 def search_adzuna(query, page=1):
@@ -81,6 +112,49 @@ def search_adzuna(query, page=1):
             "description": item.get("description", "")[:500],
         })
     return jobs
+
+
+# ── Greenhouse Search ─────────────────────────────────────────────────────────
+
+def search_greenhouse():
+    """Query Greenhouse public job board API for 60+ top tech companies.
+    No API key needed — Greenhouse job boards are publicly accessible.
+    Filters locally for data/ML/AI titles.
+    """
+    print("\n  Greenhouse: querying company career pages...")
+    all_jobs = []
+    found = 0
+
+    for company in GREENHOUSE_COMPANIES:
+        try:
+            url = f"https://boards-api.greenhouse.io/v1/boards/{company}/jobs"
+            r = requests.get(url, timeout=10)
+            if r.status_code != 200:
+                continue
+            data = r.json()
+            for job in data.get("jobs", []):
+                title = (job.get("title") or "").lower()
+                if not any(kw in title for kw in GREENHOUSE_KEYWORDS):
+                    continue
+                # Greenhouse location can be a list or string
+                loc_data = job.get("location", {})
+                location = loc_data.get("name", "") if isinstance(loc_data, dict) else str(loc_data)
+                all_jobs.append({
+                    "title":       job.get("title", ""),
+                    "company":     company.replace("-", " ").title(),
+                    "location":    location,
+                    "url":         job.get("absolute_url", ""),
+                    "posted":      job.get("updated_at", ""),
+                    "source":      "Greenhouse",
+                    "description": "",
+                })
+                found += 1
+        except Exception:
+            pass  # company may not use Greenhouse or board may be private
+        time.sleep(0.1)
+
+    print(f"    → {found} Greenhouse results across {len(GREENHOUSE_COMPANIES)} companies")
+    return all_jobs
 
 
 # ── Filtering ─────────────────────────────────────────────────────────────────
@@ -197,15 +271,25 @@ def main():
 
     all_jobs = []
 
+    # ── Adzuna (Indeed, Glassdoor, ZipRecruiter, company sites, etc.) ──────────
+    print("\n── Adzuna ──")
     for i, query in enumerate(SEARCH_QUERIES):
-        print(f"\n[{i+1}/{len(SEARCH_QUERIES)}] Searching: '{query}'")
+        print(f"  [{i+1}/{len(SEARCH_QUERIES)}] '{query}'")
         try:
             jobs = search_adzuna(query)
             print(f"    → {len(jobs)} results")
             all_jobs.extend(jobs)
         except Exception as e:
             print(f"    ✗ Adzuna error: {e}")
-        time.sleep(0.5)  # be polite to the API
+        time.sleep(0.5)
+
+    # ── Greenhouse (direct company career pages, no API key needed) ──────────
+    print("\n── Greenhouse ──")
+    try:
+        jobs = search_greenhouse()
+        all_jobs.extend(jobs)
+    except Exception as e:
+        print(f"  ✗ Greenhouse error: {e}")
 
     print(f"\n📦 Total scraped: {len(all_jobs)}")
 
