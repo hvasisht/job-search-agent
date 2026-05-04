@@ -44,17 +44,28 @@ SEARCH_QUERIES = [
     "ML engineer new grad",
 ]
 
-EXCLUDE_WORDS = [
+EXCLUDE_TITLE_WORDS = [
     "senior", "sr.", "lead", "principal", "staff", "manager",
-    "director", "vp", "head of", "5+ years", "5 years", "7+ years",
-    "10+ years", "4+ years", "4 years experience",
+    "director", "vp", "head of", "vice president", "architect",
+    "distinguished", "fellow", "president", "cto", "cdo",
+]
+
+# Regex patterns checked against the DESCRIPTION to catch over-experienced roles
+EXCLUDE_DESC_PATTERNS = [
+    r"\b[3-9]\d*\+\s*years?\s+(?:of\s+)?(?:industry\s+)?experience",
+    r"\bminimum\s+(?:of\s+)?[3-9]\d*\s+years?\b",
+    r"\b[3-9]\d*\s+(?:to\s+\d+\s+)?years?\s+(?:of\s+)?(?:relevant\s+)?experience\s+required",
+    r"\brequires?\s+[3-9]\d*\+?\s+years?\b",
+    r"\b(?:4|5|6|7|8|9|10)\+\s*years?\b",
 ]
 
 # Keywords that must appear in Greenhouse job titles to be included
+# NOTE: "applied scientist" and "research scientist" removed — those are PhD/senior roles
 GREENHOUSE_KEYWORDS = [
     "data analyst", "data scientist", "machine learning", "ml engineer",
     "analytics engineer", "data engineer", "ai engineer", "business intelligence",
-    "bi analyst", "applied scientist", "research scientist", "quantitative analyst",
+    "bi analyst", "quantitative analyst", "new grad", "university grad",
+    "early career", "associate data", "junior data",
 ]
 
 # 60+ top tech/data companies that use Greenhouse ATS and are known H1-B sponsors
@@ -162,19 +173,27 @@ def search_greenhouse():
 # ── Filtering ─────────────────────────────────────────────────────────────────
 
 def is_relevant(job):
+    import re
     title = (job.get("title") or "").lower()
+    desc  = (job.get("description") or "").lower()
 
-    # Hard exclude senior/management roles
-    for word in EXCLUDE_WORDS:
+    # Hard exclude by title
+    for word in EXCLUDE_TITLE_WORDS:
         if word in title:
             return False
 
-    # Must be in the US (Adzuna already filters by country, but double-check)
+    # Hard exclude by description — reject if requires 3+ years experience
+    for pattern in EXCLUDE_DESC_PATTERNS:
+        if re.search(pattern, desc):
+            return False
+
+    # Must be in the US
     location = (job.get("location") or "").lower()
     if location and all(c not in location for c in [
         "us", "united states", "remote", "new york", "boston",
         "chicago", "seattle", "san francisco", "austin",
         "atlanta", "denver", "dallas", "hybrid", "usa", "ny", "ca", "tx",
+        "cambridge", "washington", "virginia", "maryland", "new jersey",
     ]):
         return False
 
@@ -204,18 +223,44 @@ def deduplicate(jobs):
 
 HARINI_PROFILE = """
 Name: Harini Prasad Vasisht
-Degree: MS Data Analytics Engineering, Northeastern University (May 2026)
-Skills: Python, SQL, Tableau, Power BI, PyTorch, TensorFlow, LangChain, RAG,
-        MLOps (Airflow, DVC, Docker), AWS (S3, Glue, Athena), PySpark,
-        scikit-learn, NLP, LLMs, GenAI, ETL pipelines, statistical analysis
-Experience: Data Analyst at Phoenix Compliance (healthcare analytics, RPA, Tableau/Power BI),
-            Teaching Assistant for GenAI course (LangChain, RAG, prompt engineering)
-Projects: Multi-agent RAG health assistant, CNN/YOLOv8 attendance system,
-          MLOps pipeline (Airflow+DVC), stock sentiment agent (LangChain),
-          text-to-image (CLIP + Stable Diffusion), retail analytics (AWS)
-Target: Entry-level/new grad Data Analyst, Data Scientist, ML Engineer, AI Engineer,
-        Analytics Engineer roles in the United States, starting May/June 2026
-Compensation target: $80K-$105K
+Status: MS Data Analytics Engineering, Northeastern University — graduating May 2026 (GPA 3.7)
+Prior degree: BTech Computer Science & Engineering, Christ University India (2019–2023)
+
+INDUSTRY EXPERIENCE (1 year total):
+- Data Analyst & Customer Success, Phoenix Compliance (Aug 2022–Jun 2023, remote US hours):
+  Tableau/Power BI dashboards, UiPath RPA automation, HIPAA-compliant data management,
+  Excel analytics, cross-functional US healthcare team collaboration
+- Teaching Assistant, GenAI in Practice course, Northeastern (Feb–May 2026):
+  Designed syllabus/labs using LangChain, RAG, Claude Code, prompt engineering
+
+TECHNICAL SKILLS:
+- Languages: Python (pandas, NumPy, scikit-learn, PyTorch), SQL (MySQL, PostgreSQL), R
+- ML/DL: PyTorch, TensorFlow, CNNs (ResNet-18/50), YOLOv8, XGBoost, transformers
+- GenAI/NLP: LangChain, LangGraph, RAG, ChromaDB, FAISS, GPT-4o, Hugging Face, LLM evaluation
+- BI/Viz: Tableau, Power BI (DAX), Streamlit, Matplotlib, Seaborn
+- Data Eng: ETL pipelines, PySpark, AWS (S3, Glue, Athena), GCP, data modeling
+- MLOps: Airflow, DVC, Docker, Kubernetes, MLflow, GitHub Actions, CI/CD
+- Databases: MySQL, PostgreSQL, MongoDB, SQLite, ChromaDB, FAISS
+
+NOTABLE PROJECTS:
+- Multi-agent RAG health assistant (LangChain, LangGraph, GPT-4o, ChromaDB, Streamlit)
+- MLOps reading/journaling platform with Airflow, DVC, TFDV, embedding pipelines
+- CNN/YOLOv8 automated attendance system (PyTorch, ResNet-18/50, Flask)
+- Stock sentiment analysis agent (LangChain ReAct, yfinance, GPT-4)
+- Text-to-image pipeline (CLIP + Stable Diffusion v1.5)
+- Retail analytics ETL (AWS S3, Glue, Athena, PySpark, Tableau)
+
+TARGET:
+- Roles: Data Analyst, Data Scientist, ML Engineer, AI/GenAI Engineer, Analytics Engineer,
+         Data Engineer, BI Analyst — new grad / early-career level
+- Start: May/June 2026
+- Location: United States (on-site, hybrid, or remote)
+- Compensation: $80K–$105K
+- Visa: Needs H1-B sponsorship
+
+POSITIONING: Early-career with 1 year industry experience + strong graduate research depth.
+NOT a pure fresher. NOT mid-level (no 3+ years full-time).
+IDEAL job: 0–2 years experience required, or new grad / recent graduate explicitly welcomed.
 """
 
 def score_with_gemini(jobs):
@@ -232,7 +277,16 @@ def score_with_gemini(jobs):
 
     scored = []
     for job in jobs:
-        prompt = f"""Rate this job's fit for this candidate on a scale of 1-10.
+        prompt = f"""You are evaluating job fit for an early-career candidate graduating May 2026.
+
+STRICT SCORING RULES — apply these FIRST before anything else:
+- Score 1-2 if: job requires 3+ years experience, PhD required, clearly senior/staff/lead level
+- Score 1-2 if: job is pure manual data entry, reporting only, no ML/engineering component
+- Score 1-2 if: compensation likely below $70K (e.g. intern stipend, part-time)
+- Score 9-10 if: explicitly says "new grad", "recent graduate", "0-2 years", "entry level" AND matches skills
+- Score 7-8 if: good skill match, 0-2 years experience acceptable, US-based full-time role
+- Score 5-6 if: decent match but unclear on experience requirements or some skill gaps
+- Score 3-4 if: some relevant skills but wrong level or missing key requirements
 
 CANDIDATE:
 {HARINI_PROFILE}
@@ -241,12 +295,10 @@ JOB:
 Title: {job.get('title')}
 Company: {job.get('company')}
 Location: {job.get('location')}
-Description: {job.get('description', '')[:300]}
+Description: {job.get('description', '')[:400]}
 
 Respond with ONLY valid JSON, no markdown:
-{{"score": 8, "reason": "One sentence why this is a good/bad fit", "skills_matched": ["Python", "SQL"]}}
-
-Score guide: 9-10=perfect match, 7-8=strong match, 5-6=decent match, 1-4=poor match"""
+{{"score": 8, "reason": "One sentence why — mention if experience requirement is a fit or mismatch", "skills_matched": ["Python", "SQL"]}}"""
 
         try:
             resp = model.generate_content(prompt)
