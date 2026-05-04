@@ -5,12 +5,24 @@ checks H1-B sponsorship history, scores with Gemini, outputs to GitHub Pages.
 """
 
 import os
+import sys
 import json
 import time
 import requests
 from datetime import datetime, timezone
+from pathlib import Path
+
+# Allow imports from scripts/ folder regardless of cwd
+sys.path.insert(0, str(Path(__file__).parent))
 from h1b_check import is_h1b_sponsor, h1b_label
 from generate_html import build_html
+
+# ── Paths (always relative to repo root, not cwd) ─────────────────────────────
+REPO_ROOT  = Path(__file__).parent.parent
+DATA_DIR   = REPO_ROOT / "data"
+DOCS_DIR   = REPO_ROOT / "docs"
+DATA_DIR.mkdir(exist_ok=True)
+DOCS_DIR.mkdir(exist_ok=True)
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
@@ -79,7 +91,7 @@ def scrape_linkedin(query):
     """Use Apify LinkedIn Jobs scraper."""
     print(f"  LinkedIn: {query}")
     results = run_actor(
-        "bebity/linkedin-jobs-scraper",
+        "bebity~linkedin-jobs-scraper",
         {
             "searchQueries": [query],
             "location": "United States",
@@ -107,7 +119,7 @@ def scrape_indeed(query):
     """Use Apify Indeed scraper."""
     print(f"  Indeed: {query}")
     results = run_actor(
-        "misceres/indeed-scraper",
+        "misceres~indeed-scraper",
         {
             "queries": [{"query": query, "countryCode": "US"}],
             "maxItems": 25,
@@ -286,13 +298,12 @@ def main():
     all_jobs.sort(key=lambda j: j.get("score", 0), reverse=True)
 
     # Save raw JSON
-    with open("data/latest_jobs.json", "w") as f:
+    with open(DATA_DIR / "latest_jobs.json", "w") as f:
         json.dump({"updated": datetime.now(timezone.utc).isoformat(), "jobs": all_jobs}, f, indent=2)
 
     # Generate HTML
     html = build_html(all_jobs)
-    os.makedirs("docs", exist_ok=True)
-    with open("docs/index.html", "w") as f:
+    with open(DOCS_DIR / "index.html", "w") as f:
         f.write(html)
 
     h1b_count  = sum(1 for j in all_jobs if j.get("h1b_sponsors"))
