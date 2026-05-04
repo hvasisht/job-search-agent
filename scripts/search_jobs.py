@@ -132,11 +132,11 @@ def search_adzuna(query, page=1):
 def search_greenhouse():
     """Query Greenhouse public job board API for 60+ top tech companies.
     No API key needed — Greenhouse job boards are publicly accessible.
-    Filters locally for data/ML/AI titles.
+    Step 1: filters by title keyword.
+    Step 2: fetches full description for each matched job so Gemini + filters work properly.
     """
     print("\n  Greenhouse: querying company career pages...")
-    all_jobs = []
-    found = 0
+    matched = []
 
     for company in GREENHOUSE_COMPANIES:
         try:
@@ -149,10 +149,9 @@ def search_greenhouse():
                 title = (job.get("title") or "").lower()
                 if not any(kw in title for kw in GREENHOUSE_KEYWORDS):
                     continue
-                # Greenhouse location can be a list or string
                 loc_data = job.get("location", {})
                 location = loc_data.get("name", "") if isinstance(loc_data, dict) else str(loc_data)
-                all_jobs.append({
+                matched.append({
                     "title":       job.get("title", ""),
                     "company":     company.replace("-", " ").title(),
                     "location":    location,
@@ -160,14 +159,38 @@ def search_greenhouse():
                     "posted":      job.get("updated_at", ""),
                     "source":      "Greenhouse",
                     "description": "",
+                    "_gh_company": company,
+                    "_gh_id":      job.get("id"),
                 })
-                found += 1
         except Exception:
-            pass  # company may not use Greenhouse or board may be private
+            pass
         time.sleep(0.1)
 
-    print(f"    → {found} Greenhouse results across {len(GREENHOUSE_COMPANIES)} companies")
-    return all_jobs
+    # Step 2: fetch full descriptions for title-matched jobs
+    print(f"    → {len(matched)} title matches — fetching descriptions...")
+    for job in matched:
+        try:
+            detail_url = (
+                f"https://boards-api.greenhouse.io/v1/boards/"
+                f"{job['_gh_company']}/jobs/{job['_gh_id']}"
+            )
+            r = requests.get(detail_url, timeout=10)
+            if r.status_code == 200:
+                content_html = r.json().get("content", "")
+                # Strip HTML tags for plain text
+                import re as _re
+                plain = _re.sub(r"<[^>]+>", " ", content_html)
+                plain = _re.sub(r"\s+", " ", plain).strip()
+                job["description"] = plain[:600]
+        except Exception:
+            pass
+        time.sleep(0.1)
+        # Clean up internal fields
+        job.pop("_gh_company", None)
+        job.pop("_gh_id", None)
+
+    print(f"    → descriptions fetched for {len(matched)} Greenhouse jobs")
+    return matched
 
 
 # ── Filtering ─────────────────────────────────────────────────────────────────
