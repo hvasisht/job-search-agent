@@ -87,17 +87,19 @@ def search_adzuna(query, page=1):
     """Search Adzuna Jobs API — free, 250 calls/day, aggregates 100+ job boards."""
     print(f"  Adzuna: {query}")
     params = {
-        "app_id":          ADZUNA_APP_ID,
-        "app_key":         ADZUNA_APP_KEY,
+        "app_id":           ADZUNA_APP_ID,
+        "app_key":          ADZUNA_APP_KEY,
         "results_per_page": 25,
-        "what":            query,
-        "where":           "united states",
-        "max_days_old":    1,
-        "full_description": 1,
-        "sort_by":         "date",
-        "content-type":    "application/json",
+        "what":             query,
+        "max_days_old":     1,
+        "sort_by":          "date",
     }
-    r = requests.get(f"{ADZUNA_BASE}/{page}", params=params, timeout=30)
+    r = requests.get(
+        f"{ADZUNA_BASE}/{page}",
+        params=params,
+        headers={"Accept": "application/json"},
+        timeout=30,
+    )
     r.raise_for_status()
     data = r.json()
     jobs = []
