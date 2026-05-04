@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-04T23:42:08.278721+00:00",
+  "updated": "2026-05-04T23:45:36.446399+00:00",
   "jobs": [
     {
       "title": "AI Analytics Engineer (AI & Analytics Platform)",
@@ -12,51 +12,10 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 9,
-      "match_reason": "Harini's extensive skills in GenAI, MLOps, data engineering, and analytics, coupled with relevant projects and experience, make them an excellent fit for an AI Analytics Engineer role.",
+      "match_reason": "The candidate's deep expertise in GenAI, LLMs, and MLOps, coupled with strong data analytics and engineering skills (Python, SQL, AWS, ETL), perfectly aligns with the requirements of an AI Analytics Engineer.",
       "skills_matched": [
         "Python",
         "SQL"
-      ]
-    },
-    {
-      "title": "AI Applied Scientist",
-      "company": "Figma",
-      "location": "San Francisco, CA \u2022 New York, NY \u2022 United States",
-      "url": "https://boards.greenhouse.io/figma/jobs/5707966004?gh_jid=5707966004",
-      "posted": "2026-04-15T15:32:40-04:00",
-      "source": "Greenhouse",
-      "description": "",
-      "h1b_status": "Verify on myvisajobs.com",
-      "h1b_sponsors": false,
-      "score": 9,
-      "match_reason": "The candidate's robust portfolio of GenAI, LLM, MLOps, and deep learning projects aligns exceptionally well with the expected requirements of an AI Applied Scientist role.",
-      "skills_matched": [
-        "Python",
-        "LangChain",
-        "GenAI",
-        "MLOps",
-        "PyTorch"
-      ]
-    },
-    {
-      "title": " Research Engineer / Research Scientist, Tokens",
-      "company": "Anthropic",
-      "location": "New York City, NY; New York City, NY | Seattle, WA; San Francisco, CA",
-      "url": "https://job-boards.greenhouse.io/anthropic/jobs/4951814008",
-      "posted": "2026-04-01T10:49:08-04:00",
-      "source": "Greenhouse",
-      "description": "",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 8,
-      "match_reason": "Harini's deep expertise in GenAI, LLMs, NLP, and relevant frameworks like PyTorch and LangChain, coupled with her TA experience and advanced projects, makes her an exceptionally strong candidate for a research-focused LLM role at Anthropic.",
-      "skills_matched": [
-        "Python",
-        "PyTorch",
-        "LangChain",
-        "RAG",
-        "LLMs",
-        "GenAI"
       ]
     },
     {
@@ -69,16 +28,26 @@
       "description": "",
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
-      "score": 8,
-      "match_reason": "Harini possesses a robust blend of data analytics, machine learning, and cutting-edge GenAI/LLM skills, directly aligning with the AI Analytics Engineer title and business analytics focus.",
+      "score": 9,
+      "match_reason": "Harini's comprehensive skills in GenAI, MLOps, and core data analytics, combined with relevant project experience, perfectly align with the AI Analytics Engineer role.",
       "skills_matched": [
         "Python",
-        "SQL",
-        "LangChain",
-        "Tableau",
-        "MLOps",
-        "GenAI"
+        "SQL"
       ]
+    },
+    {
+      "title": " Research Engineer / Research Scientist, Tokens",
+      "company": "Anthropic",
+      "location": "New York City, NY; New York City, NY | Seattle, WA; San Francisco, CA",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/4951814008",
+      "posted": "2026-04-01T10:49:08-04:00",
+      "source": "Greenhouse",
+      "description": "",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
     },
     {
       "title": "AI Analytics Engineer (Marketing Analytics)",
@@ -90,12 +59,23 @@
       "description": "",
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
-      "score": 8,
-      "match_reason": "The candidate's robust background in AI/ML engineering, data analytics, MLOps, and relevant project experience makes them a strong fit for an AI Analytics Engineer role, despite lacking explicit marketing domain experience.",
-      "skills_matched": [
-        "Python",
-        "SQL"
-      ]
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
+    },
+    {
+      "title": "AI Applied Scientist",
+      "company": "Figma",
+      "location": "San Francisco, CA \u2022 New York, NY \u2022 United States",
+      "url": "https://boards.greenhouse.io/figma/jobs/5707966004?gh_jid=5707966004",
+      "posted": "2026-04-15T15:32:40-04:00",
+      "source": "Greenhouse",
+      "description": "",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
     },
     {
       "title": "AI Engineer - FDE (Forward Deployed Engineer)",
@@ -107,12 +87,9 @@
       "description": "",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
-      "score": 8,
-      "match_reason": "The candidate's strong technical foundation in GenAI, MLOps, and PySpark, demonstrated through diverse projects, makes them an excellent fit for an AI Engineer role at Databricks as a new graduate.",
-      "skills_matched": [
-        "Python",
-        "GenAI"
-      ]
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
     },
     {
       "title": "AI/ML Engineer (Hybrid @ Bellevue, WA or Remote @ Florida)",
@@ -124,15 +101,23 @@
       "description": "",
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
-      "score": 8,
-      "match_reason": "The candidate's MS degree, strong GenAI/LLM, MLOps, and ML skills, along with highly relevant projects, make them a very strong fit for an AI/ML Engineer role.",
-      "skills_matched": [
-        "Python",
-        "PyTorch",
-        "LangChain",
-        "MLOps",
-        "AWS"
-      ]
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
+    },
+    {
+      "title": "Agentic AI Architect",
+      "company": "Vankay Systems",
+      "location": "Alaska, US",
+      "url": "https://www.adzuna.com/land/ad/5718875961?se=7G9lCRNI8RGldLZhYZiz6Q&utm_medium=api&utm_source=e6e1de08&v=D3F209435F4DA049D072A62F226BFCA14ED3226A",
+      "posted": "2026-05-04T17:49:13Z",
+      "source": "Adzuna",
+      "description": "Titile: A gentic AI Architect Location: Dallas, TX (Remote) JD What You'll Do: Architect, build, and operate agentic AI services and microservices leveraging LangChain, LangSmith, OpenAI/Azure OpenAI, and LiteLLM; implement tool-use orchestration, evaluation, and guardrails. Design, build, and maintain CI/CD pipelines using Azure DevOps (ADO) YAML and GitHub Actions; enforce trunk-based workflows, quality gates, progressive delivery, and automated rollbacks. Stand up and manage Azure infrastruc\u2026",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
     },
     {
       "title": "Analytics Engineer",
@@ -144,13 +129,9 @@
       "description": "",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
-      "score": 8,
-      "match_reason": "Harini's strong foundation in SQL, Python, ETL pipelines, and cloud data engineering (AWS, Airflow) aligns exceptionally well with a typical Analytics Engineer role at a company like Stripe.",
-      "skills_matched": [
-        "Python",
-        "SQL",
-        "ETL pipelines"
-      ]
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
     },
     {
       "title": "Analytics Engineer",
@@ -162,17 +143,23 @@
       "description": "",
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
-      "score": 8,
-      "match_reason": "The candidate has excellent technical skills and experience directly aligning with an Analytics Engineer role, although the job's Ireland location conflicts with their target for US-based opportunities.",
-      "skills_matched": [
-        "Python",
-        "SQL",
-        "ETL pipelines",
-        "AWS",
-        "Airflow",
-        "PySpark",
-        "Tableau"
-      ]
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
+    },
+    {
+      "title": "Analytics Engineer, Data Platform",
+      "company": "AndHealth",
+      "location": "Columbus, Franklin County",
+      "url": "https://www.adzuna.com/details/5718878951?utm_medium=api&utm_source=e6e1de08",
+      "posted": "2026-05-04T17:55:58Z",
+      "source": "Adzuna",
+      "description": "Analytics Engineer, Data Platform Full Time Columbus, Ohio AndHealth is on a mission to radically improve access and outcomes for the most challenging chronic health conditions, with the goal of making world-class specialty care accessible and affordable to all. We partner with health systems, community health centers, plans, and employers to remove barriers to care to ensure all people have access to the care they deserve. We are building the data foundation that will power AndHealth's self-se\u2026",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
     },
     {
       "title": "Applied AI Engineer, Beneficial Deployments",
@@ -245,6 +232,20 @@
       "skills_matched": []
     },
     {
+      "title": "Azure Data Engineer",
+      "company": "Infogen Software Inc.",
+      "location": "US",
+      "url": "https://www.adzuna.com/land/ad/5718880207?se=7G9lCRNI8RGldLZhYZiz6Q&utm_medium=api&utm_source=e6e1de08&v=0224ECA6FB13DE130E7F3C4D21428887A3D486DA",
+      "posted": "2026-05-04T17:57:32Z",
+      "source": "Adzuna",
+      "description": "Role Summary We are looking for a Data Engineer to design, build, support, and improve cloud-based data platform (Azure) and enterprise data solutions. This role focuses on developing and maintaining scalable data pipelines, supporting platform operations and deployment activities, troubleshooting data and infrastructure issues, and partnering with engineering and business teams to deliver reliable data services. The ideal candidate should be comfortable working across modern Azure data and pla\u2026",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
+    },
+    {
       "title": "Biological Safety Research Scientist",
       "company": "Anthropic",
       "location": "San Francisco, CA",
@@ -254,6 +255,20 @@
       "description": "",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
+    },
+    {
+      "title": "Business Intelligence Intern",
+      "company": "Quad",
+      "location": "Sussex, Sussex County",
+      "url": "https://www.adzuna.com/land/ad/5718869049?se=7G9lCRNI8RGldLZhYZiz6Q&utm_medium=api&utm_source=e6e1de08&v=43711F53A3552D00D45501518B08EC34195FA9E7",
+      "posted": "2026-05-04T17:09:22Z",
+      "source": "Adzuna",
+      "description": "Job Description As a global marketing experience company, Quad\u2019s goal is to help our clients win every day. We use our data-driven integrated marketing and manufacturing platform to streamline solutions for our clients, reduce friction and enhance their marketing spend effectiveness. We\u2019ve built a rich legacy by believing in our people, allowing them to act like owners and to take charge of their own success. Whether an operator, sales rep, a graphic artist or a clinician, we\u2019re all driven to p\u2026",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
       "score": 6,
       "match_reason": "Could not score",
       "skills_matched": []
@@ -637,6 +652,20 @@
       "skills_matched": []
     },
     {
+      "title": "Databricks Architect",
+      "company": "Computer Enterprises, Inc.",
+      "location": "US",
+      "url": "https://www.adzuna.com/land/ad/5718878761?se=7G9lCRNI8RGldLZhYZiz6Q&utm_medium=api&utm_source=e6e1de08&v=BD2A58F05338DB52215866F544D218637FC674F8",
+      "posted": "2026-05-04T17:55:32Z",
+      "source": "Adzuna",
+      "description": "CEI is seeking a Databricks Architect to join our growing organization! Client/Industry : CEI \u2013 AI / IT Solutions/Consulting and Professional Services Job Title : Databricks Technical Architect Location : Hybrid in Pittsburgh, PA 15205 ( 3 Days On-Site / 2 Days Remote ) | OR | Remote (1 st pref-EST; 2 nd pref-CST) Work Schedule/Shift : Monday to Friday, Standard business hours | Minimum expectation of ~40 work hours per week. Duration/Length of Assignment : W2 Direct Hire / Full Time Compensati\u2026",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 6,
+      "match_reason": "Could not score",
+      "skills_matched": []
+    },
+    {
       "title": "GTM Analytics Engineer",
       "company": "Gusto",
       "location": "Denver, CO;San Francisco, CA;New York, NY;Las Vegas, NV;Atlanta, GA;Phoenix, AZ",
@@ -809,76 +838,6 @@
       "company": "Anthropic",
       "location": "San Francisco, CA | New York City, NY | Seattle, WA",
       "url": "https://job-boards.greenhouse.io/anthropic/jobs/4952079008",
-      "posted": "2026-04-01T10:49:08-04:00",
-      "source": "Greenhouse",
-      "description": "",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 6,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Product Data Scientist - Growth ",
-      "company": "Gusto",
-      "location": "San Francisco, CA;New York, NY",
-      "url": "https://job-boards.greenhouse.io/gusto/jobs/6356147",
-      "posted": "2026-04-29T18:15:38-04:00",
-      "source": "Greenhouse",
-      "description": "",
-      "h1b_status": "Verify on myvisajobs.com",
-      "h1b_sponsors": false,
-      "score": 6,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Research Engineer / Research Scientist, Vision",
-      "company": "Anthropic",
-      "location": "New York City, NY; San Francisco, CA; Seattle, WA",
-      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5074217008",
-      "posted": "2026-04-03T12:07:46-04:00",
-      "source": "Greenhouse",
-      "description": "",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 6,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Research Engineer, Machine Learning (RL Velocity)",
-      "company": "Anthropic",
-      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY",
-      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5198108008",
-      "posted": "2026-04-23T10:35:56-04:00",
-      "source": "Greenhouse",
-      "description": "",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 6,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Research Engineer, Machine Learning (Reinforcement Learning) ",
-      "company": "Anthropic",
-      "location": "San Francisco, CA | New York City, NY",
-      "url": "https://job-boards.greenhouse.io/anthropic/jobs/4613568008",
-      "posted": "2026-04-03T12:07:51-04:00",
-      "source": "Greenhouse",
-      "description": "",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 6,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Research Engineer/Research Scientist, Audio",
-      "company": "Anthropic",
-      "location": "San Francisco, CA",
-      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5074815008",
       "posted": "2026-04-01T10:49:08-04:00",
       "source": "Greenhouse",
       "description": "",
