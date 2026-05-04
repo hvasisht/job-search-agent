@@ -1,0 +1,43 @@
+name: Daily Job Search
+
+on:
+  schedule:
+    # Runs at 7:00 AM EST (12:00 UTC) every day
+    - cron: '0 12 * * *'
+  workflow_dispatch:  # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write   # Needed to commit docs/index.html back to repo
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run job search agent
+        env:
+          APIFY_TOKEN:    ${{ secrets.APIFY_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        working-directory: scripts
+        run: python search_jobs.py
+
+      - name: Commit updated job page
+        run: |
+          git config user.name  "Job Search Bot"
+          git config user.email "bot@harini-jobs.local"
+          git add docs/index.html data/latest_jobs.json
+          git diff --staged --quiet || git commit -m "Daily job update — $(date +'%Y-%m-%d %H:%M UTC')"
+          git push
