@@ -29,7 +29,8 @@ jobs:
 
       - name: Run job search agent
         env:
-          APIFY_TOKEN:    ${{ secrets.APIFY_TOKEN }}
+          ADZUNA_APP_ID:  ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         working-directory: scripts
         run: python search_jobs.py

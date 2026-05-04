@@ -1,8 +1,8 @@
 """
 Job Search Agent for Harini Prasad Vasisht
-Runs daily via GitHub Actions — scrapes Google Jobs via Apify (aggregates
-LinkedIn, Indeed, Handshake, Glassdoor, etc.), checks H1-B sponsorship
-history, scores with Gemini, outputs to GitHub Pages.
+Runs daily via GitHub Actions — searches Adzuna Jobs API (aggregates
+LinkedIn, Indeed, Glassdoor, company career pages, etc. — 100% free),
+checks H1-B sponsorship history, scores with Gemini, outputs to GitHub Pages.
 """
 
 import os
@@ -27,20 +27,21 @@ DOCS_DIR.mkdir(exist_ok=True)
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-APIFY_TOKEN    = os.environ["APIFY_TOKEN"]
+ADZUNA_APP_ID  = os.environ["ADZUNA_APP_ID"]
+ADZUNA_APP_KEY = os.environ["ADZUNA_APP_KEY"]
 GEMINI_KEY     = os.environ.get("GEMINI_API_KEY", "")
-APIFY_BASE     = "https://api.apify.com/v2"
+ADZUNA_BASE    = "https://api.adzuna.com/v1/api/jobs/us/search"
 
 # Target job titles for Harini's profile
 SEARCH_QUERIES = [
     "data analyst entry level",
     "data scientist new grad",
     "machine learning engineer entry level",
-    "analytics engineer new grad",
+    "analytics engineer",
     "AI engineer entry level",
     "data engineer entry level",
-    "business intelligence analyst new grad",
-    "ML engineer new grad 2025 2026",
+    "business intelligence analyst",
+    "ML engineer new grad",
 ]
 
 EXCLUDE_WORDS = [
@@ -49,70 +50,34 @@ EXCLUDE_WORDS = [
     "10+ years", "4+ years", "4 years experience",
 ]
 
-INCLUDE_WORDS = [
-    "entry", "junior", "associate", "new grad", "0-2", "1-2",
-    "early career", "recent graduate", "2025", "2026", "intern",
-]
+# ── Adzuna Search ─────────────────────────────────────────────────────────────
 
-# ── Apify Helpers ─────────────────────────────────────────────────────────────
-
-def run_actor(actor_id, input_data, timeout_secs=120):
-    """Start an Apify actor run and wait for results."""
-    url = f"{APIFY_BASE}/acts/{actor_id}/runs?token={APIFY_TOKEN}"
-    r = requests.post(url, json=input_data, timeout=30)
+def search_adzuna(query, page=1):
+    """Search Adzuna Jobs API — free, 250 calls/day, aggregates 100+ job boards."""
+    print(f"  Adzuna: {query}")
+    params = {
+        "app_id":          ADZUNA_APP_ID,
+        "app_key":         ADZUNA_APP_KEY,
+        "results_per_page": 25,
+        "what":            query,
+        "where":           "united states",
+        "max_days_old":    1,
+        "full_description": 1,
+        "sort_by":         "date",
+        "content-type":    "application/json",
+    }
+    r = requests.get(f"{ADZUNA_BASE}/{page}", params=params, timeout=30)
     r.raise_for_status()
-    run_id = r.json()["data"]["id"]
-
-    # Poll until finished
-    for _ in range(timeout_secs // 5):
-        time.sleep(5)
-        status_url = f"{APIFY_BASE}/actor-runs/{run_id}?token={APIFY_TOKEN}"
-        status = requests.get(status_url, timeout=15).json()["data"]["status"]
-        if status in ("SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT"):
-            break
-
-    if status != "SUCCEEDED":
-        print(f"  ⚠ Actor {actor_id} ended with status: {status}")
-        return []
-
-    dataset_id = requests.get(
-        f"{APIFY_BASE}/actor-runs/{run_id}?token={APIFY_TOKEN}", timeout=15
-    ).json()["data"]["defaultDatasetId"]
-
-    items = requests.get(
-        f"{APIFY_BASE}/datasets/{dataset_id}/items?token={APIFY_TOKEN}&limit=200",
-        timeout=30,
-    ).json()
-    return items if isinstance(items, list) else []
-
-
-# ── Scrapers ──────────────────────────────────────────────────────────────────
-
-def scrape_google_jobs(query):
-    """Use Apify Google Jobs scraper (aggregates LinkedIn, Indeed, Handshake, etc.).
-    Actor: https://apify.com/orgupdate/google-jobs-scraper
-    NOTE: You must open that URL in your Apify account and click Save before this works.
-    """
-    print(f"  Google Jobs: {query}")
-    results = run_actor(
-        "orgupdate~google-jobs-scraper",
-        {
-            "includeKeyword": query,
-            "countryName": "usa",
-            "datePosted": "today",
-            "jobType": "FULLTIME",
-            "pagesToFetch": 2,
-        },
-    )
+    data = r.json()
     jobs = []
-    for item in results:
+    for item in data.get("results", []):
         jobs.append({
-            "title":    item.get("job_title", ""),
-            "company":  item.get("company_name", ""),
-            "location": item.get("location", ""),
-            "url":      item.get("URL", ""),
-            "posted":   item.get("date", ""),
-            "source":   item.get("posted_via", "Google Jobs"),
+            "title":    item.get("title", ""),
+            "company":  item.get("company", {}).get("display_name", ""),
+            "location": item.get("location", {}).get("display_name", ""),
+            "url":      item.get("redirect_url", ""),
+            "posted":   item.get("created", ""),
+            "source":   "Adzuna",
             "description": item.get("description", "")[:500],
         })
     return jobs
@@ -122,19 +87,19 @@ def scrape_google_jobs(query):
 
 def is_relevant(job):
     title = (job.get("title") or "").lower()
-    desc  = (job.get("description") or "").lower()
-    text  = title + " " + desc
 
     # Hard exclude senior/management roles
     for word in EXCLUDE_WORDS:
         if word in title:
             return False
 
-    # Must be in the US
+    # Must be in the US (Adzuna already filters by country, but double-check)
     location = (job.get("location") or "").lower()
-    if location and all(c not in location for c in ["us", "united states", "remote", "new york", "boston",
-                                                     "chicago", "seattle", "san francisco", "austin",
-                                                     "atlanta", "denver", "dallas", "hybrid", "usa"]):
+    if location and all(c not in location for c in [
+        "us", "united states", "remote", "new york", "boston",
+        "chicago", "seattle", "san francisco", "austin",
+        "atlanta", "denver", "dallas", "hybrid", "usa", "ny", "ca", "tx",
+    ]):
         return False
 
     # Must have a URL
@@ -232,15 +197,15 @@ def main():
 
     all_jobs = []
 
-    # Run Google Jobs scraper for each query
     for i, query in enumerate(SEARCH_QUERIES):
         print(f"\n[{i+1}/{len(SEARCH_QUERIES)}] Searching: '{query}'")
         try:
-            jobs = scrape_google_jobs(query)
+            jobs = search_adzuna(query)
             print(f"    → {len(jobs)} results")
             all_jobs.extend(jobs)
         except Exception as e:
-            print(f"    ✗ Error: {e}")
+            print(f"    ✗ Adzuna error: {e}")
+        time.sleep(0.5)  # be polite to the API
 
     print(f"\n📦 Total scraped: {len(all_jobs)}")
 
