@@ -1,7 +1,8 @@
 """
 Job Search Agent for Harini Prasad Vasisht
-Runs daily via GitHub Actions — scrapes LinkedIn + Indeed via Apify,
-checks H1-B sponsorship history, scores with Gemini, outputs to GitHub Pages.
+Runs daily via GitHub Actions — scrapes Google Jobs via Apify (aggregates
+LinkedIn, Indeed, Handshake, Glassdoor, etc.), checks H1-B sponsorship
+history, scores with Gemini, outputs to GitHub Pages.
 """
 
 import os
@@ -87,54 +88,31 @@ def run_actor(actor_id, input_data, timeout_secs=120):
 
 # ── Scrapers ──────────────────────────────────────────────────────────────────
 
-def scrape_linkedin(query):
-    """Use Apify LinkedIn Jobs scraper."""
-    print(f"  LinkedIn: {query}")
+def scrape_google_jobs(query):
+    """Use Apify Google Jobs scraper (aggregates LinkedIn, Indeed, Handshake, etc.).
+    Actor: https://apify.com/orgupdate/google-jobs-scraper
+    NOTE: You must open that URL in your Apify account and click Save before this works.
+    """
+    print(f"  Google Jobs: {query}")
     results = run_actor(
-        "bebity~linkedin-jobs-scraper",
+        "orgupdate~google-jobs-scraper",
         {
-            "searchQueries": [query],
-            "location": "United States",
-            "dateSincePosted": "past24Hours",
-            "jobType": "fullTime",
-            "experienceLevel": ["entryLevel", "associate"],
-            "maxResults": 25,
+            "includeKeyword": query,
+            "countryName": "usa",
+            "datePosted": "today",
+            "jobType": "FULLTIME",
+            "pagesToFetch": 2,
         },
     )
     jobs = []
     for item in results:
         jobs.append({
-            "title":    item.get("title", ""),
-            "company":  item.get("companyName", ""),
+            "title":    item.get("job_title", ""),
+            "company":  item.get("company_name", ""),
             "location": item.get("location", ""),
-            "url":      item.get("jobUrl", item.get("url", "")),
-            "posted":   item.get("postedAt", item.get("publishedAt", "")),
-            "source":   "LinkedIn",
-            "description": item.get("description", "")[:500],
-        })
-    return jobs
-
-
-def scrape_indeed(query):
-    """Use Apify Indeed scraper."""
-    print(f"  Indeed: {query}")
-    results = run_actor(
-        "misceres~indeed-scraper",
-        {
-            "queries": [{"query": query, "countryCode": "US"}],
-            "maxItems": 25,
-            "fromDays": 1,
-        },
-    )
-    jobs = []
-    for item in results:
-        jobs.append({
-            "title":    item.get("positionName", item.get("title", "")),
-            "company":  item.get("company", ""),
-            "location": item.get("location", ""),
-            "url":      item.get("url", item.get("externalApplyLink", "")),
-            "posted":   item.get("datePosted", item.get("postedAt", "")),
-            "source":   "Indeed",
+            "url":      item.get("URL", ""),
+            "posted":   item.get("date", ""),
+            "source":   item.get("posted_via", "Google Jobs"),
             "description": item.get("description", "")[:500],
         })
     return jobs
@@ -254,24 +232,15 @@ def main():
 
     all_jobs = []
 
-    # Run scrapers for each query (rotate LinkedIn and Indeed to manage Apify credits)
+    # Run Google Jobs scraper for each query
     for i, query in enumerate(SEARCH_QUERIES):
         print(f"\n[{i+1}/{len(SEARCH_QUERIES)}] Searching: '{query}'")
         try:
-            jobs = scrape_linkedin(query)
-            print(f"    → {len(jobs)} LinkedIn results")
+            jobs = scrape_google_jobs(query)
+            print(f"    → {len(jobs)} results")
             all_jobs.extend(jobs)
         except Exception as e:
-            print(f"    ✗ LinkedIn error: {e}")
-
-        # Run Indeed for every other query to balance credits
-        if i % 2 == 0:
-            try:
-                jobs = scrape_indeed(query)
-                print(f"    → {len(jobs)} Indeed results")
-                all_jobs.extend(jobs)
-            except Exception as e:
-                print(f"    ✗ Indeed error: {e}")
+            print(f"    ✗ Error: {e}")
 
     print(f"\n📦 Total scraped: {len(all_jobs)}")
 
