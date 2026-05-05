@@ -88,7 +88,7 @@ GREENHOUSE_COMPANIES = [
 ]
 
 # Jobs older than this many days will be excluded from Greenhouse
-GREENHOUSE_MAX_AGE_DAYS = 30
+GREENHOUSE_MAX_AGE_DAYS = 14
 
 # ── Adzuna ────────────────────────────────────────────────────────────────────
 
@@ -208,13 +208,25 @@ def is_relevant(job):
         if re.search(pattern, desc, re.IGNORECASE):
             return False
 
-    # Must be US-based or remote
+    # Must be US-based or remote — exclude known non-US locations first
     location = (job.get("location") or "").lower()
+    non_us = [
+        "canada", "toronto", "montreal", "vancouver", "calgary", "ottawa",
+        "united kingdom", "london", "england", "scotland", "manchester",
+        "india", "bangalore", "bengaluru", "mumbai", "delhi", "hyderabad", "pune",
+        "australia", "sydney", "melbourne", "brisbane",
+        "germany", "berlin", "munich", "france", "paris",
+        "singapore", "ireland", "dublin", "netherlands", "amsterdam",
+        "israel", "tel aviv", "poland", "romania",
+    ]
+    if any(kw in location for kw in non_us):
+        return False
     if location and all(c not in location for c in [
         "us", "united states", "remote", "new york", "boston", "chicago",
         "seattle", "san francisco", "austin", "atlanta", "denver", "dallas",
-        "hybrid", "usa", "ny", "ca", "tx", "cambridge", "washington",
-        "virginia", "maryland", "new jersey", "anywhere",
+        "hybrid", "usa", "ny", ", ca", " ca,", " ca ", "tx", "cambridge",
+        "washington", "virginia", "maryland", "new jersey", "anywhere",
+        "los angeles", "san jose", "philadelphia", "phoenix", "portland",
     ]):
         return False
 
@@ -264,16 +276,63 @@ IDEAL: 0-2 years exp required, or explicitly "new grad"/"recent graduate".
 """
 
 
+def rule_based_score(job):
+    """Score 1-10 using deterministic rules — used when Gemini is unavailable."""
+    title = (job.get("title") or "").lower()
+    desc  = (job.get("description") or "").lower()
+    score = 5
+
+    # Strong positive: explicit entry-level / new-grad signal
+    entry_signals = [
+        "entry level", "entry-level", "new grad", "new-grad", "recent grad",
+        "junior", "associate", "early career", "university grad",
+        "0-1 year", "0-2 year", "0 to 1 year", "0 to 2 year",
+    ]
+    if any(w in title or w in desc for w in entry_signals):
+        score += 2
+
+    # Skill match bonus (up to +2 for breadth of match)
+    harini_skills = [
+        "python", "sql", "machine learning", "data science", "analytics",
+        "langchain", "pytorch", "tensorflow", "tableau", "power bi",
+        "aws", "pyspark", "airflow", "mlflow", "docker", "nlp",
+        "etl", "data pipeline", "visualization", "hugging face",
+        "rag", "llm", "generative ai",
+    ]
+    matched_skills = [s for s in harini_skills if s in desc]
+    if len(matched_skills) >= 5:
+        score += 2
+    elif len(matched_skills) >= 2:
+        score += 1
+
+    # H1-B sponsor bonus
+    if job.get("h1b_sponsors"):
+        score += 1
+
+    # Slight penalty for very short/empty descriptions (can't verify fit)
+    if len(desc) < 100:
+        score -= 1
+
+    reason = f"Rule-based: {len(matched_skills)} skill matches"
+    if any(w in title or w in desc for w in entry_signals):
+        reason += ", entry-level signal found"
+    return max(1, min(10, score)), reason, matched_skills[:6]
+
+
 def score_with_gemini(jobs):
     if not GEMINI_KEY or not jobs:
+        print("  ℹ No Gemini key — using rule-based scoring")
         for job in jobs:
-            job.setdefault("score", 5)
-            job.setdefault("match_reason", "AI scoring unavailable")
+            s, r, sk = rule_based_score(job)
+            job.setdefault("score", s)
+            job.setdefault("match_reason", r)
+            job.setdefault("skills_matched", sk)
         return jobs
 
     import google.generativeai as genai
     genai.configure(api_key=GEMINI_KEY)
     model = genai.GenerativeModel("gemini-2.0-flash")
+    gemini_ok = 0
 
     for job in jobs:
         desc_short = job.pop("_desc_short", job.get("description", "")[:400])
@@ -298,16 +357,19 @@ def score_with_gemini(jobs):
             if start == -1 or end == 0:
                 raise ValueError("No JSON found in response")
             data = json.loads(raw[start:end])
-            job["score"]         = int(data.get("score", 5))
-            job["match_reason"]  = data.get("reason", "")
+            job["score"]          = int(data.get("score", 5))
+            job["match_reason"]   = data.get("reason", "")
             job["skills_matched"] = data.get("skills_matched", [])
+            gemini_ok += 1
         except Exception as e:
-            print(f"    ⚠ Gemini error for '{job.get('title')}': {e}")
-            job["score"]         = 5
-            job["match_reason"]  = "Could not score"
-            job["skills_matched"] = []
+            print(f"    ⚠ Gemini {type(e).__name__} for '{job.get('title')}': {e}")
+            s, r, sk = rule_based_score(job)
+            job["score"]          = s
+            job["match_reason"]   = r
+            job["skills_matched"] = sk
         time.sleep(4.5)  # Gemini free tier: 15 req/min → need >4s between calls
 
+    print(f"  ✓ Gemini scored {gemini_ok}/{len(jobs)} jobs (rest used rule-based fallback)")
     return jobs
 
 
