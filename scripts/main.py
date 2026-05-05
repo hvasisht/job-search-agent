@@ -1,6 +1,6 @@
 """
 Job Search Agent — Harini Prasad Vasisht
-Sources: LinkedIn (Apify), Indeed (Apify), Greenhouse (direct API), Jobright (direct HTTP)
+Sources: LinkedIn (Apify), Indeed (Apify), Greenhouse (direct API), Adzuna (free API)
 """
 
 import os
@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from scrapers.linkedin   import scrape_linkedin
 from scrapers.indeed     import scrape_indeed
 from scrapers.greenhouse import scrape_greenhouse
-from scrapers.jobright   import scrape_jobright
+from scrapers.adzuna     import scrape_adzuna
 from filters             import is_relevant, deduplicate
 from scorer              import score_jobs
 from h1b_check           import is_h1b_sponsor, h1b_label
@@ -36,7 +36,7 @@ def main():
         ("LinkedIn",   scrape_linkedin),
         ("Indeed",     scrape_indeed),
         ("Greenhouse", scrape_greenhouse),
-        ("Jobright",   scrape_jobright),
+        ("Adzuna",     scrape_adzuna),
     ]
 
     for name, scraper_fn in sources:
