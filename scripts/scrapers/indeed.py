@@ -8,7 +8,7 @@ import os
 import time
 import requests
 
-APIFY_TOKEN = os.environ.get("APIFY_API_TOKEN", "")
+APIFY_TOKEN = os.environ.get("APIFY_API_TOKEN") or os.environ.get("APIFY_TOKEN", "")
 APIFY_BASE  = "https://api.apify.com/v2"
 
 INDEED_SEARCHES = [

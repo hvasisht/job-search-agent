@@ -8,7 +8,7 @@ import os
 import time
 import requests
 
-APIFY_TOKEN = os.environ.get("APIFY_API_TOKEN", "")
+APIFY_TOKEN = os.environ.get("APIFY_API_TOKEN") or os.environ.get("APIFY_TOKEN", "")
 
 LINKEDIN_SEARCH_URLS = [
     "https://www.linkedin.com/jobs/search/?keywords=data%20analyst%20entry%20level&location=United%20States&f_TPR=r86400&f_E=1%2C2&position=1&pageNum=0",
