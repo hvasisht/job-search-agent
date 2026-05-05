@@ -273,8 +273,7 @@ def score_with_gemini(jobs):
 
     import google.generativeai as genai
     genai.configure(api_key=GEMINI_KEY)
-    # gemini-1.5-flash: reliable, fast, works with google-generativeai==0.8.3
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    model = genai.GenerativeModel("gemini-2.0-flash")
 
     for job in jobs:
         desc_short = job.pop("_desc_short", job.get("description", "")[:400])
