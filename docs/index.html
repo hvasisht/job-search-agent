@@ -1,649 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harini's Daily Job Feed — Tuesday, May 05 2026</title>
-<style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #0d0d0d;
-    color: #e0e0e0;
-    min-height: 100vh;
-  }
-  header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border-bottom: 1px solid #2a2a4a;
-    padding: 28px 40px 24px;
-  }
-  .header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-  h1 { font-size: 22px; font-weight: 700; color: #e2c97e; letter-spacing: -0.3px; }
-  .subtitle { font-size: 13px; color: #888; margin-top: 4px; }
-  .update-time { font-size: 11px; color: #555; margin-top: 8px; }
-  .stats { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 16px; }
-  .stat {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid #2a2a2a;
-    border-radius: 8px;
-    padding: 10px 16px;
-    text-align: center;
-  }
-  .stat-num { font-size: 24px; font-weight: 700; color: #e2c97e; line-height: 1; }
-  .stat-label { font-size: 10px; color: #666; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
-  .notice {
-    background: #1a2a1a;
-    border: 1px solid #2d4a2d;
-    border-radius: 6px;
-    padding: 10px 16px;
-    font-size: 12px;
-    color: #81b29a;
-    margin-top: 16px;
-    max-width: 700px;
-  }
-  main { padding: 24px 40px 60px; max-width: 1100px; margin: 0 auto; }
-  .filter-bar {
-    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
-  }
-  .filter-btn {
-    background: rgba(255,255,255,0.04); border: 1px solid #333;
-    border-radius: 20px; padding: 6px 14px;
-    font-size: 11px; color: #aaa; cursor: pointer;
-    transition: all 0.15s; user-select: none;
-  }
-  .filter-btn:hover, .filter-btn.active {
-    background: #e2c97e22; border-color: #e2c97e88; color: #e2c97e;
-  }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
-  .card {
-    border: 1px solid #333; border-radius: 12px;
-    padding: 16px; transition: transform 0.15s, box-shadow 0.15s;
-    display: flex; flex-direction: column; gap: 10px;
-  }
-  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
-  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
-  .card-left { flex: 1; min-width: 0; }
-  .title { font-size: 14px; font-weight: 600; color: #f0ece0; line-height: 1.3; }
-  .company { font-size: 12px; color: #aaa; margin-top: 4px; }
-  .location { font-size: 11px; color: #666; margin-top: 3px; }
-  .card-right { flex-shrink: 0; }
-  .score-ring {
-    width: 48px; height: 48px; border-radius: 50%;
-    border: 2px solid #333;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-  }
-  .score-num { font-size: 16px; font-weight: 700; line-height: 1; }
-  .score-label { font-size: 8px; color: #666; }
-  .card-meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-  .badge {
-    font-size: 10px; font-weight: 600; letter-spacing: 0.04em;
-    border-radius: 4px; padding: 2px 7px; border: 1px solid;
-  }
-  .source { font-size: 10px; font-weight: 600; border-radius: 4px; padding: 2px 7px; border: 1px solid; }
-  .h1b { background: #1a2e1a; border-color: #3d6b3d; color: #81b29a; }
-  .unknown { background: #2a2500; border-color: #665c00; color: #c9a840; }
-  .posted { font-size: 10px; color: #555; }
-  .skills { display: flex; flex-wrap: wrap; gap: 5px; }
-  .skill {
-    font-size: 10px; background: rgba(226,201,126,0.1);
-    border: 1px solid rgba(226,201,126,0.3); border-radius: 3px;
-    padding: 2px 7px; color: #e2c97e;
-  }
-  .reason { font-size: 11px; color: #888; line-height: 1.5; font-style: italic; }
-  .apply-btn {
-    display: inline-block; background: #e2c97e; color: #0d0d0d;
-    border-radius: 8px; padding: 9px 16px;
-    font-size: 12px; font-weight: 700; text-decoration: none;
-    text-align: center; margin-top: auto;
-    transition: background 0.15s;
-  }
-  .apply-btn:hover { background: #f0d98c; }
-  footer {
-    text-align: center; padding: 20px;
-    font-size: 11px; color: #444; border-top: 1px solid #1a1a1a;
-  }
-  @media (max-width: 600px) {
-    header { padding: 20px; }
-    main { padding: 16px; }
-    .grid { grid-template-columns: 1fr; }
-  }
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harini's Job Board</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f8fafc; color: #1e293b; padding: 24px 16px; }
+    header { max-width: 860px; margin: 0 auto 28px; border-bottom: 2px solid #e2e8f0; padding-bottom: 16px; }
+    header h1 { font-size: 1.6rem; font-weight: 700; color: #0f172a; }
+    header p { font-size: 0.85rem; color: #64748b; margin-top: 4px; }
+    .filters { max-width: 860px; margin: 0 auto 20px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-btn { padding: 5px 14px; border-radius: 9999px; border: 1px solid #cbd5e1; background: #fff; font-size: 0.8rem; cursor: pointer; color: #475569; transition: all 0.15s; }
+    .filter-btn:hover, .filter-btn.active { background: #0f172a; color: #fff; border-color: #0f172a; }
+    .grid { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; transition: box-shadow 0.15s; }
+    .card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .card-title { font-size: 1rem; font-weight: 600; color: #0f172a; line-height: 1.35; }
+    .card-company { font-size: 0.85rem; color: #475569; margin-top: 3px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; align-items: center; }
+    .badge { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 9999px; font-size: 0.72rem; font-weight: 600; white-space: nowrap; }
+    .badge-source { color: #fff; }
+    .badge-h1b { background: #dcfce7; color: #166534; }
+    .badge-no-h1b { background: #fee2e2; color: #991b1b; }
+    .badge-loc { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+    .score-ring { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; font-weight: 700; color: #fff; flex-shrink: 0; }
+    .skills { margin-top: 10px; font-size: 0.78rem; color: #64748b; }
+    .skills span { display: inline-block; background: #f1f5f9; border-radius: 4px; padding: 1px 7px; margin: 2px 3px 2px 0; }
+    .reason { margin-top: 8px; font-size: 0.8rem; color: #64748b; font-style: italic; }
+    .apply-btn { display: inline-block; margin-top: 12px; padding: 7px 18px; background: #0f172a; color: #fff; border-radius: 6px; text-decoration: none; font-size: 0.82rem; font-weight: 600; transition: background 0.15s; }
+    .apply-btn:hover { background: #1e40af; }
+    .empty { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 1rem; }
+  </style>
 </head>
 <body>
-
-<header>
-  <div class="header-top">
-    <div>
-      <h1>Harini's Daily Job Feed</h1>
-      <p class="subtitle">Entry-level · New Grad · Data/ML/AI · United States · H1-B Sponsors</p>
-      <p class="update-time">Last updated: Tuesday, May 05 2026 at 13:58 UTC · Powered by Apify + Gemini</p>
-    </div>
+  <header>
+    <h1>🎯 Harini's Job Board</h1>
+    <p>Updated May 05, 2026 at 14:38 UTC · 16 curated entry-level roles · Sources: LinkedIn, Indeed, Greenhouse, Jobright</p>
+  </header>
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterSource('all', event)">All</button>
+    <button class="filter-btn" onclick="filterSource('LinkedIn', event)">LinkedIn</button>
+    <button class="filter-btn" onclick="filterSource('Indeed', event)">Indeed</button>
+    <button class="filter-btn" onclick="filterSource('Greenhouse', event)">Greenhouse</button>
+    <button class="filter-btn" onclick="filterSource('Jobright', event)">Jobright</button>
+    <button class="filter-btn" onclick="filterH1b(event)">H1-B Sponsors Only</button>
   </div>
-
-  <div class="stats">
-    <div class="stat"><div class="stat-num">20</div><div class="stat-label">Jobs Today</div></div>
-    <div class="stat"><div class="stat-num">12</div><div class="stat-label">H1-B Sponsors</div></div>
-    <div class="stat"><div class="stat-num">1</div><div class="stat-label">High Match (≥8)</div></div>
-    <div class="stat"><div class="stat-num">24h</div><div class="stat-label">Posted Within</div></div>
-  </div>
-
-  <div class="notice">
-    ✓ All jobs posted in the last 24 hours · Sorted by AI match score · Click any card to apply directly
-  </div>
-</header>
-
-<main>
   <div class="grid" id="grid">
-    
-        <div class="card" style="background:#1a2f1a;border-color:#3d6b3d">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Analytics Engineer</h3>
-              <p class="company">Stripe</p>
-              <p class="location">📍 Seattle, WA</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#81b29a;border-color:#3d6b3d">
-                <span class="score-num">8</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-05-04</span>
-          </div>
-          <div class="skills"><span class="skill">SQL</span> <span class="skill">Python</span> <span class="skill">ETL</span> <span class="skill">AWS</span> <span class="skill">Tableau</span></div>
-          <p class="reason">Strong analytics/data engineering skill match (SQL, Python, ETL, cloud tools, dashboarding), explicitly entry-level target role, and graduating May 2026 aligns perfectly with start date, though H1-B sponsorship need may be a consideration.</p>
-          <a class="apply-btn" href="https://stripe.com/jobs/search?gh_jid=7863844" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#1a2f1a;border-color:#3d6b3d">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Analyst - Global Growth Luxury Strategy</h3>
-              <p class="company">Lyft</p>
-              <p class="location">📍 New York, NY</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#81b29a;border-color:#3d6b3d">
-                <span class="score-num">7</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-05-01</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">Tableau</span> <span class="skill">Power BI</span> <span class="skill">Analytics</span></div>
-          <p class="reason">Data Analyst role at major tech company with strong skill match in SQL/Python/analytics tools, but experience level requirements and seniority expectations are unclear from truncated job description.</p>
-          <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8514400002?gh_jid=8514400002" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#1a2f1a;border-color:#3d6b3d">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Machine Learning Engineer, Core Engineering</h3>
-              <p class="company">Pinterest</p>
-              <p class="location">📍 San Francisco, CA, US; Palo Alto, CA, US; Seattle, WA, US; Remote, US</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#81b29a;border-color:#3d6b3d">
-                <span class="score-num">7</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-04-30</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">PyTorch</span> <span class="skill">TensorFlow</span> <span class="skill">transformers</span> <span class="skill">LangChain</span></div>
-          <p class="reason">Strong ML/AI skill alignment (PyTorch, transformers, LLMs) and relevant project experience, but job seniority level is unclear and may exceed entry-level expectations for Core Engineering role.</p>
-          <a class="apply-btn" href="https://www.pinterestcareers.com/jobs/?gh_jid=6121450" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#1a2f1a;border-color:#3d6b3d">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">AI/ML Engineer (Hybrid @ Bellevue, WA or Remote @ Florida)</h3>
-              <p class="company">Offerup</p>
-              <p class="location">📍 Hybrid @ Bellevue, WA </p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#81b29a;border-color:#3d6b3d">
-                <span class="score-num">7</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge unknown">Verify H1-B</span>
-            <span class="posted">Posted: 2026-04-28</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">ML/AI frameworks</span> <span class="skill">ETL</span> <span class="skill">AWS</span></div>
-          <p class="reason">Data/ML role with strong skill alignment (Python, SQL, ML frameworks, ETL, cloud tools), but job description is incomplete and experience level requirements are unclear.</p>
-          <a class="apply-btn" href="https://job-boards.greenhouse.io/offerup/jobs/7739995" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#1a2f1a;border-color:#3d6b3d">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Engineer, Analytics</h3>
-              <p class="company">Discord</p>
-              <p class="location">📍 San Francisco Bay Area</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#81b29a;border-color:#3d6b3d">
-                <span class="score-num">7</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge unknown">Verify H1-B</span>
-            <span class="posted">Posted: 2026-04-30</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">ETL</span> <span class="skill">PySpark</span> <span class="skill">AWS</span></div>
-          <p class="reason">Data Engineer role with strong skill alignment (Python, SQL, ETL, PySpark, AWS, Airflow, Docker) and entry-level positioning, but location (Bay Area) and H1-B sponsorship uncertainty are potential concerns.</p>
-          <a class="apply-btn" href="https://job-boards.greenhouse.io/discord/jobs/8371252002" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#1a2f1a;border-color:#3d6b3d">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Engineer, Analytics Data Engineering</h3>
-              <p class="company">Dropbox</p>
-              <p class="location">📍 Remote - US: Select locations</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#81b29a;border-color:#3d6b3d">
-                <span class="score-num">7</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge unknown">Verify H1-B</span>
-            <span class="posted">Posted: 2026-04-28</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">PySpark</span> <span class="skill">AWS (S3/Glue/Athena)</span> <span class="skill">ETL</span></div>
-          <p class="reason">Strong data engineering skill match (Python, SQL, Spark, AWS, ETL, Airflow) and entry-level timeline (May 2026 grad), but job description appears cut off and no explicit 'new grad' language visible; experience level requirement unclear.</p>
-          <a class="apply-btn" href="https://jobs.dropbox.com/listing/7739571?gh_jid=7739571" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#1a2f1a;border-color:#3d6b3d">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Scientist - Core Products</h3>
-              <p class="company">Gusto</p>
-              <p class="location">📍 San Francisco, CA - Hybrid; New York, NY - Hybrid;</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#81b29a;border-color:#3d6b3d">
-                <span class="score-num">7</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge unknown">Verify H1-B</span>
-            <span class="posted">Posted: 2026-04-29</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">Machine Learning</span> <span class="skill">Data Analysis</span> <span class="skill">Statistics</span></div>
-          <p class="reason">Data scientist role at established company with strong skill match (Python, SQL, ML/AI), but experience level requirements unclear and no explicit new-grad language found in posting.</p>
-          <a class="apply-btn" href="https://job-boards.greenhouse.io/gusto/jobs/7524662" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#1a2f1a;border-color:#3d6b3d">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Scientist, Analytics</h3>
-              <p class="company">Discord</p>
-              <p class="location">📍 San Francisco Bay Area</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#81b29a;border-color:#3d6b3d">
-                <span class="score-num">7</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge unknown">Verify H1-B</span>
-            <span class="posted">Posted: 2026-04-30</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">Machine Learning</span> <span class="skill">Analytics</span> <span class="skill">Data visualization</span></div>
-          <p class="reason">Data scientist role at major tech company with strong skill alignment (Python, SQL, ML/AI), but no explicit entry-level designation and Bay Area location may complicate H1-B sponsorship timeline for May 2026 graduate.</p>
-          <a class="apply-btn" href="https://job-boards.greenhouse.io/discord/jobs/8447216002" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Applied AI Engineer, Enterprise Tech</h3>
-              <p class="company">Anthropic</p>
-              <p class="location">📍 San Francisco, CA | New York City, NY | Seattle, WA</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-04-24</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">PyTorch</span> <span class="skill">TensorFlow</span> <span class="skill">LangChain</span> <span class="skill">RAG</span></div>
-          <p class="reason">Strong AI/ML technical skills and relevant project experience, but role appears mid-level focused on enterprise systems rather than explicitly entry-level, and unclear if H1-B sponsorship available.</p>
-          <a class="apply-btn" href="https://job-boards.greenhouse.io/anthropic/jobs/5057647008" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Applied AI Engineer, Startups</h3>
-              <p class="company">Anthropic</p>
-              <p class="location">📍 San Francisco, CA | New York City, NY</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-04-23</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">PyTorch</span> <span class="skill">TensorFlow</span> <span class="skill">LangChain</span> <span class="skill">transformers</span></div>
-          <p class="reason">Strong AI/ML technical skills and relevant project experience, but 'Applied AI Engineer' typically requires 2-3 years professional experience and the role focuses on AI systems engineering rather than entry-level data analytics.</p>
-          <a class="apply-btn" href="https://job-boards.greenhouse.io/anthropic/jobs/5073277008" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Engineer</h3>
-              <p class="company">Lyft</p>
-              <p class="location">📍 Ukraine Anywhere</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-05-01</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">ETL</span> <span class="skill">AWS</span> <span class="skill">data engineering fundamentals</span></div>
-          <p class="reason">Data Engineer role at Lyft is a strong data/tech fit with excellent skill overlap (Python, SQL, ETL, AWS), but job posting lacks explicit entry-level/new-grad language and experience requirements are unclear, plus Ukraine location may complicate H1-B sponsorship needs.</p>
-          <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8461103002?gh_jid=8461103002" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Scientist - Machine Learning, Pricing & Rider Engagement</h3>
-              <p class="company">Lyft</p>
-              <p class="location">📍 San Francisco, CA</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-05-01</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">Machine Learning</span> <span class="skill">XGBoost</span> <span class="skill">PyTorch</span></div>
-          <p class="reason">Strong ML/data science skills and relevant experience, but job likely requires 2-3+ years experience; no explicit entry-level language in the posting, and Lyft DS roles typically target mid-level candidates despite candidate's excellent technical fit.</p>
-          <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8485432002?gh_jid=8485432002" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Scientist, Algorithms - Lyft Ads</h3>
-              <p class="company">Lyft</p>
-              <p class="location">📍 New York, NY</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-05-01</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">Machine Learning</span> <span class="skill">Data Science</span> <span class="skill">Statistical Analysis</span></div>
-          <p class="reason">Strong ML/data science skills and relevant experience, but job is ambiguous on experience level (no explicit entry-level designation) and 'Algorithms' focus may require deeper academic ML background than current experience demonstrates.</p>
-          <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8330595002?gh_jid=8330595002" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Scientist, Supply and Operations Technology, Lyft Urban Solutions</h3>
-              <p class="company">Lyft</p>
-              <p class="location">📍 New York, NY</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-05-01</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">Machine Learning</span> <span class="skill">Data Analysis</span> <span class="skill">Statistics</span></div>
-          <p class="reason">Data scientist role with strong technical skill match (Python, SQL, ML frameworks) and relevant project experience, but job description incomplete and experience level requirements unclear.</p>
-          <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8402782002?gh_jid=8402782002" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Forward Deployed Engineer, Applied AI</h3>
-              <p class="company">Anthropic</p>
-              <p class="location">📍 Boston, MA; Chicago, IL; New York City, NY | Seattle, WA; San Francisco, CA | New York City, NY; Washington, DC</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-04-24</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">LangChain</span> <span class="skill">RAG</span> <span class="skill">Claude/GPT models</span> <span class="skill">transformers</span></div>
-          <p class="reason">Strong AI/ML technical skills and relevant GenAI experience, but 'Forward Deployed Engineer' appears to be a specialized/mid-level role rather than explicitly entry-level, and job description is incomplete making seniority requirements unclear.</p>
-          <a class="apply-btn" href="https://job-boards.greenhouse.io/anthropic/jobs/4985877008" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Machine Learning Engineer</h3>
-              <p class="company">Twilio</p>
-              <p class="location">📍 Remote - US</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-04-30</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">PyTorch</span> <span class="skill">TensorFlow</span> <span class="skill">Transformers</span> <span class="skill">SQL</span></div>
-          <p class="reason">ML/AI role with strong technical skill overlap (Python, PyTorch, TensorFlow, transformers), but job description is incomplete and seniority level unclear, making it difficult to confirm entry-level positioning.</p>
-          <a class="apply-btn" href="https://job-boards.greenhouse.io/twilio/jobs/7702644" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Machine Learning Engineer, Customer Support Engineering</h3>
-              <p class="company">Airbnb</p>
-              <p class="location">📍 Remote-USA</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge h1b">H1-B Sponsor ✓</span>
-            <span class="posted">Posted: 2026-04-23</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">PyTorch</span> <span class="skill">TensorFlow</span> <span class="skill">transformers</span> <span class="skill">LangChain</span></div>
-          <p class="reason">Strong ML/AI skills and relevant experience, but role appears mid-level (no explicit entry-level language) and Airbnb typically targets candidates with 2+ years in production ML roles.</p>
-          <a class="apply-btn" href="https://careers.airbnb.com/positions/7826337?gh_jid=7826337" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Engineer</h3>
-              <p class="company">Dropbox</p>
-              <p class="location">📍 Remote - Mexico</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge unknown">Verify H1-B</span>
-            <span class="posted">Posted: 2026-04-28</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">ETL</span> <span class="skill">PySpark</span> <span class="skill">AWS</span></div>
-          <p class="reason">Data Engineer role with strong technical skill match (Python, SQL, ETL, Spark, cloud), but remote Mexico location conflicts with candidate's US/remote preference and H1B sponsorship needs; experience level not explicitly stated as entry-level.</p>
-          <a class="apply-btn" href="https://jobs.dropbox.com/listing/7739553?gh_jid=7739553" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Scientist</h3>
-              <p class="company">Dropbox</p>
-              <p class="location">📍 Remote - US: Select locations</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge unknown">Verify H1-B</span>
-            <span class="posted">Posted: 2026-04-28</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">PyTorch</span> <span class="skill">TensorFlow</span> <span class="skill">XGBoost</span></div>
-          <p class="reason">Data scientist role at established tech company with strong skill alignment (Python, SQL, ML frameworks, cloud), but no explicit entry-level/new-grad language and Dropbox typically targets candidates with 1-3 years experience.</p>
-          <a class="apply-btn" href="https://jobs.dropbox.com/listing/7762004?gh_jid=7762004" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
-        <div class="card" style="background:#2d2a00;border-color:#6b6200">
-          <div class="card-top">
-            <div class="card-left">
-              <h3 class="title">Data Scientist, Product</h3>
-              <p class="company">Robinhood</p>
-              <p class="location">📍 New York, NY</p>
-            </div>
-            <div class="card-right">
-              <div class="score-ring" style="color:#e9c46a;border-color:#6b6200">
-                <span class="score-num">6</span>
-                <span class="score-label">/10</span>
-              </div>
-            </div>
-          </div>
-          <div class="card-meta">
-            <span class="source" style="background:#66622;border-color:#66666;color:#666">Greenhouse</span>
-            <span class="badge unknown">Verify H1-B</span>
-            <span class="posted">Posted: 2026-04-28</span>
-          </div>
-          <div class="skills"><span class="skill">Python</span> <span class="skill">SQL</span> <span class="skill">Machine Learning</span> <span class="skill">Statistical Analysis</span> <span class="skill">Data Visualization</span></div>
-          <p class="reason">Data scientist role with strong ML/AI skill match and relevant project experience, but job description is incomplete and seniority level unclear; candidate is well-qualified but entry-level positioning uncertain for Robinhood (typically more competitive).</p>
-          <a class="apply-btn" href="https://boards.greenhouse.io/robinhood/jobs/7324983?t=gh_src=&gh_jid=7324983" target="_blank" rel="noopener">
-            View & Apply →
-          </a>
-        </div>
+    <div class="card" data-source="Greenhouse" data-h1b="false">
+  <div class="card-top">
+    <div><div class="card-title">Forward Deployed Marketing Data Scientist</div><div class="card-company">Hightouch</div></div>
+    <div class="score-ring" style="background:#0369a1">8/10</div>
   </div>
-</main>
-
-<footer>
-  Built for Harini Prasad Vasisht · Runs daily at 7 AM EST via GitHub Actions ·
-  Data from LinkedIn + Indeed via Apify · H1-B data from USCIS public records ·
-  AI scoring by Google Gemini 2.5 Flash
-</footer>
-
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-no-h1b">No H1-B data</span><span class="badge badge-loc">📍 Remote (North America)</span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>Pandas</span><span>Polars</span><span>Analytics</span><span>Experimentation</span><span>Data notebooks</span><span>Statistics</span></div>
+  <div class='reason'>Explicitly entry-level marketing data science role with strong Python/SQL overlap, remote US-based, ideal timeline (May/June 2026), and experimentation/analytics focus matches candidate's background perfectly.</div>
+  <a class="apply-btn" href="https://job-boards.greenhouse.io/hightouch/jobs/5718912004" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="true">
+  <div class="card-top">
+    <div><div class="card-title">Data Analyst - Global Growth Luxury Strategy</div><div class="card-company">Lyft</div></div>
+    <div class="score-ring" style="background:#0369a1">7/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-h1b">✓ H1-B Sponsor</span><span class="badge badge-loc">📍 New York, NY</span>
+  </div>
+  <div class='skills'><span>SQL</span><span>Python</span><span>Tableau/Power BI</span><span>Analytics</span><span>ETL</span><span>Statistical modeling</span></div>
+  <div class='reason'>Entry-level data analyst role with strong skill overlap (SQL, Python, dashboards, modeling); no explicit experience requirement stated; US-based; OPT-friendly by default.</div>
+  <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8514400002?gh_jid=8514400002" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="true">
+  <div class="card-top">
+    <div><div class="card-title">Machine Learning Engineer, Lyft Business</div><div class="card-company">Lyft</div></div>
+    <div class="score-ring" style="background:#0369a1">7/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-h1b">✓ H1-B Sponsor</span><span class="badge badge-loc">📍 New York, NY; San Francisco, CA</span>
+  </div>
+  <div class='skills'><span>Python</span><span>PyTorch/TensorFlow</span><span>LLMs/transformers</span><span>Feature engineering</span><span>MLOps</span><span>SQL</span><span>RAG systems</span></div>
+  <div class='reason'>Strong ML/AI skill match (transformers, RAG, feature pipelines) and agentic AI alignment, but no explicit entry-level/new-grad language and experience requirement unclear—typical Big Tech bar likely 1–2 yrs FT.</div>
+  <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8513769002?gh_jid=8513769002" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="true">
+  <div class="card-top">
+    <div><div class="card-title">Machine Learning Engineer, Core Engineering</div><div class="card-company">Pinterest</div></div>
+    <div class="score-ring" style="background:#0369a1">7/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-h1b">✓ H1-B Sponsor</span><span class="badge badge-loc">📍 San Francisco, CA, US; Palo Alto, CA, US; Seattle, WA, US; Remote, US</span>
+  </div>
+  <div class='skills'><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>transformers</span><span>SQL</span><span>AWS</span><span>data-driven methods</span><span>experimentation</span></div>
+  <div class='reason'>Strong ML/AI skill match (PyTorch, transformers, LangGraph, RAG) and entry-level friendly, but role doesn't explicitly state 'new grad' and Pinterest typically targets 1-3 years experience; OPT-friendly location and timeline align perfectly.</div>
+  <a class="apply-btn" href="https://www.pinterestcareers.com/jobs/?gh_jid=6121450" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="false">
+  <div class="card-top">
+    <div><div class="card-title">Data Scientist</div><div class="card-company">Dropbox</div></div>
+    <div class="score-ring" style="background:#0369a1">7/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-no-h1b">No H1-B data</span><span class="badge badge-loc">📍 Remote - US: Select locations</span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>ML/AI</span><span>Statistics</span><span>Analytics</span></div>
+  <div class='reason'>Data Scientist role at major tech company with strong skill overlap (Python, SQL, ML), but job description is corrupted/incomplete, experience requirements unclear, and no explicit entry-level/new-grad language.</div>
+  <a class="apply-btn" href="https://jobs.dropbox.com/listing/7762004?gh_jid=7762004" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="false">
+  <div class="card-top">
+    <div><div class="card-title">AI/ML Engineer (Hybrid @ Bellevue, WA or Remote @ Florida)</div><div class="card-company">Offerup</div></div>
+    <div class="score-ring" style="background:#0369a1">7/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-no-h1b">No H1-B data</span><span class="badge badge-loc">📍 Hybrid @ Bellevue, WA </span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>RAG</span><span>LLMs</span><span>Production ML</span><span>LangChain</span><span>PyTorch</span><span>Data Engineering</span></div>
+  <div class='reason'>AI/ML role with strong skill overlap (Python, SQL, RAG, LLMs, production systems), entry-level friendly, but experience requirement unclear and Bellevue location may conflict with candidate's US-remote-only preference.</div>
+  <a class="apply-btn" href="https://job-boards.greenhouse.io/offerup/jobs/7739995" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="true">
+  <div class="card-top">
+    <div><div class="card-title">Machine Learning Engineer, Customer Support Engineering</div><div class="card-company">Airbnb</div></div>
+    <div class="score-ring" style="background:#b45309">6/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-h1b">✓ H1-B Sponsor</span><span class="badge badge-loc">📍 Remote-USA</span>
+  </div>
+  <div class='skills'><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>transformers</span><span>LangChain</span><span>RAG</span><span>GPT-4o</span></div>
+  <div class='reason'>ML role with strong skill overlap (Python, PyTorch, transformers, LLMs) and remote-USA location, but no explicit experience requirement stated—unclear if entry-level friendly or if Airbnb's bar is higher; no OPT mention is slight concern.</div>
+  <a class="apply-btn" href="https://careers.airbnb.com/positions/7826337?gh_jid=7826337" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="true">
+  <div class="card-top">
+    <div><div class="card-title">Data Scientist, Algorithms - Lyft Ads</div><div class="card-company">Lyft</div></div>
+    <div class="score-ring" style="background:#b45309">6/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-h1b">✓ H1-B Sponsor</span><span class="badge badge-loc">📍 New York, NY</span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>ML model evaluation</span><span>A/B testing</span><span>Feature engineering</span><span>Statistical analysis</span><span>PyTorch/TensorFlow applicable</span></div>
+  <div class='reason'>Strong ML/DS skill match and Python/SQL expertise, but no explicit entry-level language, unclear experience requirement, and Lyft Ads role suggests mid-level complexity; F-1 OPT status is acceptable but not mentioned in posting.</div>
+  <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8330595002?gh_jid=8330595002" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="true">
+  <div class="card-top">
+    <div><div class="card-title">Machine Learning Engineer</div><div class="card-company">Twilio</div></div>
+    <div class="score-ring" style="background:#b45309">6/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-h1b">✓ H1-B Sponsor</span><span class="badge badge-loc">📍 Remote - US</span>
+  </div>
+  <div class='skills'><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>MLOps</span><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>AWS</span></div>
+  <div class='reason'>ML role with strong skill overlap (Python, PyTorch, TensorFlow, MLOps), but experience level unclear—no explicit entry-level/new-grad language, operational excellence and on-call ownership suggest mid-level expectations.</div>
+  <a class="apply-btn" href="https://job-boards.greenhouse.io/twilio/jobs/7702644" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="false">
+  <div class="card-top">
+    <div><div class="card-title">Data Engineer</div><div class="card-company">Brex</div></div>
+    <div class="score-ring" style="background:#b45309">6/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-no-h1b">No H1-B data</span><span class="badge badge-loc">📍 San Francisco, California, United States</span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>ETL</span><span>AWS</span><span>PySpark</span><span>Data Pipeline Design</span></div>
+  <div class='reason'>Strong technical fit (Python, SQL, ETL, cloud) and entry-level candidate, but role lacks explicit new-grad/entry-level signal, requires SF office 3 days/week (conflicts with remote preference), and no OPT mention.</div>
+  <a class="apply-btn" href="https://www.brex.com/careers/8366850002?gh_jid=8366850002" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="false">
+  <div class="card-top">
+    <div><div class="card-title">Data Scientist, Product</div><div class="card-company">Robinhood</div></div>
+    <div class="score-ring" style="background:#b45309">6/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-no-h1b">No H1-B data</span><span class="badge badge-loc">📍 New York, NY</span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>Machine Learning</span><span>Statistical Analysis</span><span>Product Analytics</span></div>
+  <div class='reason'>Strong skill match (Python, SQL, ML, statistical analysis) and entry-level friendly, but no explicit experience requirement stated—unclear if truly new-grad focused or expects 2+ yrs; no OPT mention is minor concern.</div>
+  <a class="apply-btn" href="https://boards.greenhouse.io/robinhood/jobs/7324983?t=gh_src=&gh_jid=7324983" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="true">
+  <div class="card-top">
+    <div><div class="card-title">Applied Scientist- Pricing, Dynamic Pricing & Offer Selection</div><div class="card-company">Lyft</div></div>
+    <div class="score-ring" style="background:#b45309">5/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-h1b">✓ H1-B Sponsor</span><span class="badge badge-loc">📍 New York, NY</span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>ML</span><span>PyTorch/TensorFlow</span><span>Data Analysis</span><span>Production Code</span></div>
+  <div class='reason'>Applied Scientist role suggests mid-level seniority (custom methods, production ML systems, metrics design); unclear if entry-level acceptable; strong technical skill match but experience expectations and 'Applied Scientist' title create ambiguity.</div>
+  <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8403370002?gh_jid=8403370002" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="true">
+  <div class="card-top">
+    <div><div class="card-title">Data Scientist, Algorithms, Optimization - Fulfillment</div><div class="card-company">Lyft</div></div>
+    <div class="score-ring" style="background:#b45309">5/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-h1b">✓ H1-B Sponsor</span><span class="badge badge-loc">📍 Seattle, WA</span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>Machine Learning</span><span>Statistical Analysis</span><span>A/B Testing</span><span>Production Code</span><span>Data Analysis</span></div>
+  <div class='reason'>Data Science role with strong skill overlap (Python, SQL, ML, experimentation), but job description appears to require MS/PhD and doesn't explicitly state entry-level or new-grad eligibility, creating uncertainty on experience expectations.</div>
+  <a class="apply-btn" href="https://app.careerpuck.com/job-board/lyft/job/8335715002?gh_jid=8335715002" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="true">
+  <div class="card-top">
+    <div><div class="card-title">Data Scientist</div><div class="card-company">Stripe</div></div>
+    <div class="score-ring" style="background:#b45309">5/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-h1b">✓ H1-B Sponsor</span><span class="badge badge-loc">📍 Seattle, WA</span>
+  </div>
+  <div class='skills'><span>Python</span><span>R</span><span>SQL</span><span>ETL</span><span>Statistics</span><span>Experimentation</span><span>Data analysis</span></div>
+  <div class='reason'>Strong skill match (Python, R, SQL, ML) and relevant experience, but 3-year FT requirement is a hard blocker for entry-level targeting; Master's degree requirement met, but experience gap is significant.</div>
+  <a class="apply-btn" href="https://stripe.com/jobs/search?gh_jid=7809414" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="false">
+  <div class="card-top">
+    <div><div class="card-title">Data Engineer, Analytics Data Engineering</div><div class="card-company">Dropbox</div></div>
+    <div class="score-ring" style="background:#b45309">5/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-no-h1b">No H1-B data</span><span class="badge badge-loc">📍 Remote - US: Select locations</span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>PySpark</span><span>ETL</span><span>AWS</span><span>Data modeling</span></div>
+  <div class='reason'>Data Engineer role with strong skill overlap (Python, SQL, Spark, ETL, cloud), but job description is corrupted/unreadable, experience requirements unclear, and no explicit entry-level/new-grad language visible.</div>
+  <a class="apply-btn" href="https://jobs.dropbox.com/listing/7739571?gh_jid=7739571" target="_blank" rel="noopener">Apply →</a>
+</div>
+<div class="card" data-source="Greenhouse" data-h1b="false">
+  <div class="card-top">
+    <div><div class="card-title">Data Engineer, Analytics</div><div class="card-company">Discord</div></div>
+    <div class="score-ring" style="background:#b45309">5/10</div>
+  </div>
+  <div class="badge-row">
+    <span class="badge badge-source" style="background:#3dba4e">Greenhouse</span>
+    <span class="badge badge-no-h1b">No H1-B data</span><span class="badge badge-loc">📍 San Francisco Bay Area</span>
+  </div>
+  <div class='skills'><span>Python</span><span>SQL</span><span>Data Modeling</span><span>ETL</span><span>Dashboards</span><span>Analytics</span></div>
+  <div class='reason'>Strong skill overlap (Python, SQL, data modeling, dashboards) but explicit 2+ years requirement is a hard blocker for May 2026 graduate with ~1 year experience.</div>
+  <a class="apply-btn" href="https://job-boards.greenhouse.io/discord/jobs/8371252002" target="_blank" rel="noopener">Apply →</a>
+</div>
+  </div>
+  <script>
+    let h1bOnly = false;
+    let activeSource = 'all';
+    function filterSource(src, e) {
+      activeSource = src; h1bOnly = false;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      applyFilters();
+    }
+    function filterH1b(e) {
+      h1bOnly = !h1bOnly; activeSource = 'all';
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      e.target.classList.toggle('active', h1bOnly);
+      applyFilters();
+    }
+    function applyFilters() {
+      document.querySelectorAll('.card').forEach(card => {
+        const srcOk = activeSource === 'all' || card.dataset.source === activeSource;
+        const h1bOk = !h1bOnly || card.dataset.h1b === 'true';
+        card.style.display = (srcOk && h1bOk) ? '' : 'none';
+      });
+    }
+  </script>
 </body>
 </html>
