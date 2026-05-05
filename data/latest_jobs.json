@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-05T13:52:16.382937+00:00",
+  "updated": "2026-05-05T13:58:59.475666+00:00",
   "jobs": [
     {
       "title": "Analytics Engineer",
@@ -12,35 +12,42 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 8,
-      "match_reason": "Explicitly entry-level Analytics Engineer role, strong match on SQL/Python/analytics stack, relevant dashboarding experience (Tableau/Power BI), and graduating May 2026 aligns perfectly with start date.",
+      "match_reason": "Strong analytics/data engineering skill match (SQL, Python, ETL, cloud tools, dashboarding), explicitly entry-level target role, and graduating May 2026 aligns perfectly with start date, though H1-B sponsorship need may be a consideration.",
+      "skills_matched": [
+        "SQL",
+        "Python",
+        "ETL",
+        "AWS",
+        "Tableau",
+        "Power BI",
+        "Streamlit",
+        "PostgreSQL",
+        "PySpark",
+        "Airflow",
+        "DVC",
+        "Docker"
+      ]
+    },
+    {
+      "title": "Data Analyst - Global Growth Luxury Strategy",
+      "company": "Lyft",
+      "location": "New York, NY",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8514400002?gh_jid=8514400002",
+      "posted": "2026-05-01T14:21:31-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;Data is at the heart of Lyft\u2019s products and decision-making. You will leverage data and rigorous, analytical thinking to shape our products and make business decisions. This will involve performing rigorous product deep dives, identifying opportunities for product enhancements, and measuring the impact of new features.&lt;/p&gt; &lt;p&gt;The Global Growth team is at the forefront of innovation at Lyft, focused on expanding Lyft beyond North American rideshare\u2019s core products. This includes our premium Luxury modes and Livery drivers, building a unified Lyft presence internationally, and enabling Autonomous Vehicles (AVs) domestically and abroad. These teams are at the center of innovation and the future of Lyft\u2019s growth, and this role would be directly shaping the strategic roadmap for these crucial areas. As an Analytics Lead, you will collaborate with our world class team of engineers, product managers, and designers to think critically about the current rider and driver experience and implement product enhancements to facilitate market growth.&lt;/p&gt; &lt;p&gt;The ideal candidate can apply strong business acumen to propose product and marketplace changes, and is comfortable working with a highly cross functional team. This role will help define Lyft\u2019s strategy for growing luxury modes, setting the strategic roadmap for pricing, driver pay, and product development. In this role, you will help us tackle problems such as:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;How should we be pricing our premium Luxury products? Who are our current Luxury riders and what segment is most likely to grow our rider base?&lt;/li&gt; &lt;li&gt;How can we best merchandise Luxury rideshare products within the Lyft app? What product features or app changes would improve the rider experience and motivate",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 7,
+      "match_reason": "Data Analyst role at major tech company with strong skill match in SQL/Python/analytics tools, but experience level requirements and seniority expectations are unclear from truncated job description.",
       "skills_matched": [
         "Python",
         "SQL",
         "Tableau",
         "Power BI",
-        "ETL",
-        "Data modeling",
-        "AWS"
-      ]
-    },
-    {
-      "title": "Data Scientist, Supply and Operations Technology, Lyft Urban Solutions",
-      "company": "Lyft",
-      "location": "New York, NY",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8402782002?gh_jid=8402782002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;The Lyft Urban Solution team is developing the future of micromobility and is looking for a Data Scientist to inform and drive decision-making that charts the way. From New York\u2019s Citi Bike to San Francisco\u2019s Bay Wheels, our micromobility systems depend on smart data-informed decisions to operate efficiently and at scale. Analyses, insights, and algorithms guide both planning and operations, and we\u2019re looking for passionate, driven Data Scientists to take on some of the most interesting and impactful problems in micromobility.&amp;nbsp;&lt;/p&gt; &lt;p&gt;The set of problems tackled by the Lyft Urban Solutions Operations Technology Team is incredibly diverse. They cut across optimization, prediction, simulation, inference, transportation, analytics and mapping. We collaborate with and inform a wide range of stakeholders, from executives to hardware specialists to local market operations teams. We&#39;re looking for someone who is passionate about solving mathematical problems with data, and is excited about working in a fast-paced, innovative and collegial environment.&lt;/p&gt; &lt;h1&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Partner with Engineers, Product Managers, and Business Partners to frame problems, both mathematically and within the business context&lt;/li&gt; &lt;li&gt;Perform exploratory data analysis to gain a deeper understanding of the problem&lt;/li&gt; &lt;li&gt;Develop, calibrate, refine, and leverage numerical models (e.g., statistical, simulation)&lt;/li&gt; &lt;li&gt;Collaborate with Software Engineers to, refine, monitor and troubleshoot algorithms in production&lt;/li&gt; &lt;li&gt;Design and implement both simulated and live experiments&lt;/li&gt; &lt;li&gt;Analyze experimental and observational data; communic",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 7,
-      "match_reason": "Data Scientist role with strong skill alignment in Python/SQL/ML and relevant experience, but job posting appears to target mid-level candidates without explicit entry-level language, and location/sponsorship requirements unclear.",
-      "skills_matched": [
-        "Python",
-        "SQL",
-        "Machine Learning",
-        "Statistical Analysis",
-        "Data Analysis"
+        "Analytics",
+        "Data visualization",
+        "Statistical analysis"
       ]
     },
     {
@@ -54,35 +61,17 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 7,
-      "match_reason": "Strong ML/AI skill match (PyTorch, TensorFlow, transformers, RAG) and entry-level appropriate, but Core Engineering role suggests senior IC expectations and no explicit new-grad language; experience level requirements unclear from job posting.",
+      "match_reason": "Strong ML/AI skill alignment (PyTorch, transformers, LLMs) and relevant project experience, but job seniority level is unclear and may exceed entry-level expectations for Core Engineering role.",
       "skills_matched": [
         "Python",
         "PyTorch",
         "TensorFlow",
-        "Machine Learning",
-        "Deep Learning",
-        "Transformers",
+        "transformers",
         "LangChain",
         "RAG",
+        "SQL",
+        "Docker",
         "AWS"
-      ]
-    },
-    {
-      "title": "Machine Learning Engineer, Customer Support Engineering",
-      "company": "Airbnb",
-      "location": "Remote-USA",
-      "url": "https://careers.airbnb.com/positions/7826337?gh_jid=7826337",
-      "posted": "2026-04-23T13:44:57-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-family: helvetica, arial, sans-serif; font-size: 12pt;&quot;&gt;Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible for guests to connect with communities in a more authentic way.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif; color: #000000;&quot;&gt;&lt;strong&gt;The Community You Will Join: &lt;/strong&gt;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;color: #000000; font-family: arial, helvetica, sans-serif;&quot;&gt;Machine Learning and Artificial Intelligence are at the heart of the Airbnb product. From Trust to Payments, and from Customer Service to Marketing we rely on ML to ensure that guests and hosts have the best possible experience with Airbnb.&amp;nbsp;&lt;br&gt;The Core ML team in Community Support is the team responsible for adopting the Agentic AI technologies to enable an intelligent, scalable and exceptional customer service experience. We are responsible for developing the Chat AI assistant, Voice AI Assistant and more! The team is constantly exploring the SOTA Agentic architecture, develops and enhances various AI models, ML services and leverages tools including SFT, Reinforcement learning, Distillation, RAG/Search, &amp;nbsp;LLM evaluation and testing automation, feedback-based learning and guardrail for a wide range of applications in Airbnb.&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif; color: #000000;&quot;&gt;&lt;strong&gt;The Difference You Will Make:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;We believe our current customer experiences in these domains are only scratching",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 7,
-      "match_reason": "Rule-based: 3 skill matches",
-      "skills_matched": [
-        "machine learning",
-        "rag",
-        "llm"
       ]
     },
     {
@@ -96,16 +85,15 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 7,
-      "match_reason": "Data/ML role with strong skill alignment (Python, SQL, ML frameworks, cloud tools) and experience level appropriate for entry-level, but job description lacks explicit new-grad confirmation and experience requirements are unclear.",
+      "match_reason": "Data/ML role with strong skill alignment (Python, SQL, ML frameworks, ETL, cloud tools), but job description is incomplete and experience level requirements are unclear.",
       "skills_matched": [
         "Python",
         "SQL",
-        "PyTorch",
-        "TensorFlow",
-        "AWS",
+        "ML/AI frameworks",
         "ETL",
-        "Data analysis",
-        "Machine learning"
+        "AWS",
+        "Data engineering",
+        "MLOps"
       ]
     },
     {
@@ -119,18 +107,18 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 7,
-      "match_reason": "Data Engineer role with strong skill match (Python, SQL, ETL, PySpark, AWS, Airflow, MLflow) and clear analytics focus, but experience level requirement unclear and role may lean slightly senior for entry-level candidate.",
+      "match_reason": "Data Engineer role with strong skill alignment (Python, SQL, ETL, PySpark, AWS, Airflow, Docker) and entry-level positioning, but location (Bay Area) and H1-B sponsorship uncertainty are potential concerns.",
       "skills_matched": [
         "Python",
         "SQL",
         "ETL",
         "PySpark",
-        "AWS (S3/Glue/Athena)",
+        "AWS",
         "Airflow",
-        "DVC",
         "Docker",
-        "MLflow",
-        "PostgreSQL"
+        "PostgreSQL",
+        "DVC",
+        "MLflow"
       ]
     },
     {
@@ -144,7 +132,7 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 7,
-      "match_reason": "Data engineering role with strong skill match (Python, SQL, Spark, AWS, ETL, Airflow) and experience level unclear, but candidate has relevant project experience and is graduating May 2026 which aligns with timeline.",
+      "match_reason": "Strong data engineering skill match (Python, SQL, Spark, AWS, ETL, Airflow) and entry-level timeline (May 2026 grad), but job description appears cut off and no explicit 'new grad' language visible; experience level requirement unclear.",
       "skills_matched": [
         "Python",
         "SQL",
@@ -167,17 +155,13 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 7,
-      "match_reason": "Strong data/ML skills match for entry-level data scientist role, but job description lacks explicit 'new grad' language and experience requirements are unclear.",
+      "match_reason": "Data scientist role at established company with strong skill match (Python, SQL, ML/AI), but experience level requirements unclear and no explicit new-grad language found in posting.",
       "skills_matched": [
         "Python",
         "SQL",
-        "PyTorch",
-        "TensorFlow",
-        "XGBoost",
-        "transformers",
-        "ETL",
-        "AWS",
-        "MLflow"
+        "Machine Learning",
+        "Data Analysis",
+        "Statistics"
       ]
     },
     {
@@ -191,13 +175,14 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 7,
-      "match_reason": "Entry-level data scientist role with strong skill alignment in Python, SQL, and ML/AI, but experience level requirements and specific tools not explicitly stated in job description.",
+      "match_reason": "Data scientist role at major tech company with strong skill alignment (Python, SQL, ML/AI), but no explicit entry-level designation and Bay Area location may complicate H1-B sponsorship timeline for May 2026 graduate.",
       "skills_matched": [
         "Python",
         "SQL",
         "Machine Learning",
-        "Data Analysis",
-        "Statistical Modeling"
+        "Analytics",
+        "Data visualization",
+        "Statistical analysis"
       ]
     },
     {
@@ -211,15 +196,17 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 6,
-      "match_reason": "Strong AI/ML technical skills and GenAI experience align well with Applied AI Engineer role, but job level unclear (may be mid-level), and Anthropic typically targets stronger candidates; unclear if explicitly entry-level.",
+      "match_reason": "Strong AI/ML technical skills and relevant project experience, but role appears mid-level focused on enterprise systems rather than explicitly entry-level, and unclear if H1-B sponsorship available.",
       "skills_matched": [
         "Python",
+        "PyTorch",
+        "TensorFlow",
         "LangChain",
         "RAG",
-        "Claude/GPT-4o",
-        "PyTorch",
-        "transformers",
-        "Hugging Face",
+        "Claude/LLMs",
+        "Transformers",
+        "MLOps",
+        "Docker",
         "AWS"
       ]
     },
@@ -234,36 +221,16 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 6,
-      "match_reason": "Strong AI/ML technical skills and relevant GenAI experience, but role appears mid-level focused on applied AI systems rather than explicitly entry-level, and San Francisco location may complicate H1-B sponsorship timing for May 2026 grad.",
+      "match_reason": "Strong AI/ML technical skills and relevant project experience, but 'Applied AI Engineer' typically requires 2-3 years professional experience and the role focuses on AI systems engineering rather than entry-level data analytics.",
       "skills_matched": [
         "Python",
-        "LangChain",
-        "RAG",
-        "Claude/GPT-4o",
         "PyTorch",
+        "TensorFlow",
+        "LangChain",
         "transformers",
-        "ML fundamentals"
-      ]
-    },
-    {
-      "title": "Data Analyst - Global Growth Luxury Strategy",
-      "company": "Lyft",
-      "location": "New York, NY",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8514400002?gh_jid=8514400002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;Data is at the heart of Lyft\u2019s products and decision-making. You will leverage data and rigorous, analytical thinking to shape our products and make business decisions. This will involve performing rigorous product deep dives, identifying opportunities for product enhancements, and measuring the impact of new features.&lt;/p&gt; &lt;p&gt;The Global Growth team is at the forefront of innovation at Lyft, focused on expanding Lyft beyond North American rideshare\u2019s core products. This includes our premium Luxury modes and Livery drivers, building a unified Lyft presence internationally, and enabling Autonomous Vehicles (AVs) domestically and abroad. These teams are at the center of innovation and the future of Lyft\u2019s growth, and this role would be directly shaping the strategic roadmap for these crucial areas. As an Analytics Lead, you will collaborate with our world class team of engineers, product managers, and designers to think critically about the current rider and driver experience and implement product enhancements to facilitate market growth.&lt;/p&gt; &lt;p&gt;The ideal candidate can apply strong business acumen to propose product and marketplace changes, and is comfortable working with a highly cross functional team. This role will help define Lyft\u2019s strategy for growing luxury modes, setting the strategic roadmap for pricing, driver pay, and product development. In this role, you will help us tackle problems such as:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;How should we be pricing our premium Luxury products? Who are our current Luxury riders and what segment is most likely to grow our rider base?&lt;/li&gt; &lt;li&gt;How can we best merchandise Luxury rideshare products within the Lyft app? What product features or app changes would improve the rider experience and motivate",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 6,
-      "match_reason": "Data analyst role with strong skill match (SQL, Python, analytics tools) and appropriate experience level, but job description is incomplete and experience requirements are unclear.",
-      "skills_matched": [
-        "SQL",
-        "Python",
-        "Tableau",
-        "Power BI",
-        "analytical thinking",
-        "data-driven decision making"
+        "Claude/GPT-4o",
+        "RAG",
+        "MLOps fundamentals"
       ]
     },
     {
@@ -277,15 +244,13 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 6,
-      "match_reason": "Data Engineer role at top tech company with strong skill match (Python, SQL, ETL, AWS, Airflow, Docker), but job description incomplete and experience level requirements unclear; candidate is overqualified in ML/AI but fits data engineering focus.",
+      "match_reason": "Data Engineer role at Lyft is a strong data/tech fit with excellent skill overlap (Python, SQL, ETL, AWS), but job posting lacks explicit entry-level/new-grad language and experience requirements are unclear, plus Ukraine location may complicate H1-B sponsorship needs.",
       "skills_matched": [
         "Python",
         "SQL",
         "ETL",
         "AWS",
-        "Airflow",
-        "Docker",
-        "PySpark"
+        "data engineering fundamentals"
       ]
     },
     {
@@ -299,14 +264,15 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 6,
-      "match_reason": "Strong ML/AI skills and relevant experience, but job appears mid-level (no explicit entry-level language) and requires proven pricing/marketplace modeling experience that candidate lacks.",
+      "match_reason": "Strong ML/data science skills and relevant experience, but job likely requires 2-3+ years experience; no explicit entry-level language in the posting, and Lyft DS roles typically target mid-level candidates despite candidate's excellent technical fit.",
       "skills_matched": [
         "Python",
         "SQL",
+        "Machine Learning",
+        "XGBoost",
         "PyTorch",
         "TensorFlow",
-        "XGBoost",
-        "ML modeling"
+        "MLOps"
       ]
     },
     {
@@ -320,14 +286,33 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 6,
-      "match_reason": "Strong ML/AI skill match and entry-level positioning, but job title 'Data Scientist, Algorithms' at Lyft suggests mid-level complexity; no explicit new-grad language found in truncated posting.",
+      "match_reason": "Strong ML/data science skills and relevant experience, but job is ambiguous on experience level (no explicit entry-level designation) and 'Algorithms' focus may require deeper academic ML background than current experience demonstrates.",
       "skills_matched": [
         "Python",
         "SQL",
         "Machine Learning",
-        "Algorithms",
-        "PyTorch",
-        "TensorFlow"
+        "Data Science",
+        "Statistical Analysis"
+      ]
+    },
+    {
+      "title": "Data Scientist, Supply and Operations Technology, Lyft Urban Solutions",
+      "company": "Lyft",
+      "location": "New York, NY",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8402782002?gh_jid=8402782002",
+      "posted": "2026-05-01T14:21:31-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;The Lyft Urban Solution team is developing the future of micromobility and is looking for a Data Scientist to inform and drive decision-making that charts the way. From New York\u2019s Citi Bike to San Francisco\u2019s Bay Wheels, our micromobility systems depend on smart data-informed decisions to operate efficiently and at scale. Analyses, insights, and algorithms guide both planning and operations, and we\u2019re looking for passionate, driven Data Scientists to take on some of the most interesting and impactful problems in micromobility.&amp;nbsp;&lt;/p&gt; &lt;p&gt;The set of problems tackled by the Lyft Urban Solutions Operations Technology Team is incredibly diverse. They cut across optimization, prediction, simulation, inference, transportation, analytics and mapping. We collaborate with and inform a wide range of stakeholders, from executives to hardware specialists to local market operations teams. We&#39;re looking for someone who is passionate about solving mathematical problems with data, and is excited about working in a fast-paced, innovative and collegial environment.&lt;/p&gt; &lt;h1&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Partner with Engineers, Product Managers, and Business Partners to frame problems, both mathematically and within the business context&lt;/li&gt; &lt;li&gt;Perform exploratory data analysis to gain a deeper understanding of the problem&lt;/li&gt; &lt;li&gt;Develop, calibrate, refine, and leverage numerical models (e.g., statistical, simulation)&lt;/li&gt; &lt;li&gt;Collaborate with Software Engineers to, refine, monitor and troubleshoot algorithms in production&lt;/li&gt; &lt;li&gt;Design and implement both simulated and live experiments&lt;/li&gt; &lt;li&gt;Analyze experimental and observational data; communic",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 6,
+      "match_reason": "Data scientist role with strong technical skill match (Python, SQL, ML frameworks) and relevant project experience, but job description incomplete and experience level requirements unclear.",
+      "skills_matched": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Data Analysis",
+        "Statistics"
       ]
     },
     {
@@ -341,14 +326,15 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 6,
-      "match_reason": "Strong AI/ML skill alignment and relevant GenAI experience, but Forward Deployed Engineer typically requires 2-5 years experience and involves client deployment rather than pure data/ML work, creating unclear seniority fit.",
+      "match_reason": "Strong AI/ML technical skills and relevant GenAI experience, but 'Forward Deployed Engineer' appears to be a specialized/mid-level role rather than explicitly entry-level, and job description is incomplete making seniority requirements unclear.",
       "skills_matched": [
         "Python",
         "LangChain",
-        "Claude/GPT-4o",
         "RAG",
+        "Claude/GPT models",
         "transformers",
-        "LangGraph"
+        "prompt engineering",
+        "ML fundamentals"
       ]
     },
     {
@@ -362,14 +348,36 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 6,
-      "match_reason": "Strong ML/AI skill match and entry-level appropriate, but job title suggests mid-level ML Engineer role without explicit new-grad language; experience level requirements unclear from truncated posting.",
+      "match_reason": "ML/AI role with strong technical skill overlap (Python, PyTorch, TensorFlow, transformers), but job description is incomplete and seniority level unclear, making it difficult to confirm entry-level positioning.",
+      "skills_matched": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "Transformers",
+        "SQL",
+        "Docker",
+        "AWS",
+        "GitHub Actions"
+      ]
+    },
+    {
+      "title": "Machine Learning Engineer, Customer Support Engineering",
+      "company": "Airbnb",
+      "location": "Remote-USA",
+      "url": "https://careers.airbnb.com/positions/7826337?gh_jid=7826337",
+      "posted": "2026-04-23T13:44:57-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-family: helvetica, arial, sans-serif; font-size: 12pt;&quot;&gt;Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible for guests to connect with communities in a more authentic way.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif; color: #000000;&quot;&gt;&lt;strong&gt;The Community You Will Join: &lt;/strong&gt;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;color: #000000; font-family: arial, helvetica, sans-serif;&quot;&gt;Machine Learning and Artificial Intelligence are at the heart of the Airbnb product. From Trust to Payments, and from Customer Service to Marketing we rely on ML to ensure that guests and hosts have the best possible experience with Airbnb.&amp;nbsp;&lt;br&gt;The Core ML team in Community Support is the team responsible for adopting the Agentic AI technologies to enable an intelligent, scalable and exceptional customer service experience. We are responsible for developing the Chat AI assistant, Voice AI Assistant and more! The team is constantly exploring the SOTA Agentic architecture, develops and enhances various AI models, ML services and leverages tools including SFT, Reinforcement learning, Distillation, RAG/Search, &amp;nbsp;LLM evaluation and testing automation, feedback-based learning and guardrail for a wide range of applications in Airbnb.&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif; color: #000000;&quot;&gt;&lt;strong&gt;The Difference You Will Make:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;We believe our current customer experiences in these domains are only scratching",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 6,
+      "match_reason": "Strong ML/AI skills and relevant experience, but role appears mid-level (no explicit entry-level language) and Airbnb typically targets candidates with 2+ years in production ML roles.",
       "skills_matched": [
         "Python",
         "PyTorch",
         "TensorFlow",
         "transformers",
-        "Docker",
-        "GitHub Actions",
+        "LangChain",
         "AWS"
       ]
     },
@@ -384,16 +392,37 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 6,
-      "match_reason": "Strong data engineer technical skills and ML/AI background, but role is remote-Mexico (not US/remote US), and experience level/seniority requirements unclear from truncated job description.",
+      "match_reason": "Data Engineer role with strong technical skill match (Python, SQL, ETL, Spark, cloud), but remote Mexico location conflicts with candidate's US/remote preference and H1B sponsorship needs; experience level not explicitly stated as entry-level.",
       "skills_matched": [
         "Python",
         "SQL",
+        "ETL",
         "PySpark",
         "AWS",
-        "ETL",
-        "Airflow",
-        "Docker",
-        "Data Engineering fundamentals"
+        "Docker"
+      ]
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Dropbox",
+      "location": "Remote - US: Select locations",
+      "url": "https://jobs.dropbox.com/listing/7762004?gh_jid=7762004",
+      "posted": "2026-04-28T10:09:23-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;h2&gt;Role Description&lt;/h2&gt; &lt;p&gt;&lt;span class=&quot; author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj6z89zz79zuu6z87zz69zz65zelz65zmz77z5z68zrz70zgobz82z1o9z69zz67zz79zz67z&quot;&gt;We&#39;re looking for a &lt;/span&gt;&lt;span class=&quot; author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz89zz77zz77zxz78z84z84zngz66zz66z9ubz85zz88zpifz74zz65zz66z4bz80zz78znz67zz68z&quot;&gt;Data Scientist&lt;/span&gt; &lt;span class=&quot; author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj6z89zz79zuu6z87zz69zz65zelz65zmz77z5z68zrz70zgobz82z1o9z69zz67zz79zz67z&quot;&gt;to partner with product&lt;/span&gt;&lt;span class=&quot; author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qowz80zsz83zz68zklz81zz67z11hz69z84z69zxqz82zvz90zz88zxihz68zz78zlrz67zz77z0&quot;&gt;, engineering, and design &lt;/span&gt;&lt;span class=&quot; author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj6z89zz79zuu6z87zz69zz65zelz65zmz77z5z68zrz70zgobz82z1o9z69zz67zz79zz67z&quot;&gt;teams to answer key questions about how to&lt;/span&gt;&lt;span class=&quot; author-d-42z69zz85zx9z84zz79zvz66zz71z4yz65zz67znhz79zc739z71zk7z68z3wz89zo1z70zz87zz83z0z73zz84zeoz77zhz68zz77zz89zz84z&quot;&gt; grow revenue, &lt;/span&gt;&lt;span class=&quot; author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovvz89zz77zz77zxz78z84z84zngz66zz66z9ubz85zz88zpifz74zz65zz66z4bz80zz78znz67zz68z&quot;&gt;optimize product, &lt;/span&gt;&lt;span class=&quot; author-d-42z69zz85zx9z84zz79zvz66zz71z4yz65zz67znhz79zc739z71zk7z68z3wz89zo1z70zz87zz83z0z73zz84zeoz77zhz68zz77zz89zz84z&quot;&gt;scale &lt;/span&gt;&lt;span class=&quot; author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovwiz73zz66zthz71zz76zz85z2d7z75zq23z77zb2lmz85zz85zz65zz89zdmz79zbz66zz65z&quot;&gt;and monetize the &lt;/span&gt;&lt;span class=&quot; author-d-42z69zz85zx9z84zz79zvz66zz71z4yz65zz67znhz79zc739z71zk7z68z3wz89zo1z70zz87zz83z0z73zz84zeoz77zhz68zz77zz89zz84z&quot;&gt;business, and launch high-impact initiatives. &lt;/span&gt;&lt;span class=&quot; author-d-4z65zz66zl57z75zyiz66zfr2fz87zwz89znuj6z89zz79zuu6z87z",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 6,
+      "match_reason": "Data scientist role at established tech company with strong skill alignment (Python, SQL, ML frameworks, cloud), but no explicit entry-level/new-grad language and Dropbox typically targets candidates with 1-3 years experience.",
+      "skills_matched": [
+        "Python",
+        "SQL",
+        "PyTorch",
+        "TensorFlow",
+        "XGBoost",
+        "AWS",
+        "transformers",
+        "ETL"
       ]
     },
     {
@@ -407,37 +436,16 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 6,
-      "match_reason": "Data science role with strong technical skill match (Python, SQL, ML frameworks), but job posting lacks explicit entry-level/new-grad language and experience requirements are unclear, making fit moderately uncertain despite excellent candidate qualifications.",
-      "skills_matched": [
-        "Python",
-        "SQL",
-        "Machine Learning (PyTorch/TensorFlow)",
-        "XGBoost",
-        "Data Analysis",
-        "Statistics",
-        "ETL/Data Engineering"
-      ]
-    },
-    {
-      "title": "Product Data Scientist - Growth ",
-      "company": "Gusto",
-      "location": "San Francisco, CA;New York, NY",
-      "url": "https://job-boards.greenhouse.io/gusto/jobs/6356147",
-      "posted": "2026-04-29T18:15:38-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p style=&quot;line-height: 1.2;&quot;&gt;&amp;nbsp;&lt;/p&gt; &lt;hr&gt; &lt;p&gt;&lt;strong&gt;About Gusto&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;At Gusto, we&#39;re on a mission to grow the small business economy. We handle the hard stuff \u2014 payroll, health insurance, 401(k)s, and HR \u2014 so owners can focus on their craft and their customers. With teams in Denver, San Francisco, and New York, we support more than 500,000 small businesses nationwide and are building a workplace that reflects the people we serve.&lt;/p&gt; &lt;p&gt;&amp;nbsp;&lt;br&gt;All full-time employees receive competitive base pay, benefits, and equity (RSUs) \u2014 because everyone who helps build Gusto should share in its success. Offer amounts are determined by role, level, and location. Learn more about our&lt;a href=&quot;https://gusto.com/about/careers/total-rewards&quot; target=&quot;_blank&quot;&gt; &lt;u&gt;Total Rewards philosophy&lt;/u&gt;&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;&amp;nbsp;&lt;br&gt;AI is a fundamental part of how work gets done at Gusto. We expect all team members to actively engage with AI tools relevant to their role and grow their fluency as the technology evolves. AI experience requirements vary by role and will be assessed during the interview process.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;About the Role:&lt;/strong&gt;&lt;/p&gt; &lt;p class=&quot;font-claude-response-body break-words whitespace-normal leading-[1.7]&quot;&gt;Gusto is looking for a highly skilled and motivated Data Scientist to join our Growth Data Science team. In this role, you&#39;ll leverage experimentation, statistical inference, and causal analysis to drive strategic decisions that directly impact how Gusto acquires, retains, and grows its customer base. The ideal candidate is a trusted data storyteller with strong statistical and coding skills, and a passion for using data to help small businesses thrive.&lt;/p&gt; &lt;p class=&quot;font-claude-response-body ",
-      "h1b_status": "Verify on myvisajobs.com",
-      "h1b_sponsors": false,
-      "score": 6,
-      "match_reason": "Data scientist role at reputable company with strong skill match (Python, SQL, ML, analytics), but experience level requirements unclear and no explicit new-grad language in posting.",
+      "match_reason": "Data scientist role with strong ML/AI skill match and relevant project experience, but job description is incomplete and seniority level unclear; candidate is well-qualified but entry-level positioning uncertain for Robinhood (typically more competitive).",
       "skills_matched": [
         "Python",
         "SQL",
         "Machine Learning",
-        "Statistics",
-        "Data Analysis",
-        "A/B Testing",
-        "Product Analytics"
+        "Statistical Analysis",
+        "Data Visualization",
+        "AWS",
+        "PyTorch",
+        "TensorFlow"
       ]
     }
   ]
