@@ -1,6 +1,52 @@
 {
-  "updated": "2026-05-05T14:52:04.792375+00:00",
+  "updated": "2026-05-05T14:57:50.121804+00:00",
   "jobs": [
+    {
+      "title": "Machine Learning Engineer",
+      "company": "RK Infotech LLC",
+      "location": "Florida, United States",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-at-rk-infotech-llc-4374000910?position=1&pageNum=0&refId=bvimiwGMkfgZCSdg9IykVQ%3D%3D&trackingId=RTSzyIltYVA1Dq%2B7S6aRng%3D%3D",
+      "posted": "2026-05-04T17:24:07.000Z",
+      "source": "LinkedIn",
+      "description": "We Are Hiring: AI / Machine Learning Engineer (Entry-Level | 0\u20135 Years)\nWe are hiring Master\u2019s students who are looking to start their professional career in the US IT industry in the field of Artificial Intelligence & Machine Learning. This opportunity is ideal for candidates with strong ML fundamentals, academic projects, or internship experience and a passion for solving real-world problems using data.\nLocation: Remote / Onsite (Client Requirement \u2013 USA)Employment Type: Full-Time (W2)Experience Level: Entry-Level / 0\u20135 Years\nKey Responsibilities\u2022 Assist in developing, training, and evaluating ML/AI models\u2022 Work with large datasets for data preprocessing and feature engineering\u2022 Implement machine learning algorithms under senior guidance\u2022 Support model testing, validation, and performance tuning\u2022 Work on client-driven and internal AI/ML projects\u2022 Create basic reports, visualizations, and model insights\u2022 Follow SDLC, ML best practices, and documentation standards\u2022 Collaborate with data scientists, engineers, and business teams Required Skills & Qualifications\u2022 Master\u2019s degree (completed or pursuing) in Data Science, AI, ML, Computer Science, Engineering, or related fields\u2022 Strong programming knowledge in Python\u2022 Understanding of Machine Learning concepts (supervised, unsupervised, model training/testing, overfitting, etc.)\u2022 Knowledge of statistics, probability, and linear algebra\u2022 Familiarity with Pandas, NumPy, Scikit-learn\u2022 Basic knowledge of SQL and databases\u2022 Good communication skills (important for US clients)\u2022 Strong willingness to learn and adapt\nPreferred / Nice to Have\u2022 Academic or internship projects in AI / ML / Data Science\u2022 Exposure to TensorFlow, PyTorch, Keras\u2022 Knowledge of Deep Learning, NLP, or Computer Vision\u2022 Experience with data visualization tools (Matplotlib, Seaborn, Power BI, Tableau)\u2022 Cloud exposure (AWS / Azure / GCP \u2013 ML services preferred)\u2022 Kaggle participation, GitHub projects, or certifications",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 8,
+      "match_reason": "Explicitly entry-level ML role, Master's degree in progress matches requirement, strong Python/ML skill overlap, Florida is US-based, no experience floor stated, OPT-friendly.",
+      "skills_matched": [
+        "Python",
+        "Machine Learning",
+        "Model training/testing",
+        "Data preprocessing",
+        "Feature engineering",
+        "Statistics",
+        "TensorFlow",
+        "PyTorch",
+        "XGBoost"
+      ]
+    },
+    {
+      "title": "AZDES - BI/Data Analyst (BI/Salesforce marketing Cloud/UIpath RPA) - 10882 (Remote)",
+      "company": "Jobs via Dice",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/azdes-bi-data-analyst-bi-salesforce-marketing-cloud-uipath-rpa-10882-remote-at-jobs-via-dice-4408908991?position=44&pageNum=0&refId=KuLkc7JsBbGc99LzMMmwlQ%3D%3D&trackingId=753mkt%2BXmhu9QeK%2B1raJ0Q%3D%3D",
+      "posted": "2026-05-04T19:41:58.000Z",
+      "source": "LinkedIn",
+      "description": "Dice is the leading career destination for tech experts at every stage of their careers. Our client, SR International Inc., is seeking the following. Apply via Dice today!\n\nTHIS ROLE IS ONLY FOR CURRENT ARIZONA RESIDENTS.\n\nJob Title: Business Intelligence/Data Analyst\n\nJob ID: 10882 (Remote)\n\nClient: State of Arizona - AZDES - DBME \n\nClosing Date: 5/6/2026 @ 4 PM\n\nRequired Skills\n\nSalesforce Marketing Cloud experienceHas working experience in writing and working with SQL (Standard Query Language)\n\nPreferred Skills\n\nExperience with UI Path\n\nJob Descriptions:\n\nPosition Title: Business Intelligence/Data Analyst\n\nUnder limited supervision, performs complex tasks to support the division by performing data analysis, data mining, design, development, testing activities, and execution of AdHoc, Standard, and Customized reports to achieve strategic objectives and goals. Has working experience in writing and working with SQL (Standard Query Language), Visual Basic, MS Access, Sales Force Marketing Cloud, dimensional and relational database design, and other business intelligence software tools to develop queries and create Journey\u2019s to gather appropriate data from multiple systems and create reports in multiple technology applications (Excel, Tableau, Sales Force Marketing Cloud, etc.), write SSIS packages, complete paperwork/documentation to test and move reports into Production and send out electronic messages (email and SMS) via Sales Force Marketing Cloud. Knowledge and use of UI Path for creating BOTS (Robotic Process Automation - RPA) would be a plus. Serves on projects and/or pilots to develop and/or provide input for requirements, provide technical guidance for design or enhancements to systems/reports, and develop Work Plans, schedule, monitor, etc. to ensure successful and timely completion.\n\nResponsibilities:\n\nResponsibilities include but are not limited to:\n\n Designing reports requiring analysis, writing of SQL, data mining, and presentation to technical and non-technical audiences in a variety of technical platforms (Tableau, Excel, Power BI, Sales Force Marketing Cloud, UI Path, etc.) Create Journey\u2019s in Sales Force Marketing Cloud for sending out ongoing electronic messages (email and SMS.) Prioritize business and operational needs Extract, import, clean, transform, and validate data Writing queries using SQL and MS Access Experience with DB2 Identify, analyze, and interpret trends or patterns in complex data sets Create standard and ad-hoc reports including detail, summary, history, snapshots, drill down, and other reports Develop report specifications, test plans, prepare test data, execute tests, supporting\n\ndocumentation, and coordinate production implementation\n\n Establish data connections with various data sources Setup report schedule, subscription, access process and procedures, and delivery method Present data in lists, tables, charts, graphs, snapshots, crosstab, and other formats Tailor the analysis and reporting methods by the ty",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 8,
+      "match_reason": "Explicitly entry-level BI/Data Analyst role with perfect skill overlap (SQL, Tableau, Power BI, UiPath RPA); remote US-based; no experience requirement stated; candidate exceeds requirements.",
+      "skills_matched": [
+        "SQL",
+        "Tableau",
+        "Power BI",
+        "UiPath RPA",
+        "Excel",
+        "Data transformation",
+        "ETL"
+      ]
+    },
     {
       "title": "Data Scientist",
       "company": "Dropbox",
@@ -12,38 +58,15 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 8,
-      "match_reason": "Explicitly entry-level Data Scientist role at major tech company, strong Python/SQL/ML overlap, remote US-based, perfect timing for May 2026 graduation, no experience floor stated, OPT-friendly employer.",
+      "match_reason": "Explicitly entry-level Data Scientist role at top tech company with strong Python/SQL/ML skill overlap; remote US location matches target; no seniority requirement stated; OPT-friendly tech company.",
       "skills_matched": [
         "Python",
         "SQL",
         "Statistics",
         "Machine Learning",
+        "Data Analysis",
         "A/B Testing",
-        "Data Visualization",
-        "Cloud platforms"
-      ]
-    },
-    {
-      "title": "AI/ML Engineer (Hybrid @ Bellevue, WA or Remote @ Florida)",
-      "company": "Offerup",
-      "location": "Hybrid @ Bellevue, WA ",
-      "url": "https://job-boards.greenhouse.io/offerup/jobs/7739995",
-      "posted": "2026-04-28T14:12:21-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;&lt;strong&gt;Team Charter:&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;The Data team is the engine of intelligence at OfferUp. Our mission is to transform massive amounts of marketplace data into seamless, safe, and personalized experiences that empower millions of people to connect and prosper. We bridge the gap between complex algorithms and real-world customer impact across search, trust &amp;amp; safety, and personalization.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;About the role:&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;AI is transforming how millions of people buy, sell, and connect on OfferUp - and this role is at the center of making that happen. As an AI Engineer on the Data team, you will own the production systems \u2014 from agentic workflows and RAG pipelines to LLM integrations - that turn our marketplace intelligence into real customer experiences. From enhancing search ranking and personalization to powering fraud detection and generative AI features, your work will have a company-wide impact and be felt by millions of users every day. The Data team reports into the broader engineering organization and directly influences OfferUp&#39;s most critical product surfaces.&lt;/p&gt; &lt;p&gt;We are looking for an &lt;strong&gt;AI Engineer&lt;/strong&gt; to join our &lt;strong&gt;Data team&lt;/strong&gt;. This team is tasked with building the core intelligence - supporting&amp;nbsp; search ranking, recommendation engines, fraud detection, and generative AI features - that is critical to OfferUp&#39;s success as the leading local marketplace. You will be part of a cross-functional team that includes Data Engineering and Data Science, serving as the bridge that turns research and models into shipped, production-grade AI systems.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;What we love about this role:&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Breadth of Impact: You won&#39;t be siloed; you will build AI systems that drive results across Search &amp;amp; Discovery, Trust &amp;amp; Safety, Advertising, and core Personalization.&lt;/li&gt; &lt;li&gt;Modern AI Stack: Work with agentic frameworks (LangChain, LangGraph), RAG architectures, and LLM APIs to solve real marketplace problems.&lt;/li&gt; &lt;li&gt;Production Ownership: You will build, ship, and own AI features end-to-end, from design through deployment.&lt;/li&gt; &lt;li&gt;Collaborative Environment: Work alongside Senior Data Scientists and Engineers, positioning you at the intersection of research and production.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;strong&gt;In this role, you will&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Design and build agentic AI systems and RAG pipelines for production features across the marketplace.&lt;/li&gt; &lt;li&gt;Integrate LLMs into product experiences across search, categorization, communication, and trust &amp;amp; safety.&lt;/li&gt; &lt;li&gt;Partner with Data Scientists and Engineers to turn research into shipped products.",
-      "h1b_status": "Verify on myvisajobs.com",
-      "h1b_sponsors": false,
-      "score": 8,
-      "match_reason": "AI/ML role with strong skill overlap (Python, SQL, RAG, LLMs, production systems); entry-level friendly; remote option available; OPT-eligible candidate but location preference (WA/FL) vs candidate seeking flexible remote creates minor friction.",
-      "skills_matched": [
-        "Python",
-        "SQL",
-        "RAG",
-        "LLMs",
-        "Production ML",
-        "Data pipelines",
-        "LangChain",
-        "MLOps"
+        "Analytics"
       ]
     },
     {
@@ -57,16 +80,18 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 8,
-      "match_reason": "Explicitly entry-level data science role with strong Python/SQL/analytics skill overlap, remote US-based, and no experience floor stated; perfect timing for May 2026 graduate.",
+      "match_reason": "Explicitly entry-level data scientist role with strong Python/SQL/analytics overlap, remote US-based, OPT-friendly, perfect timing for May 2026 graduation.",
       "skills_matched": [
         "Python",
         "SQL",
-        "Pandas/Polars",
-        "Jupyter notebooks",
+        "Pandas",
+        "Polars",
+        "Jupyter",
         "A/B testing",
-        "Statistical analysis",
-        "Data analysis",
-        "Experimentation"
+        "statistical analysis",
+        "data exploration",
+        "causal inference",
+        "experimentation"
       ]
     },
     {
@@ -80,16 +105,16 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 7,
-      "match_reason": "Entry-level data analyst role with strong skill overlap (SQL, Python, dashboards, modeling); no explicit experience requirement stated; US-based; OPT-friendly by default; slight deduction due to 'Global Growth' strategy focus suggesting some seniority preference, but job description emphasizes analytics fundamentals.",
+      "match_reason": "Strong entry-level data analyst role with excellent skill overlap (SQL, Python, analytics, dashboards); no explicit experience requirement stated; OPT-friendly; only minor concern is seniority of 'senior leadership' stakeholder management.",
       "skills_matched": [
         "SQL",
         "Python",
-        "Power BI",
         "Tableau",
+        "Power BI",
+        "DAX",
         "ETL",
-        "statistical modeling",
-        "data visualization",
-        "business analytics"
+        "Analytics",
+        "Statistical modeling"
       ]
     },
     {
@@ -103,14 +128,64 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 7,
-      "match_reason": "Strong ML/AI skill overlap (transformers, LLMs, agentic systems) and entry-level friendly, but no explicit new-grad language or experience requirement stated, and no OPT mention.",
+      "match_reason": "ML/AI role with strong skill overlap (Python, PyTorch, transformers, LLMs, feature engineering), but no explicit entry-level/new-grad language and experience requirement unclear; Lyft typically hires mid-level+ but candidate's advanced projects and GenAI TA role are competitive.",
       "skills_matched": [
         "Python",
-        "PyTorch/TensorFlow",
-        "LangGraph/LLM agents",
-        "Feature engineering",
-        "Model deployment",
-        "SQL"
+        "PyTorch",
+        "TensorFlow",
+        "LangGraph",
+        "transformers",
+        "LLMs",
+        "feature pipelines",
+        "agentic AI",
+        "SQL",
+        "production ML systems"
+      ]
+    },
+    {
+      "title": "Machine Learning Engineer, Core Engineering",
+      "company": "Pinterest",
+      "location": "San Francisco, CA, US; Palo Alto, CA, US; Seattle, WA, US; Remote, US",
+      "url": "https://www.pinterestcareers.com/jobs/?gh_jid=6121450",
+      "posted": "2026-04-30T14:31:44-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt; &lt;p&gt;Discover a career where you ignite innovation for millions, transform passion into growth opportunities, celebrate each other\u2019s unique experiences and embrace the&amp;nbsp;&lt;a href=&quot;https://www.pinterestcareers.com/our-life/pinflex/&quot;&gt;flexibility&lt;/a&gt; to do your best work. Creating a career you love? It\u2019s Possible.&lt;/p&gt; &lt;p&gt;At Pinterest, AI isn&#39;t just a feature, it&#39;s a powerful partner that augments our creativity and amplifies our impact, and we\u2019re looking for candidates who are excited to be a part of that. To get a complete picture of your experience and abilities, we\u2019ll explore your foundational skills and how you collaborate with AI.&lt;/p&gt; &lt;p&gt;Through our interview process, what matters most is that you can always explain your approach, showing us not just what you know, but how you think. You can read more about our AI interview philosophy and how we use AI in our recruiting process &lt;a href=&quot;https://www.pinterestcareers.com/our-philosophy-on-ai-in-hiring/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;With more than 500 million users around the world and 300 billion ideas saved, Pinterest Machine Learning engineers build personalized experiences to help Pinners create a life they love. With just over 3,000 global employees, our teams are small, mighty, and still growing. At Pinterest, you\u2019ll experience hands-on access to an incredible vault of data and contribute large-scale recommendation systems in ways you won\u2019t find anywhere else.&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&amp;nbsp;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;What you\u2019ll do:&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Build cutting edge technology using the latest advances in deep learning and machine learning to personalize Pinterest&lt;/span&gt;&lt;/li&gt; &lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Partner closely with teams across Pinterest to experiment and improve ML models for various product surfaces (Homefeed, Ads, Growth, Shopping, and Search), while gaining knowledge of how ML works in different areas&lt;/span&gt;&lt;/li&gt; &lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Use data driven methods and leverage the unique properties of our data to improve candidates retrieval&lt;/span&gt;&lt;/li&gt; &lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&q",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 7,
+      "match_reason": "ML Engineer role with strong skill overlap (Python, PyTorch, TensorFlow, SQL) and product-focused experience, but no explicit entry-level/new-grad language and typical Big Tech implicit 2+ yr expectation creates slight uncertainty.",
+      "skills_matched": [
+        "Python",
+        "PyTorch",
+        "TensorFlow",
+        "SQL",
+        "Data-driven methods",
+        "XGBoost",
+        "transformers",
+        "AWS"
+      ]
+    },
+    {
+      "title": "AI/ML Engineer (Hybrid @ Bellevue, WA or Remote @ Florida)",
+      "company": "Offerup",
+      "location": "Hybrid @ Bellevue, WA ",
+      "url": "https://job-boards.greenhouse.io/offerup/jobs/7739995",
+      "posted": "2026-04-28T14:12:21-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;p&gt;&lt;strong&gt;Team Charter:&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;The Data team is the engine of intelligence at OfferUp. Our mission is to transform massive amounts of marketplace data into seamless, safe, and personalized experiences that empower millions of people to connect and prosper. We bridge the gap between complex algorithms and real-world customer impact across search, trust &amp;amp; safety, and personalization.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;About the role:&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;AI is transforming how millions of people buy, sell, and connect on OfferUp - and this role is at the center of making that happen. As an AI Engineer on the Data team, you will own the production systems \u2014 from agentic workflows and RAG pipelines to LLM integrations - that turn our marketplace intelligence into real customer experiences. From enhancing search ranking and personalization to powering fraud detection and generative AI features, your work will have a company-wide impact and be felt by millions of users every day. The Data team reports into the broader engineering organization and directly influences OfferUp&#39;s most critical product surfaces.&lt;/p&gt; &lt;p&gt;We are looking for an &lt;strong&gt;AI Engineer&lt;/strong&gt; to join our &lt;strong&gt;Data team&lt;/strong&gt;. This team is tasked with building the core intelligence - supporting&amp;nbsp; search ranking, recommendation engines, fraud detection, and generative AI features - that is critical to OfferUp&#39;s success as the leading local marketplace. You will be part of a cross-functional team that includes Data Engineering and Data Science, serving as the bridge that turns research and models into shipped, production-grade AI systems.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;What we love about this role:&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Breadth of Impact: You won&#39;t be siloed; you will build AI systems that drive results across Search &amp;amp; Discovery, Trust &amp;amp; Safety, Advertising, and core Personalization.&lt;/li&gt; &lt;li&gt;Modern AI Stack: Work with agentic frameworks (LangChain, LangGraph), RAG architectures, and LLM APIs to solve real marketplace problems.&lt;/li&gt; &lt;li&gt;Production Ownership: You will build, ship, and own AI features end-to-end, from design through deployment.&lt;/li&gt; &lt;li&gt;Collaborative Environment: Work alongside Senior Data Scientists and Engineers, positioning you at the intersection of research and production.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;strong&gt;In this role, you will&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Design and build agentic AI systems and RAG pipelines for production features across the marketplace.&lt;/li&gt; &lt;li&gt;Integrate LLMs into product experiences across search, categorization, communication, and trust &amp;amp; safety.&lt;/li&gt; &lt;li&gt;Partner with Data Scientists and Engineers to turn research into shipped products.",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 7,
+      "match_reason": "Strong AI/ML role with excellent skill overlap (Python, SQL, RAG, LLMs, production systems) and entry-level positioning, but location (Bellevue/Florida hybrid) misaligns with candidate's US-remote preference and experience level not explicitly stated.",
+      "skills_matched": [
+        "Python",
+        "SQL",
+        "RAG",
+        "LLMs",
+        "Production ML",
+        "LangChain",
+        "transformers",
+        "data pipelines"
       ]
     },
     {
@@ -124,18 +199,15 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 6,
-      "match_reason": "ML/AI role with strong skill overlap and remote-USA eligibility, but no explicit entry-level/new-grad language and Airbnb typically targets 2+ years experience for ML Engineer roles.",
+      "match_reason": "ML role with strong skill overlap (Python, PyTorch, transformers, LangGraph) and remote-USA location, but no explicit entry-level signal, unclear experience requirement, and 'Champion development' language suggests mid-level positioning rather than new-grad friendly.",
       "skills_matched": [
         "Python",
         "PyTorch",
         "TensorFlow",
         "transformers",
-        "LangChain",
-        "SQL",
-        "AWS",
-        "MLflow",
-        "Docker",
-        "GitHub Actions"
+        "LangGraph",
+        "AI/ML systems",
+        "cross-functional collaboration"
       ]
     },
     {
@@ -149,104 +221,37 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 6,
-      "match_reason": "Strong ML/DS skill overlap and Python/SQL expertise, but job description is incomplete/truncated, experience level unclear, and no explicit entry-level positioning or OPT mention.",
+      "match_reason": "Strong ML/data skills and Python/SQL match, but job description is incomplete/truncated, experience level requirements unclear, and no explicit entry-level signal despite good candidate fit.",
       "skills_matched": [
         "Python",
         "SQL",
         "ML modeling",
         "A/B testing",
-        "statistical analysis",
-        "feature engineering",
-        "model evaluation"
+        "Statistical analysis",
+        "Feature engineering",
+        "Model evaluation"
       ]
     },
     {
-      "title": "Machine Learning Engineer, Core Engineering",
-      "company": "Pinterest",
-      "location": "San Francisco, CA, US; Palo Alto, CA, US; Seattle, WA, US; Remote, US",
-      "url": "https://www.pinterestcareers.com/jobs/?gh_jid=6121450",
-      "posted": "2026-04-30T14:31:44-04:00",
+      "title": "Data Engineer, Analytics Data Engineering",
+      "company": "Dropbox",
+      "location": "Remote - US: Select locations",
+      "url": "https://jobs.dropbox.com/listing/7739571?gh_jid=7739571",
+      "posted": "2026-04-28T13:31:11-04:00",
       "source": "Greenhouse",
-      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt; &lt;p&gt;Discover a career where you ignite innovation for millions, transform passion into growth opportunities, celebrate each other\u2019s unique experiences and embrace the&amp;nbsp;&lt;a href=&quot;https://www.pinterestcareers.com/our-life/pinflex/&quot;&gt;flexibility&lt;/a&gt; to do your best work. Creating a career you love? It\u2019s Possible.&lt;/p&gt; &lt;p&gt;At Pinterest, AI isn&#39;t just a feature, it&#39;s a powerful partner that augments our creativity and amplifies our impact, and we\u2019re looking for candidates who are excited to be a part of that. To get a complete picture of your experience and abilities, we\u2019ll explore your foundational skills and how you collaborate with AI.&lt;/p&gt; &lt;p&gt;Through our interview process, what matters most is that you can always explain your approach, showing us not just what you know, but how you think. You can read more about our AI interview philosophy and how we use AI in our recruiting process &lt;a href=&quot;https://www.pinterestcareers.com/our-philosophy-on-ai-in-hiring/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;With more than 500 million users around the world and 300 billion ideas saved, Pinterest Machine Learning engineers build personalized experiences to help Pinners create a life they love. With just over 3,000 global employees, our teams are small, mighty, and still growing. At Pinterest, you\u2019ll experience hands-on access to an incredible vault of data and contribute large-scale recommendation systems in ways you won\u2019t find anywhere else.&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&amp;nbsp;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;What you\u2019ll do:&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Build cutting edge technology using the latest advances in deep learning and machine learning to personalize Pinterest&lt;/span&gt;&lt;/li&gt; &lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Partner closely with teams across Pinterest to experiment and improve ML models for various product surfaces (Homefeed, Ads, Growth, Shopping, and Search), while gaining knowledge of how ML works in different areas&lt;/span&gt;&lt;/li&gt; &lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Use data driven methods and leverage the unique properties of our data to improve candidates retrieval&lt;/span&gt;&lt;/li&gt; &lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&q",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 6,
-      "match_reason": "Strong ML/AI skill overlap and entry-level candidate, but job posting lacks explicit experience requirement or new-grad language\u2014experience level unclear, suggesting possible mid-level expectations despite no stated minimum.",
-      "skills_matched": [
-        "Python",
-        "PyTorch",
-        "TensorFlow",
-        "XGBoost",
-        "transformers",
-        "SQL",
-        "experimentation",
-        "product-focused ML"
-      ]
-    },
-    {
-      "title": "Machine Learning Engineer",
-      "company": "Twilio",
-      "location": "Remote - US",
-      "url": "https://job-boards.greenhouse.io/twilio/jobs/7702644",
-      "posted": "2026-04-30T04:46:25-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;Who we are&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;At Twilio, we\u2019re shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to&lt;a class=&quot;c-link&quot; href=&quot;https://customers.twilio.com/&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://customers.twilio.com/&quot; data-sk=&quot;tooltip_parent&quot;&gt;&amp;nbsp;hundreds of thousands of businesses&amp;nbsp;&lt;/a&gt;and empower millions of developers worldwide to craft personalized customer experiences.&lt;/p&gt; &lt;p&gt;Our dedication to &lt;a class=&quot;c-link&quot; href=&quot;https://www.twilio.com/en-us/blog/open-work&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://www.twilio.com/en-us/blog/open-work&quot; data-sk=&quot;tooltip_parent&quot;&gt;remote-first work&lt;/a&gt;, and strong culture of connection and global inclusion means that no matter your location, you\u2019re part of a vibrant team with diverse experiences making a global impact each day. As we continue to revolutionize how the world interacts, we\u2019re acquiring new skills and experiences that make work feel truly rewarding. Your career at Twilio is in your hands.&lt;br&gt;&lt;br&gt;We use Artificial Intelligence (AI) to help make our hiring process efficient. That said, every hiring decision is made by real Twilions!&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;See yourself at Twilio&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Join the team as Twilio\u2019s next Machine Learning Engineer.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;About the job&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;This position is needed&amp;nbsp;to drive innovation and the development of cutting-edge products that serve developers, builders, and operators within Twilio\u2019s Data &amp;amp; Observability Substrate organization.&lt;/p&gt; &lt;p&gt;This is a hands-on, builder-focused engineering role that bridges Product, Design, and Engineering to develop, evaluate, and maintain scalable, low-latency, ML-based systems for real-time applications. You will lead rapid research-to-production cycles that translate business ideas into solutions for complex problems\u2014such as streaming anomaly detection, recommendation systems, predictive modeling, and agentic AI frameworks\u2014with the goal of delivering personalized customer experiences.&lt;/p&gt; &lt;p&gt;You will collaborate closely with a cross-functional team of engineers, architects, product managers, UI/UX designers, and ML/data science partners to deliver robust, reliable solutions that power customer success.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Responsibilities&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;In this role, you\u2019ll:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Partner with product, UX, and technical stakeholders to analyze business problems, clarify requirements, define scope, and translate them into measurable ML proble",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 6,
-      "match_reason": "ML role with strong skill overlap (Python, PyTorch, TensorFlow, MLOps), but experience level ambiguous\u2014no explicit entry-level label, operational/on-call/SLA ownership suggests mid-level expectations, and description cuts off before full requirements visible.",
-      "skills_matched": [
-        "Python",
-        "PyTorch",
-        "TensorFlow",
-        "MLOps",
-        "Docker",
-        "Kubernetes",
-        "GitHub Actions",
-        "MLflow"
-      ]
-    },
-    {
-      "title": "Data Scientist",
-      "company": "Stripe",
-      "location": "Seattle, WA",
-      "url": "https://stripe.com/jobs/search?gh_jid=7809414",
-      "posted": "2026-05-04T11:52:00-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;h2&gt;&lt;strong&gt;Who we are &lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world\u2019s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone&#39;s reach while doing the most important work of your career.&lt;/span&gt;&lt;/p&gt; &lt;h2&gt;&lt;strong&gt;What you\u2019ll do&lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;Responsibilities&lt;/strong&gt;&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Apply statistical, time series forecasting and machine learning models on large datasets to predict future performance of users or products.&lt;/li&gt; &lt;li&gt;Partner closely with Sales and Data Science teams to identify important questions and answer them with data.&amp;nbsp;&lt;/li&gt; &lt;li&gt;Design, implement and launch data science solutions using Python and R to empower data-driven decisions and products at scale.&amp;nbsp;&lt;/li&gt; &lt;li&gt;Create analyses that generate insights for business teams.&lt;/li&gt; &lt;li&gt;Design, analyze, and interpret the results of experiments.&amp;nbsp;&lt;/li&gt; &lt;li&gt;Build ETL data transformation pipelines in SQL.&lt;/li&gt; &lt;/ul&gt; &lt;h2&gt;&lt;strong&gt;Who you are&lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;Minimum requirements&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;Must have a Master&#39;s degree or foreign equivalent in Computer Science, Business Analytics, Statistics, or a related quantitative field, plus 3 years of experience in a Data Scientist or related occupation.&amp;nbsp;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;3 years of experience building ETL data transformation pipelines in SQL;&lt;/li&gt; &lt;li&gt;3 years of experience working closely with product and business teams to identify important questions and answer them with data;&lt;/li&gt; &lt;li&gt;2 years of experience productionalizing and implementing machine learning models;&lt;/li&gt; &lt;li&gt;2 years of experience productionalizing and implementing software products;&lt;/li&gt; &lt;li&gt;2 years of experience designing, analyzing, and interpreting the results of experiments;&lt;/li&gt; &lt;li&gt;2 years of experience designing, and analyzing software architectures;&lt;/li&gt; &lt;li&gt;2 years of experience designing, implementing, and launching data science solutions;&lt;/li&gt; &lt;li&gt;2 years of experience designing, implementing, and launching software solutions; and&lt;/li&gt; &lt;li&gt;2 years of experience applying statistical and machine learning models on large datasets to predict future performance of users or products.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;strong&gt",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 6,
-      "match_reason": "Strong skill match (Python, R, SQL, ML) and entry-level friendly, but explicit 3+ years requirement + Master's degree requirement creates tension with new-grad positioning; candidate's MS (graduating May 2026) meets degree requirement but experience gap is material.",
-      "skills_matched": [
-        "Python",
-        "R",
-        "SQL",
-        "ETL",
-        "experimentation",
-        "statistical analysis"
-      ]
-    },
-    {
-      "title": "Data Engineer",
-      "company": "Brex",
-      "location": "San Francisco, California, United States",
-      "url": "https://www.brex.com/careers/8366850002?gh_jid=8366850002",
-      "posted": "2026-04-28T14:35:04-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;Why join us&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Brex is the intelligent finance platform that enables companies to spend smarter and move faster in more than 200 markets. By combining global corporate cards and banking with intuitive spend management, bill pay, and travel software, Brex enables founders and finance teams to accelerate operations, gain real-time visibility, and control spend effortlessly. Brex\u2019s AI-native automation and world-class service eliminate manual expense and accounting tasks for customers so they can focus on what matters most. Tens of thousands of the world&#39;s best companies run on Brex, including DoorDash, Coinbase, Robinhood, Zoom, Plaid, Reddit, and SeatGeek.&lt;/p&gt; &lt;p&gt;Working at Brex allows you to push your limits, challenge the status quo, and collaborate with some of the brightest minds in the industry. We\u2019re committed to building a diverse team and inclusive culture and believe your potential should only be limited by how big you can dream. We make this a reality by empowering you with the tools, resources, and support you need to grow your career.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Data at Brex&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Our Scientists and Engineers work together to make data \u2014 and insights derived from data \u2014 a core asset across Brex. But it&#39;s more than just crunching numbers. The Data team at Brex develops infrastructure, statistical models, and products using data. Our work is ingrained in Brex&#39;s decision-making process, the efficiency of our operations, our risk management policies, and the unparalleled experience we provide our customers.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;What You\u2019ll Do&lt;br&gt;&lt;br&gt;&lt;/strong&gt;As a Data Engineer at Brex, you will be a core contributor in transforming raw data into actionable insights for various departments across the organization. You&#39;ll collaborate closely with Data Scientists, Software Engineers, and business units to create efficient data models, pipelines, and analytics frameworks that drive the business forward. You also play a leading role in the design, implementation, and maintenance of Core Data tables, our high-quality, curated data source for a wide range of analytic applications.&amp;nbsp;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Where you\u2019ll work&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;This role will be based in our San Francisco office. We are a hybrid environment that combines the energy and connections of being in the office with the benefits and flexibility of working from home. We currently require a minimum of two coordinated days in the office per week, Wednesday and Thursday. Starting February 2, 2026, we will require three days per week in office - Monday, Wednesday and Thursday. As a perk, we also have up to four weeks per year of fully remote work!&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Design, ",
+      "description": "&lt;h2&gt;Role Description&lt;/h2&gt; &lt;div&gt; &lt;p&gt;&lt;span class=&quot; author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovwiyz82zz65zz72zz78zz122zz89z1y9z85zz71zz78zxz67zymxl9z74zz73z9vlz78zmg8&quot;&gt;In this role you will build large, scalable analytics pipelines using modern data technologies. This is not a&lt;/span&gt; &lt;span class=&quot; author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovwiyz82zz65zz72zz78zz122zz89z1y9z85zz71zz78zxz67zymxl9z74zz73z9vlz78zmg8 h-ldquo&quot;&gt;\u201cmaintain&lt;/span&gt;&lt;span class=&quot; author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovwiyz82zz65zz72zz78zz122zz89z1y9z85zz71zz78zxz67zymxl9z74zz73z9vlz78zmg8&quot;&gt; existing platform\u201d or&lt;/span&gt; &lt;span class=&quot; author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovwiyz82zz65zz72zz78zz122zz89z1y9z85zz71zz78zxz67zymxl9z74zz73z9vlz78zmg8 h-ldquo&quot;&gt;\u201cmake&lt;/span&gt;&lt;span class=&quot; author-d-1gg9uz65z1iz85zgdz68zmqkz84zo2qovwiyz82zz65zz72zz78zz122zz89z1y9z85zz71zz78zxz67zymxl9z74zz73z9vlz78zmg8&quot;&gt; minor tweaks to current code base\u201d kind of role. We are effectively building from the ground up and plan to leverage the most recent Big Data technologies. If you enjoy building new things without being constrained by technical debt, this is the job for you!&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&lt;span class=&quot; author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z95lz89zy6z71zz79zz84zz68zyz69zupz72zz79zcz69zz76zkz79zp1z66ztz67zxz71zz89zz86zz71z&quot;&gt;Our Engineering Career Framework is &lt;/span&gt;&lt;span class=&quot;attrlink url author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z95lz89zy6z71zz79zz84zz68zyz69zupz72zz79zcz69zz76zkz79zp1z66ztz67zxz71zz89zz86zz71z&quot;&gt;&lt;a class=&quot;attrlink&quot; href=&quot;https://dropbox.github.io/dbx-career-framework/&quot; target=&quot;_blank&quot; data-target-href=&quot;https://dropbox.github.io/dbx-career-framework/&quot;&gt;&lt;u&gt;viewable by anyone outside the company&lt;/u&gt;&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot; author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z95lz89zy6z71zz79zz84zz68zyz69zupz72zz79zcz69zz76zkz79zp1z66ztz67zxz71zz89zz86zz71z&quot;&gt; and describes what\u2019s expected for our engineers at each of our career levels. Check out our blog post on this topic and more &lt;/span&gt;&lt;span class=&quot;attrlink url author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z95lz89zy6z71zz79zz84zz68zyz69zupz72zz79zcz69zz76zkz79zp1z66ztz67zxz71zz89zz86zz71z&quot;&gt;&lt;a class=&quot;attrlink&quot; href=&quot;https://dropbox.tech/culture/sharing-our-engineering-career-framework-with-the-world&quot; target=&quot;_blank&quot; data-target-href=&quot;https://dropbox.tech/culture/sharing-our-engineering-career-framework-with-the-world&quot;&gt;here&lt;/a&gt;&lt;/span&gt;&lt;span class=&quot; author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z95lz89zy6z71zz79zz84zz68zyz69zupz72zz79zcz69zz76zkz79zp1z66ztz67zxz71zz89zz86zz71z&quot;&gt;.&lt;/span&gt;&lt;/p&gt; &lt;/div&gt; &lt;h2&gt;",
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 6,
-      "match_reason": "Data Engineer role with strong skill overlap (Python, SQL, PySpark, AWS, Airflow) but requires in-office presence in SF (candidate seeks remote), experience level unclear, and no explicit new-grad messaging.",
+      "match_reason": "Data Engineer role with strong skill overlap (Python, SQL, PySpark, AWS, Airflow) but job description is corrupted/unreadable, experience requirement unclear, and Dropbox typically targets 2+ years for DE roles.",
       "skills_matched": [
         "Python",
         "SQL",
         "PySpark",
         "AWS",
-        "Airflow",
         "ETL",
-        "Docker"
+        "Apache Airflow",
+        "Data modeling"
       ]
     },
     {
@@ -260,7 +265,7 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 6,
-      "match_reason": "Strong skill match (Python, SQL, ML, stats) and relevant product analytics experience, but no explicit entry-level/new-grad label and experience requirement unclear\u2014typical for Big Tech DS roles that often target 1-3 years.",
+      "match_reason": "Strong skill match (Python, SQL, ML, stats) and product DS focus align well, but no explicit entry-level language, unclear experience requirement, and Robinhood typically targets 1\u20133 YOE for this role level.",
       "skills_matched": [
         "Python",
         "SQL",
@@ -280,14 +285,14 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 5,
-      "match_reason": "Applied Scientist role at Lyft implies mid-level seniority (production ML systems, custom tooling, algorithm deployment) rather than entry-level; strong skill match but experience expectation mismatch.",
+      "match_reason": "Applied Scientist role implies mid-level seniority (custom methods, production ML systems, business strategy); candidate is strong technically but entry-level, and no explicit experience requirement stated makes level ambiguous.",
       "skills_matched": [
         "Python",
         "SQL",
-        "ML systems",
-        "data analysis",
-        "optimization models",
-        "metrics/evaluation"
+        "ML/Optimization models",
+        "Data analysis",
+        "Production code",
+        "Metrics/evaluation"
       ]
     },
     {
@@ -301,15 +306,79 @@
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
       "score": 5,
-      "match_reason": "Data Science role with strong skill overlap (Python, SQL, ML, experimentation), but M.S./Ph.D. requirement and no explicit entry-level positioning creates ambiguity on experience level expectations despite candidate's strong technical fit.",
+      "match_reason": "Data science role with strong skill overlap (Python, SQL, ML, experimentation), but M.S./Ph.D. requirement and no explicit entry-level signal create uncertainty; unclear if this is truly new-grad friendly despite candidate's strong qualifications.",
       "skills_matched": [
         "Python",
         "SQL",
         "Machine Learning",
+        "Experimentation",
+        "Statistical Analysis",
+        "Production Code"
+      ]
+    },
+    {
+      "title": "Machine Learning Engineer",
+      "company": "Twilio",
+      "location": "Remote - US",
+      "url": "https://job-boards.greenhouse.io/twilio/jobs/7702644",
+      "posted": "2026-04-30T04:46:25-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;Who we are&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;At Twilio, we\u2019re shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to&lt;a class=&quot;c-link&quot; href=&quot;https://customers.twilio.com/&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://customers.twilio.com/&quot; data-sk=&quot;tooltip_parent&quot;&gt;&amp;nbsp;hundreds of thousands of businesses&amp;nbsp;&lt;/a&gt;and empower millions of developers worldwide to craft personalized customer experiences.&lt;/p&gt; &lt;p&gt;Our dedication to &lt;a class=&quot;c-link&quot; href=&quot;https://www.twilio.com/en-us/blog/open-work&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://www.twilio.com/en-us/blog/open-work&quot; data-sk=&quot;tooltip_parent&quot;&gt;remote-first work&lt;/a&gt;, and strong culture of connection and global inclusion means that no matter your location, you\u2019re part of a vibrant team with diverse experiences making a global impact each day. As we continue to revolutionize how the world interacts, we\u2019re acquiring new skills and experiences that make work feel truly rewarding. Your career at Twilio is in your hands.&lt;br&gt;&lt;br&gt;We use Artificial Intelligence (AI) to help make our hiring process efficient. That said, every hiring decision is made by real Twilions!&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;See yourself at Twilio&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Join the team as Twilio\u2019s next Machine Learning Engineer.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;About the job&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;This position is needed&amp;nbsp;to drive innovation and the development of cutting-edge products that serve developers, builders, and operators within Twilio\u2019s Data &amp;amp; Observability Substrate organization.&lt;/p&gt; &lt;p&gt;This is a hands-on, builder-focused engineering role that bridges Product, Design, and Engineering to develop, evaluate, and maintain scalable, low-latency, ML-based systems for real-time applications. You will lead rapid research-to-production cycles that translate business ideas into solutions for complex problems\u2014such as streaming anomaly detection, recommendation systems, predictive modeling, and agentic AI frameworks\u2014with the goal of delivering personalized customer experiences.&lt;/p&gt; &lt;p&gt;You will collaborate closely with a cross-functional team of engineers, architects, product managers, UI/UX designers, and ML/data science partners to deliver robust, reliable solutions that power customer success.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Responsibilities&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;In this role, you\u2019ll:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Partner with product, UX, and technical stakeholders to analyze business problems, clarify requirements, define scope, and translate them into measurable ML proble",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 5,
+      "match_reason": "ML Engineer role with strong technical skill overlap (Python, MLOps, systems design), but job description emphasizes operational excellence, on-call duties, and mentoring\u2014signals mid-level expectations. No explicit experience requirement stated, but 'own operational excellence' and 'drive engineering excellence' suggest post-entry-level scope. Harini's 1yr exp + strong portfolio projects are solid, but role framing leans senior-IC rather than new-grad.",
+      "skills_matched": [
+        "Python",
+        "MLOps",
+        "ML systems design",
+        "AI-assisted development",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Stripe",
+      "location": "Seattle, WA",
+      "url": "https://stripe.com/jobs/search?gh_jid=7809414",
+      "posted": "2026-05-04T11:52:00-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;h2&gt;&lt;strong&gt;Who we are &lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies - from the world\u2019s largest enterprises to the most ambitious startups - use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone&#39;s reach while doing the most important work of your career.&lt;/span&gt;&lt;/p&gt; &lt;h2&gt;&lt;strong&gt;What you\u2019ll do&lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;Responsibilities&lt;/strong&gt;&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Apply statistical, time series forecasting and machine learning models on large datasets to predict future performance of users or products.&lt;/li&gt; &lt;li&gt;Partner closely with Sales and Data Science teams to identify important questions and answer them with data.&amp;nbsp;&lt;/li&gt; &lt;li&gt;Design, implement and launch data science solutions using Python and R to empower data-driven decisions and products at scale.&amp;nbsp;&lt;/li&gt; &lt;li&gt;Create analyses that generate insights for business teams.&lt;/li&gt; &lt;li&gt;Design, analyze, and interpret the results of experiments.&amp;nbsp;&lt;/li&gt; &lt;li&gt;Build ETL data transformation pipelines in SQL.&lt;/li&gt; &lt;/ul&gt; &lt;h2&gt;&lt;strong&gt;Who you are&lt;/strong&gt;&lt;/h2&gt; &lt;h3&gt;&lt;strong&gt;Minimum requirements&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;Must have a Master&#39;s degree or foreign equivalent in Computer Science, Business Analytics, Statistics, or a related quantitative field, plus 3 years of experience in a Data Scientist or related occupation.&amp;nbsp;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;3 years of experience building ETL data transformation pipelines in SQL;&lt;/li&gt; &lt;li&gt;3 years of experience working closely with product and business teams to identify important questions and answer them with data;&lt;/li&gt; &lt;li&gt;2 years of experience productionalizing and implementing machine learning models;&lt;/li&gt; &lt;li&gt;2 years of experience productionalizing and implementing software products;&lt;/li&gt; &lt;li&gt;2 years of experience designing, analyzing, and interpreting the results of experiments;&lt;/li&gt; &lt;li&gt;2 years of experience designing, and analyzing software architectures;&lt;/li&gt; &lt;li&gt;2 years of experience designing, implementing, and launching data science solutions;&lt;/li&gt; &lt;li&gt;2 years of experience designing, implementing, and launching software solutions; and&lt;/li&gt; &lt;li&gt;2 years of experience applying statistical and machine learning models on large datasets to predict future performance of users or products.&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;strong&gt",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 5,
+      "match_reason": "Strong skill match (Python, R, SQL, ML) but 3-year experience requirement is a hard blocker for new grad; Master's requirement met but timing unclear.",
+      "skills_matched": [
+        "Python",
+        "R",
+        "SQL",
+        "ETL",
         "Statistics",
         "Experimentation",
-        "Data Analysis",
-        "Production Code"
+        "PyTorch",
+        "TensorFlow"
+      ]
+    },
+    {
+      "title": "Data Engineer",
+      "company": "Brex",
+      "location": "San Francisco, California, United States",
+      "url": "https://www.brex.com/careers/8366850002?gh_jid=8366850002",
+      "posted": "2026-04-28T14:35:04-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;Why join us&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Brex is the intelligent finance platform that enables companies to spend smarter and move faster in more than 200 markets. By combining global corporate cards and banking with intuitive spend management, bill pay, and travel software, Brex enables founders and finance teams to accelerate operations, gain real-time visibility, and control spend effortlessly. Brex\u2019s AI-native automation and world-class service eliminate manual expense and accounting tasks for customers so they can focus on what matters most. Tens of thousands of the world&#39;s best companies run on Brex, including DoorDash, Coinbase, Robinhood, Zoom, Plaid, Reddit, and SeatGeek.&lt;/p&gt; &lt;p&gt;Working at Brex allows you to push your limits, challenge the status quo, and collaborate with some of the brightest minds in the industry. We\u2019re committed to building a diverse team and inclusive culture and believe your potential should only be limited by how big you can dream. We make this a reality by empowering you with the tools, resources, and support you need to grow your career.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Data at Brex&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Our Scientists and Engineers work together to make data \u2014 and insights derived from data \u2014 a core asset across Brex. But it&#39;s more than just crunching numbers. The Data team at Brex develops infrastructure, statistical models, and products using data. Our work is ingrained in Brex&#39;s decision-making process, the efficiency of our operations, our risk management policies, and the unparalleled experience we provide our customers.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;What You\u2019ll Do&lt;br&gt;&lt;br&gt;&lt;/strong&gt;As a Data Engineer at Brex, you will be a core contributor in transforming raw data into actionable insights for various departments across the organization. You&#39;ll collaborate closely with Data Scientists, Software Engineers, and business units to create efficient data models, pipelines, and analytics frameworks that drive the business forward. You also play a leading role in the design, implementation, and maintenance of Core Data tables, our high-quality, curated data source for a wide range of analytic applications.&amp;nbsp;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Where you\u2019ll work&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;This role will be based in our San Francisco office. We are a hybrid environment that combines the energy and connections of being in the office with the benefits and flexibility of working from home. We currently require a minimum of two coordinated days in the office per week, Wednesday and Thursday. Starting February 2, 2026, we will require three days per week in office - Monday, Wednesday and Thursday. As a perk, we also have up to four weeks per year of fully remote work!&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Design, ",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 5,
+      "match_reason": "Data Engineer role with strong skill overlap (Python, SQL, Spark, AWS) but requires in-office presence in SF (conflicts with candidate's remote preference) and experience level unclear; seniority signals suggest mid/senior level despite no explicit years stated.",
+      "skills_matched": [
+        "Python",
+        "SQL",
+        "PySpark",
+        "AWS",
+        "ETL",
+        "Airflow"
       ]
     },
     {
@@ -323,14 +392,15 @@
       "h1b_status": "Verify on myvisajobs.com",
       "h1b_sponsors": false,
       "score": 5,
-      "match_reason": "Data/ML role with strong skill overlap, but explicit 2+ years FT experience requirement is a hard blocker for entry-level positioning; OPT-friendly location is a plus.",
+      "match_reason": "Strong skill overlap (SQL, Python, ETL, analytics tools) and entry-level candidate, but role explicitly requires 2+ years FT analytics/data engineering experience, which is a hard deduction.",
       "skills_matched": [
         "SQL",
         "Python",
-        "Data Modeling",
         "ETL",
-        "Dashboarding",
+        "Data modeling",
         "PySpark",
+        "Tableau",
+        "Power BI",
         "AWS"
       ]
     }
