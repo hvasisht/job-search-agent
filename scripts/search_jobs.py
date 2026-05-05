@@ -306,7 +306,7 @@ def score_with_gemini(jobs):
             job["score"]         = 5
             job["match_reason"]  = "Could not score"
             job["skills_matched"] = []
-        time.sleep(1.2)
+        time.sleep(4.5)  # Gemini free tier: 15 req/min → need >4s between calls
 
     return jobs
 
