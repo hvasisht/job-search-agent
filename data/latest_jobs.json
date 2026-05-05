@@ -1,19 +1,58 @@
 {
-  "updated": "2026-05-05T00:15:59.020671+00:00",
+  "updated": "2026-05-05T13:33:59.635711+00:00",
   "jobs": [
     {
-      "title": "AI Engineer - FDE (Forward Deployed Engineer)",
-      "company": "Databricks",
-      "location": "United States",
-      "url": "https://databricks.com/company/careers/open-positions/job?gh_jid=8335860002",
-      "posted": "2026-04-09T16:51:22-04:00",
+      "title": "Data Engineer",
+      "company": "Lyft",
+      "location": "Ukraine Anywhere",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8461103002?gh_jid=8461103002",
+      "posted": "2026-05-01T14:21:31-04:00",
       "source": "Greenhouse",
-      "description": "&lt;p data-pm-slice=&quot;1 1 []&quot;&gt;CSQ127R66&lt;/p&gt; &lt;p&gt;The AI Forward Deployed Engineering (AI FDE) team is a highly specialized customer-facing AI team at Databricks. We deliver professional services engagements to help our customers build and productionize first-of-its-kind AI applications. We work cross-functionally to shape long-term strategic priorities and initiatives alongside engineering, product, and developer relations, as well as support internal subject matter expert (SME) teams. We view our team as an ensemble: we look for individuals with strong, unique specializations to improve the overall strength of the team. This team is the right fit for you if you love working with customers, teammates, and fueling your curiosity for the latest trends in GenAI, LLMOps, and ML more broadly. This role can be remote.&lt;/p&gt; &lt;p data-renderer-start-pos=&quot;2006&quot;&gt;&lt;strong data-renderer-mark=&quot;true&quot;&gt;The impact you will have:&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Develop cutting-edge GenAI solutions, incorporating the latest techniques from our &lt;a href=&quot;https://www.databricks.com/research/mosaic&quot;&gt;Mosaic AI Research&lt;/a&gt; to solve customer problems.&lt;/li&gt; &lt;li&gt;Own production rollouts of consumer and internally facing GenAI applications.&lt;/li&gt; &lt;li&gt;Serve as a trusted technical advisor to customers across a variety of domains.&lt;/li&gt; &lt;li&gt;Present at conferences such as &lt;a href=&quot;https://www.databricks.com/dataaisummit&quot;&gt;Data + AI Summit&lt;/a&gt;, recognized as a thought leader internally and externally.&lt;/li&gt; &lt;li&gt;Collaborate cross-functionally with the product and engineering teams to influence priorities and shape the product roadmap.&lt;/li&gt; &lt;/ul&gt; &lt;p data-renderer-start-pos=&quot;2367&quot;&gt;&lt;strong data-renderer-mark=&quot;true&quot;&gt;What we look for:&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Experience building GenAI a",
+      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;The Safety and Customer Care (SCC) team at Lyft manages over 1.7 million monthly human and AI interactions and serves as Lyft&#39;s primary direct touchpoint with riders and drivers. We handle critical infrastructure that powers both human associates and AI agents to make riders and drivers feel safe and comfortable while riding or driving with Lyft, transforming every support interaction into a moment of genuine connection.&amp;nbsp;&lt;/p&gt; &lt;p&gt;As a Data Engineer on the SCC team, you will have ownership over the data modeling and pipelines that power SCC\u2019s Associate and AI Agent Platform . Your efforts will be critical to the reliability of our pipelines, execution of third party data integrations, accurate reporting of agents performance, and efficiency improvements that can save millions of dollars / year. You will work cross-functionally to bridge Lyft&#39;s business goals with data engineering. Your efforts will allow access to business and user behavior insights, using huge amounts of Lyft data to fuel several teams such as Analytics, Data Science, Engineering, and many others.&amp;nbsp;&lt;/p&gt; &lt;h2&gt;Responsibilities:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Owner of the core data pipeline, responsible for scaling up data processing flow to meet the rapid data growth at Lyft&lt;/li&gt; &lt;li&gt;Evolve data model and data schema based on business and engineering needs&lt;/li&gt; &lt;li&gt;Implement systems tracking data quality and consistency&lt;/li&gt; &lt;li&gt;Develop tools supporting self-service data pipeline management (ETL)&lt;/li&gt; &lt;li&gt;SQL and MapReduce job tuning to improve data processing performance&lt;/li&gt; &lt;li&gt;Write well-crafted, well-tested, readable, maintainable code&lt;/li&gt; &lt;li&gt;Participate in code reviews to ensure cod",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
+      "score": 10,
+      "match_reason": "Rule-based: 5 skill matches, entry-level signal found",
+      "skills_matched": [
+        "sql",
+        "data science",
+        "analytics",
+        "etl",
+        "data pipeline"
+      ]
+    },
+    {
+      "title": "iOS Software Engineer, Airbnb - New Grad",
+      "company": "Airbnb",
+      "location": "San Francisco, CA, Seattle, WA",
+      "url": "https://careers.airbnb.com/positions/7859317?gh_jid=7859317",
+      "posted": "2026-04-28T13:05:43-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-family: helvetica, arial, sans-serif; font-size: 12pt;&quot;&gt;Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible for guests to connect with communities in a more authentic way.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;The Community You Will Join:&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;The Quality Reputation team is dedicated to building exceptional customer-facing products that enhance trip quality and user reputation. We build systems that define and improve quality on Airbnb: collecting quality signals that elevate the best supply while protecting users through proactive intervention and enforcement. Our mission is to build delightful user products and intelligent capabilities that raise the supply quality on the Airbnb platform. The team is highly collaborative with its partners in design, product, data science, legal, and marketing to deliver features and experiences used by millions of people.&lt;/p&gt; &lt;p&gt;&amp;nbsp;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;The Difference You Will Make:&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;As a Software Engineer (New Grad) at Airbnb, you\u2019ll play a vital role in building, supporting, and refining the products and systems that make Airbnb\u2019s mission possible. Your work will directly contribute to high-quality, reliable experiences for our global community\u2014whether you\u2019re fixing bugs, launching well-defined features, or enhancing existing components. You&#39;ll also have the opportunity to contribute to AI-powered features, applying foundational knowledge of machine learning concepts and modern AI tools to build smarter, more personalized experiences for our hosts and guests. ",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 9,
+      "match_reason": "Rule-based: 2 skill matches, entry-level signal found",
+      "skills_matched": [
+        "machine learning",
+        "data science"
+      ]
+    },
+    {
+      "title": "Software Engineer, Airbnb - New Grad",
+      "company": "Airbnb",
+      "location": "San Francisco, Seattle",
+      "url": "https://careers.airbnb.com/positions/7773838?gh_jid=7773838",
+      "posted": "2026-04-30T17:17:03-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-family: helvetica, arial, sans-serif; font-size: 12pt;&quot;&gt;Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible for guests to connect with communities in a more authentic way.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;The Community You Will Join:&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;At Airbnb, we believe technology has the power to bring people together \u2014 and our engineers are the ones building it. Our Engineering org is a diverse, fast-moving group of teams working across Payments, Trust, Marketing, Relevance &amp;amp; Personalization, and more. Together, we&#39;re tackling some of the hardest problems in tech: search relevance at global scale, fraud prevention, seamless payments, and fueling growth \u2014 all while delivering a product experience that feels effortless and beautiful. We&#39;re also at the forefront of integrating AI and machine learning into our products \u2014 from personalized search experiences to intelligent trust and safety systems \u2014 and we&#39;re looking for curious engineers who are excited to grow alongside this technology.&lt;/p&gt; &lt;p&gt;If you&#39;re energized by engineering that creates real-world human connection \u2014 and by the idea that your code will be experienced by millions of people around the world \u2014 you&#39;ll feel right at home here.&lt;/p&gt; &lt;p&gt;&amp;nbsp;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;The Difference You Will Make:&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;As a Software Engineer (New Grad) at Airbnb, you\u2019ll play a vital role in building, supporting, and refining the products and systems that make Airbnb\u2019s mission possible. Your work will directly contribute to high-quali",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 8,
+      "match_reason": "Rule-based: 1 skill matches, entry-level signal found",
+      "skills_matched": [
+        "machine learning"
+      ]
     },
     {
       "title": "Analytics Engineer",
@@ -25,8 +64,148 @@
       "description": "&lt;h3&gt;&lt;strong&gt;About Stripe&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;Stripe is a financial infrastructure platform for businesses. Millions of companies\u2014from the world\u2019s largest enterprises to the most ambitious startups\u2014use Stripe to accept payments, grow their revenue, and accelerate new business opportunities. Our mission is to increase the GDP of the internet, and we have a staggering amount of work ahead. That means you have an unprecedented opportunity to put the global economy within everyone\u2019s reach while doing the most important work of your career.&lt;/p&gt; &lt;h3&gt;About the team&lt;/h3&gt; &lt;p&gt;The Global Payments Performance Team are Stripe\u2019s foremost payments experts, identifying payment optimization opportunities for Stripe\u2019s users. We serve a critical role both in demonstrating thought leadership on challenging payment topics and partnering with our high-potential merchants to set them up for long term success. We make payments performance a competitive advantage for our users, large and small, by providing them with best-in-class technology in concert with insightful and specific advice on how to harness this technology to achieve their business goals.&lt;/p&gt; &lt;h3&gt;What you\u2019ll do&lt;/h3&gt; &lt;p&gt;You\u2019ll be embedded directly within the Global Payments Performance team, and responsible for data &amp;amp; tooling used by the team and our stakeholders. You will be instrumental in scaling the subject matter expertise of the team\u2019s payments domain experts - building datasets, agents, and tools that enable Stripes to deliver tailored, expert level content to their customers.&lt;/p&gt; &lt;h3&gt;Responsibilities&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Develop analytics products, dashboards, and tools that GTM leverages to deliver expert level payment optimization sessions to Stripe customers.&lt;/li&gt; &lt;li&gt;Maintain analytics assets owned by the team, such as metric definitions, technical documentation, vertical agents and query repositorie",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
+      "score": 7,
+      "match_reason": "Rule-based: 2 skill matches",
+      "skills_matched": [
+        "analytics",
+        "rag"
+      ]
+    },
+    {
+      "title": "Data Analyst - Global Growth Luxury Strategy",
+      "company": "Lyft",
+      "location": "New York, NY",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8514400002?gh_jid=8514400002",
+      "posted": "2026-05-01T14:21:31-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;Data is at the heart of Lyft\u2019s products and decision-making. You will leverage data and rigorous, analytical thinking to shape our products and make business decisions. This will involve performing rigorous product deep dives, identifying opportunities for product enhancements, and measuring the impact of new features.&lt;/p&gt; &lt;p&gt;The Global Growth team is at the forefront of innovation at Lyft, focused on expanding Lyft beyond North American rideshare\u2019s core products. This includes our premium Luxury modes and Livery drivers, building a unified Lyft presence internationally, and enabling Autonomous Vehicles (AVs) domestically and abroad. These teams are at the center of innovation and the future of Lyft\u2019s growth, and this role would be directly shaping the strategic roadmap for these crucial areas. As an Analytics Lead, you will collaborate with our world class team of engineers, product managers, and designers to think critically about the current rider and driver experience and implement product enhancements to facilitate market growth.&lt;/p&gt; &lt;p&gt;The ideal candidate can apply strong business acumen to propose product and marketplace changes, and is comfortable working with a highly cross functional team. This role will help define Lyft\u2019s strategy for growing luxury modes, setting the strategic roadmap for pricing, driver pay, and product development. In this role, you will help us tackle problems such as:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;How should we be pricing our premium Luxury products? Who are our current Luxury riders and what segment is most likely to grow our rider base?&lt;/li&gt; &lt;li&gt;How can we best merchandise Luxury rideshare products within the Lyft app? What product features or app changes would improve the rider experience and motivate",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 7,
+      "match_reason": "Rule-based: 2 skill matches",
+      "skills_matched": [
+        "analytics",
+        "rag"
+      ]
+    },
+    {
+      "title": "Data Scientist - Machine Learning, Pricing & Rider Engagement",
+      "company": "Lyft",
+      "location": "San Francisco, CA",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8485432002?gh_jid=8485432002",
+      "posted": "2026-05-01T14:21:31-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;The Pricing team is a centerpiece of Lyft\u2019s marketplace. The Pricing team owns the models and software systems that determine the final prices shown to riders. Working with our business and analytics partners, the team owns tools to ensure Lyft offers competitive prices while making efficient financial trade-offs. Rider Engagement is a fast-growing team within Pricing, focused on developing rider-facing engagement levers and optimizing allocations and decisioning systems to drive both short term and long term business outcomes.&lt;/p&gt; &lt;p&gt;As a Data Scientist specializing in Algorithms on the Rider Engagement team, you will develop mathematical models for core discounting systems and address diverse problems across optimization, prediction, machine learning, and inference. You will collaborate with cross-functional teammates and stakeholders to enhance algorithms, build and scale our rider engagement products and systems, and drive business growth. We are looking for someone who is excited about working in a fast-paced, innovative, and impactful environment, and is adept at balancing complexity and efficiency to translate real world business problems into reliable solutions and decisioning frameworks. In this role, you will report to a Data Science Manager.&lt;/p&gt; &lt;h2&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Partner with Engineers, Product Managers, and Business Partners to frame problems mathematically and within the business context&lt;/li&gt; &lt;li&gt;Prioritize and lead deep dives into our data to uncover new product and business opportunities&lt;/li&gt; &lt;li&gt;Be familiar with production code; collaborate with Software Engineers to implement algorithms and models in production&lt;/li&gt; &lt;li&gt;Design, imple",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 7,
+      "match_reason": "Rule-based: 3 skill matches",
+      "skills_matched": [
+        "machine learning",
+        "data science",
+        "analytics"
+      ]
+    },
+    {
+      "title": "Data Scientist, Algorithms - Lyft Ads",
+      "company": "Lyft",
+      "location": "New York, NY",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8330595002?gh_jid=8330595002",
+      "posted": "2026-05-01T17:13:58-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&amp;nbsp;&lt;/p&gt; &lt;p&gt;Lyft Ads is one of Lyft\u2019s newest and fastest-growing businesses, focused on building the world\u2019s largest transportation media network. Our mission is to help brands reach riders during key moments of their journey\u2014before, during, and after a ride\u2014by delivering meaningful, contextually relevant ad experiences. We operate at the intersection of mobility data, real-time decision systems, and AI-powered personalization, enabling advertisers to run high-impact campaigns with measurable outcomes.&lt;/p&gt; &lt;p&gt;We are seeking an &lt;strong&gt;Algorithms Scientist &lt;/strong&gt;&amp;nbsp;to help build the next generation of ads relevance, targeting, optimization, and measurement algorithms that power the Lyft Ads platform. In this role, you will work across large-scale datasets and complex real-time systems to design, prototype, and deploy production-grade machine learning models. You\u2019ll collaborate closely with Engineering, Product, Data Science, and Sales to translate ambiguous business and advertiser needs into rigorous algorithmic solutions that improve ad performance, enhance marketplace efficiency, and drive meaningful revenue growth.&lt;/p&gt; &lt;p&gt;This is a high-impact, highly technical role within a rapidly scaling business line. The ideal candidate brings strong applied machine learning intuition, hands-on modeling experience, and the ability to write clean, efficient production code. You will play a critical role in shaping how advertisers connect with Lyft riders\u2014pushing the boundaries of personalization, measurement, and real-time optimization in a dynamic marketplace.&lt;/p&gt; &lt;h2&gt;Responsibilities:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Design, develop, and deploy production-grade machine learning models and algorithms that power core Lyft Ads cap",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 7,
+      "match_reason": "Rule-based: 2 skill matches",
+      "skills_matched": [
+        "machine learning",
+        "data science"
+      ]
+    },
+    {
+      "title": "Data Scientist, Algorithms, Optimization - Fulfillment",
+      "company": "Lyft",
+      "location": "Seattle, WA",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8335715002?gh_jid=8335715002",
+      "posted": "2026-05-01T14:21:31-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;Data Science is central to Lyft&#39;s products and decision-making. As a Data Scientist on the cross-functional team, you will work in a dynamic environment, tackling a variety of problems from shaping critical business decisions to building algorithms that power our products. We seek passionate, driven Data Scientists to address some of the most interesting and impactful problems in ridesharing.&lt;/p&gt; &lt;p&gt;As a Data Scientist specializing in Algorithms, you will develop mathematical models for the platform&#39;s core services, addressing diverse problems in optimization, prediction, machine learning, and inference. On the Fulfillment team, you will collaborate with cross-functional teammates and stakeholders to enhance algorithms for matching rideshare supply and demand in real time and develop product offerings to improve the experiences of Lyft Riders and Drivers.&lt;/p&gt; &lt;h2&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Leverage data and analytic frameworks to direct creations and improvements of algorithms and models underpinning the team\u2019s systems and products&lt;/li&gt; &lt;li&gt;Partner with Engineers, Product Managers, and Business Partners to frame problems, both mathematically and within the business context.&lt;/li&gt; &lt;li&gt;Perform exploratory data analysis to gain a deeper understanding of the problem&lt;/li&gt; &lt;li&gt;Construct and fit statistical, machine learning, or optimization models&lt;/li&gt; &lt;li&gt;Write production modeling code; collaborate with Software Engineers to implement algorithms in production&lt;/li&gt; &lt;li&gt;Design and implement both simulated and live traffic experiments&lt;/li&gt; &lt;li&gt;Analyze experimental and observational data; communicate findings; facilitate launch d",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 7,
+      "match_reason": "Rule-based: 4 skill matches",
+      "skills_matched": [
+        "machine learning",
+        "data science",
+        "rag",
+        "llm"
+      ]
+    },
+    {
+      "title": "Data Scientist, Supply and Operations Technology, Lyft Urban Solutions",
+      "company": "Lyft",
+      "location": "New York, NY",
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8402782002?gh_jid=8402782002",
+      "posted": "2026-05-01T14:21:31-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;The Lyft Urban Solution team is developing the future of micromobility and is looking for a Data Scientist to inform and drive decision-making that charts the way. From New York\u2019s Citi Bike to San Francisco\u2019s Bay Wheels, our micromobility systems depend on smart data-informed decisions to operate efficiently and at scale. Analyses, insights, and algorithms guide both planning and operations, and we\u2019re looking for passionate, driven Data Scientists to take on some of the most interesting and impactful problems in micromobility.&amp;nbsp;&lt;/p&gt; &lt;p&gt;The set of problems tackled by the Lyft Urban Solutions Operations Technology Team is incredibly diverse. They cut across optimization, prediction, simulation, inference, transportation, analytics and mapping. We collaborate with and inform a wide range of stakeholders, from executives to hardware specialists to local market operations teams. We&#39;re looking for someone who is passionate about solving mathematical problems with data, and is excited about working in a fast-paced, innovative and collegial environment.&lt;/p&gt; &lt;h1&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Partner with Engineers, Product Managers, and Business Partners to frame problems, both mathematically and within the business context&lt;/li&gt; &lt;li&gt;Perform exploratory data analysis to gain a deeper understanding of the problem&lt;/li&gt; &lt;li&gt;Develop, calibrate, refine, and leverage numerical models (e.g., statistical, simulation)&lt;/li&gt; &lt;li&gt;Collaborate with Software Engineers to, refine, monitor and troubleshoot algorithms in production&lt;/li&gt; &lt;li&gt;Design and implement both simulated and live experiments&lt;/li&gt; &lt;li&gt;Analyze experimental and observational data; communic",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 7,
+      "match_reason": "Rule-based: 2 skill matches",
+      "skills_matched": [
+        "analytics",
+        "rag"
+      ]
+    },
+    {
+      "title": "Machine Learning Engineer, Customer Support Engineering",
+      "company": "Airbnb",
+      "location": "Remote-USA",
+      "url": "https://careers.airbnb.com/positions/7826337?gh_jid=7826337",
+      "posted": "2026-04-23T13:44:57-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-family: helvetica, arial, sans-serif; font-size: 12pt;&quot;&gt;Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible for guests to connect with communities in a more authentic way.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif; color: #000000;&quot;&gt;&lt;strong&gt;The Community You Will Join: &lt;/strong&gt;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;color: #000000; font-family: arial, helvetica, sans-serif;&quot;&gt;Machine Learning and Artificial Intelligence are at the heart of the Airbnb product. From Trust to Payments, and from Customer Service to Marketing we rely on ML to ensure that guests and hosts have the best possible experience with Airbnb.&amp;nbsp;&lt;br&gt;The Core ML team in Community Support is the team responsible for adopting the Agentic AI technologies to enable an intelligent, scalable and exceptional customer service experience. We are responsible for developing the Chat AI assistant, Voice AI Assistant and more! The team is constantly exploring the SOTA Agentic architecture, develops and enhances various AI models, ML services and leverages tools including SFT, Reinforcement learning, Distillation, RAG/Search, &amp;nbsp;LLM evaluation and testing automation, feedback-based learning and guardrail for a wide range of applications in Airbnb.&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif; color: #000000;&quot;&gt;&lt;strong&gt;The Difference You Will Make:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;We believe our current customer experiences in these domains are only scratching",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 7,
+      "match_reason": "Rule-based: 3 skill matches",
+      "skills_matched": [
+        "machine learning",
+        "rag",
+        "llm"
+      ]
+    },
+    {
+      "title": "Staff, Data Scientist ",
+      "company": "Twilio",
+      "location": "Remote - US",
+      "url": "https://job-boards.greenhouse.io/twilio/jobs/7851920",
+      "posted": "2026-04-30T14:11:33-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;Who we are&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;At Twilio, we\u2019re shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to&lt;a class=&quot;c-link&quot; href=&quot;https://customers.twilio.com/&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://customers.twilio.com/&quot; data-sk=&quot;tooltip_parent&quot;&gt;&amp;nbsp;hundreds of thousands of businesses&amp;nbsp;&lt;/a&gt;and empower millions of developers worldwide to craft personalized customer experiences.&lt;/p&gt; &lt;p&gt;Our dedication to &lt;a class=&quot;c-link&quot; href=&quot;https://www.twilio.com/en-us/blog/open-work&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://www.twilio.com/en-us/blog/open-work&quot; data-sk=&quot;tooltip_parent&quot;&gt;remote-first work&lt;/a&gt;, and strong culture of connection and global inclusion means that no matter your location, you\u2019re part of a vibrant team with diverse experiences making a global impact each day. As we continue to revolutionize how the world interacts, we\u2019re acquiring new skills and experiences that make work feel truly rewarding. Your career at Twilio is in your hands.&lt;br&gt;&lt;br&gt;We use Artificial Intelligence (AI) to help make our hiring process efficient. That said, every hiring decision is made by real Twilions!&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;See yourself at Twilio&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Join the team as Twilio\u2019s next &lt;strong&gt;Staff Data Scientist&lt;/strong&gt;.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;About the job&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;This position is needed to drive advanced analytics and data science solutions that optimize sales performance and enable data-driven decision-making across the Go-To-Market organization.&lt;/p&gt; &lt;p&gt;As a Staff Data Scientist",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 7,
+      "match_reason": "Rule-based: 2 skill matches",
+      "skills_matched": [
+        "data science",
+        "analytics"
+      ]
+    },
+    {
+      "title": "Inside Sales Representative - Early Career (2026)",
+      "company": "Figma",
+      "location": "San Francisco, CA \u2022 New York, NY",
+      "url": "https://boards.greenhouse.io/figma/jobs/5977327004?gh_jid=5977327004",
+      "posted": "2026-04-23T00:32:19-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Figma is growing our team of passionate creatives and builders on a mission to make design accessible to all. Figma\u2019s platform helps teams bring ideas to life\u2014whether you&#39;re brainstorming, creating a prototype, translating designs into code, or iterating with AI. From idea to product, Figma empowers teams to streamline workflows, move faster, and work together in real time from anywhere in the world. If you&#39;re excited to shape the future of design and collaboration, join us!&lt;/p&gt;&lt;/div&gt;&lt;div class=&quot;section page-centered&quot;&gt; &lt;div class=&quot;section page-centered&quot;&gt; &lt;div class=&quot;section page-centered&quot;&gt; &lt;div class=&quot;section page-centered&quot;&gt; &lt;p&gt;As an Inside Sales Representative, you\u2019ll play an important role in helping our existing customers scale while managing requests and closing deals from a large book of accounts. You\u2019ll build a strong foundation of knowledge across our product platform and internal sales processes while partnering with Support, Order Management, and Marketing. You\u2019ll also gain experience qualifying and routing inbound prospects to an aligned Account Executive. Ultimately, this experience will help you serve customers efficiently and support your own career development in Sales. As a founding member of this new team, you&#39;re adaptable and eager to contribute to how the strategy of this function evolves over time.&lt;/p&gt; &lt;p&gt;This is a full time role that can be held from our New York City hub or San Francisco hub.&lt;/p&gt; &lt;h4&gt;&lt;strong&gt;What you&#39;ll do at Figma:&lt;/strong&gt;&lt;/h4&gt; &lt;ul&gt; &lt;li&gt;Communicate with existing customer accounts through email, Zoom, and Ironclad about Figma\u2019s platform and pricing&amp;nbsp;&lt;/li&gt; &lt;li&gt;Close inbound sales requests for subscription expansions, including adding products or licenses, creating new instances, and upgrading to the Enterpris",
+      "h1b_status": "Verify on myvisajobs.com",
+      "h1b_sponsors": false,
+      "score": 7,
+      "match_reason": "Rule-based: 0 skill matches, entry-level signal found",
       "skills_matched": []
     },
     {
@@ -39,9 +218,11 @@
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;&lt;strong&gt;About Anthropic&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;About the role:&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;As a member of the Applied AI team at Anthropic, you will be a technical Product Engineer focused on becoming a trusted technical advisor to Digital Native Businesses - technology companies adopting the Claude API into their core products. You will work closely with customer product and engineering teams as they ship new products powered by Claude: advising on architecture design decisions, developing evaluation frameworks, and guiding customers through the most cutting-edge implementation patterns for LLMs.&lt;/p&gt; &lt;p&gt;Working closely with our Sales, Product, and Engineering teams, you&#39;ll guide a focused portfolio of customers from technical discovery through successful deployment. You&#39;ll combine deep engineering expertise with customer-facing skills to help customers unlock the full potential of Claude APIs and move their products closer to the frontier, while maintaining our high standards for safety and reliability.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Serve as a specialist technical advisor to Anthropic customers as they deploy new products &amp;amp; workflows with our models: from discovery through deployment, coordinating internally across multiple teams to drive customer success&lt;/li&gt; &lt;li&gt;Partner with account executives and solutions architects to translate customer business requirements into technical solutions&lt;/li&gt; &lt;li&gt;Influence technic",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
+      "score": 6,
+      "match_reason": "Rule-based: 1 skill matches",
+      "skills_matched": [
+        "llm"
+      ]
     },
     {
       "title": "Applied AI Engineer, Startups",
@@ -53,177 +234,27 @@
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;&lt;strong&gt;About Anthropic&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.&lt;/p&gt;&lt;/div&gt;&lt;h2&gt;&lt;strong&gt;About the role:&lt;/strong&gt;&amp;nbsp;&lt;/h2&gt; &lt;p&gt;As an Applied AI Engineer on the Startups team at Anthropic, you will be a trusted technical advisor helping the top AI-native startups build on the Claude Developer Platform as they grow from early product to scale. You&#39;ll lead deep technical engagements, partnering directly with startup engineering teams to help them develop their products on top of Claude\u2014advising on implementation, agent design, and working alongside them to build at the frontier of AI.&lt;/p&gt; &lt;p&gt;Working closely with Applied AI Architects, Account Executives, and Anthropic&#39;s Product and Engineering teams, you&#39;ll guide startups through deep technical engagements. You&#39;ll leverage your AI engineering expertise to develop custom evaluation frameworks, design scalable architectures, and create the technical resources that enable startups to succeed with Claude.&lt;/p&gt; &lt;h2&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&amp;nbsp;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Serve as a deep technical advisor to high-potential startups, working alongside them to build innovative use cases that push the boundaries of AI&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Work hands-on with startup engineering teams: pair programming, architecture reviews, and code contributions that accelerate their development&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Develop prototypes and technical documentation\u2014including evaluation suites, AI engineering techniq",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Analyst - Global Growth Luxury Strategy",
-      "company": "Lyft",
-      "location": "New York, NY",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8514400002?gh_jid=8514400002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;Data is at the heart of Lyft\u2019s products and decision-making. You will leverage data and rigorous, analytical thinking to shape our products and make business decisions. This will involve performing rigorous product deep dives, identifying opportunities for product enhancements, and measuring the impact of new features.&lt;/p&gt; &lt;p&gt;The Global Growth team is at the forefront of innovation at Lyft, focused on expanding Lyft beyond North American rideshare\u2019s core products. This includes our premium Luxury modes and Livery drivers, building a unified Lyft presence internationally, and enabling Autonomous Vehicles (AVs) domestically and abroad. These teams are at the center of innovation and the future of Lyft\u2019s growth, and this role would be directly shaping the strategic roadmap for these crucial areas. As an Analytics Lead, you will collaborate with our world class team of engineers, product managers, and designers to think critically about the current rider and driver experience and implement product enhancements to facilitate market growth.&lt;/p&gt; &lt;p&gt;The ideal candidate can apply strong business acumen to propose product and marketplace changes, and is comfortable working with a highly cross functional team. This role will help define Lyft\u2019s strategy for growing luxury modes, setting the strategic roadmap for pricing, driver pay, and product development. In this role, you will help us tackle problems such as:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;How should we be pricing our premium Luxury products? Who are our current Luxury riders and what segment is most likely to grow our rider base?&lt;/li&gt; &lt;li&gt;How can we best merchandise Luxury rideshare products within the Lyft app? What product features or app changes would improve the rider experience and motivate",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Analyst, Global Growth Strategy ",
-      "company": "Lyft",
-      "location": "Toronto, Canada",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8461143002?gh_jid=8461143002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. To do this, we start with our own community by creating an open, inclusive, and diverse organization&lt;/p&gt; &lt;p&gt;Data is at the heart of Lyft\u2019s products and decision-making. You will leverage data and rigorous, analytical thinking to shape our products and make business decisions. This will involve performing rigorous product deep dives, identifying opportunities for product enhancements, and measuring the impact of new features.&lt;/p&gt; &lt;p&gt;The Global Growth team is at the forefront of innovation at Lyft, focused on expanding Lyft beyond North American rideshare\u2019s core products. This includes our premium Luxury modes and Livery drivers, building a unified Lyft presence internationally, and enabling Autonomous Vehicles (AVs) domestically and abroad. These teams are at the center of innovation and the future of Lyft\u2019s growth, and this role would be directly shaping the strategic roadmap for these crucial areas. As a Data Analyst, you will collaborate with our world class team of engineers, product managers, and designers to think critically about the current rider and driver experience and implement product enhancements to facilitate market growth.&lt;/p&gt; &lt;p&gt;The ideal candidate can apply strong business acumen to propose product and marketplace changes, and is comfortable working with a highly cross functional team. This role will help define Lyft\u2019s strategy for growing luxury modes, setting the strategic roadmap for pricing, driver pay, and product development. In this role, you will help us tackle problems such as:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;How should we be pricing our premium Luxury products? Who are our current Luxury riders and what segment is most likely to grow our rider base?&lt;/li&gt; &lt;li&gt;What is the best way to continue to grow and deploy AVs on our platform? What use cases do riders prefer AVs?&lt;/li&gt; &lt;li&gt;How do we ensure a consistent excellent rider experie",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Engineer",
-      "company": "Lyft",
-      "location": "Toronto, Canada",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8503994002?gh_jid=8503994002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&amp;nbsp;&lt;/p&gt; &lt;p&gt;The Safety and Customer Care (SCC) team at Lyft manages over 1.7 million monthly human and AI interactions and serves as Lyft&#39;s primary direct touchpoint with riders and drivers. We handle critical infrastructure that powers both human associates and AI agents to make riders and drivers feel safe and comfortable while riding or driving with Lyft, transforming every support interaction into a moment of genuine connection.&amp;nbsp;&lt;/p&gt; &lt;p&gt;As a Data Engineer on the SCC team, you will have ownership over the data modeling and pipelines that power SCC\u2019s Associate and AI Agent Platform . Your efforts will be critical to the reliability of our pipelines, execution of third party data integrations, accurate reporting of agents performance, and efficiency improvements that can save millions of dollars / year. You will work cross-functionally to bridge Lyft&#39;s business goals with data engineering. Your efforts will allow access to business and user behavior insights, using huge amounts of Lyft data to fuel several teams such as Analytics, Data Science, Engineering, and many others.&amp;nbsp;&lt;/p&gt; &lt;h2&gt;Responsibilities:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Owner of the core data pipeline, responsible for scaling up data processing flow to meet the rapid data growth at Lyft&lt;/li&gt; &lt;li&gt;Evolve data model and data schema based on business and engineering needs&lt;/li&gt; &lt;li&gt;Implement systems tracking data quality and consistency&lt;/li&gt; &lt;li&gt;Develop tools supporting self-service data pipeline management (ETL)&lt;/li&gt; &lt;li&gt;SQL and MapReduce job tuning to improve data processing performance&lt;/li&gt; &lt;li&gt;Write well-crafted, well-tested, readable, maintainable code&lt;/li&gt; &lt;li&gt;Participate in code reviews to ",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Scientist - Decisions, Mapping",
-      "company": "Lyft",
-      "location": "Toronto, Canada",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8448179002?gh_jid=8448179002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;As a Data Scientist on the Mapping team, you will collaborate with our world class team of engineers, product managers, and designers to grow and improve the quality of recommended routes and accuracy of our travel time estimations. We&#39;re looking for a passionate, driven Data Scientist who is excited to dive into our spatial data and build a best-in-class mapping product that provides safe, efficient, and seamless navigation for our rideshare drivers.&lt;/p&gt; &lt;p&gt;Data Science is at the heart of Lyft\u2019s products and decision-making. You will leverage data and rigorous, analytical thinking to shape our mapping products and make business decisions that put our customers first. This will involve identifying and scoping opportunities, shaping priorities, recommending technical solutions, designing experiments, and measuring the impact of new features. You will help us solve some of the most impactful problems in mapping, including:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;How do we improve the quality of our map data in order to improve our recommendations?&lt;/li&gt; &lt;li&gt;How do we benchmark and measure the success of our services?&lt;/li&gt; &lt;li&gt;How do we validate features of the real world that affect our routing algorithms?&lt;/li&gt; &lt;li&gt;Are we meeting our travel estimation promises to our customers?&lt;/li&gt; &lt;/ul&gt; &lt;h2&gt;Responsibilities&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Leverage data and analytic frameworks to identify opportunities for growth and efficiency&lt;/li&gt; &lt;li&gt;Partner with product managers, engineers, and operators to translate analytical insights into decisions and action, and implement products to drive business goals&lt;/li&gt; &lt;li&gt;Define and implement decision frameworks, measurement strategies, and scientific method",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Scientist - Machine Learning, Pricing & Rider Engagement",
-      "company": "Lyft",
-      "location": "San Francisco, CA",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8485432002?gh_jid=8485432002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;The Pricing team is a centerpiece of Lyft\u2019s marketplace. The Pricing team owns the models and software systems that determine the final prices shown to riders. Working with our business and analytics partners, the team owns tools to ensure Lyft offers competitive prices while making efficient financial trade-offs. Rider Engagement is a fast-growing team within Pricing, focused on developing rider-facing engagement levers and optimizing allocations and decisioning systems to drive both short term and long term business outcomes.&lt;/p&gt; &lt;p&gt;As a Data Scientist specializing in Algorithms on the Rider Engagement team, you will develop mathematical models for core discounting systems and address diverse problems across optimization, prediction, machine learning, and inference. You will collaborate with cross-functional teammates and stakeholders to enhance algorithms, build and scale our rider engagement products and systems, and drive business growth. We are looking for someone who is excited about working in a fast-paced, innovative, and impactful environment, and is adept at balancing complexity and efficiency to translate real world business problems into reliable solutions and decisioning frameworks. In this role, you will report to a Data Science Manager.&lt;/p&gt; &lt;h2&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Partner with Engineers, Product Managers, and Business Partners to frame problems mathematically and within the business context&lt;/li&gt; &lt;li&gt;Prioritize and lead deep dives into our data to uncover new product and business opportunities&lt;/li&gt; &lt;li&gt;Be familiar with production code; collaborate with Software Engineers to implement algorithms and models in production&lt;/li&gt; &lt;li&gt;Design, imple",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Scientist, Algorithms - Driver Incentives",
-      "company": "Lyft",
-      "location": "Toronto, Canada",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8503986002?gh_jid=8503986002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;Lyft\u2019s Data Science Team builds mathematical models underpinning the platform\u2019s core services. Compared to other technology companies of a similar size, the set of problems that we tackle is incredibly diverse. They cut across optimization, prediction, modeling, inference, transportation, and mapping. We are hiring motivated experts in each of these fields. We&#39;re looking for someone who is passionate about solving mathematical problems with data, and are excited about working in a fast-paced, innovative and collegial environment.&lt;/p&gt; &lt;p&gt;You will report into a Science Manager.&lt;/p&gt; &lt;h2&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Partner with Engineers, Product Managers, and Business Partners to frame problems, both mathematically and within the business context.&lt;/li&gt; &lt;li&gt;Perform exploratory data analysis to gain a deeper understanding of the problem&lt;/li&gt; &lt;li&gt;Construct and fit statistical, machine learning, or optimization models&lt;/li&gt; &lt;li&gt;Write production modeling code; collaborate with Software Engineers to implement algorithms in production&lt;/li&gt; &lt;li&gt;Design and run both simulated and live traffic experiments&lt;/li&gt; &lt;li&gt;Analyze experimental and observational data; communicate findings; facilitate launch decisions&lt;/li&gt; &lt;/ul&gt; &lt;h2&gt;&lt;strong&gt;Experience:&lt;/strong&gt;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Ph.D. in Statistics, Operations Research, Mathematics, Computer Science, or other quantitative fields&lt;/li&gt; &lt;li&gt;2+ years professional experience in a technology companies&lt;/li&gt; &lt;li&gt;Passion for solving unstructured and non-standard mathematical problems&lt;/li&gt; &lt;li&gt;End-to-end experience with data, including queryin",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Scientist, Algorithms - Lyft Ads",
-      "company": "Lyft",
-      "location": "New York, NY",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8330595002?gh_jid=8330595002",
-      "posted": "2026-05-01T17:13:58-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&amp;nbsp;&lt;/p&gt; &lt;p&gt;Lyft Ads is one of Lyft\u2019s newest and fastest-growing businesses, focused on building the world\u2019s largest transportation media network. Our mission is to help brands reach riders during key moments of their journey\u2014before, during, and after a ride\u2014by delivering meaningful, contextually relevant ad experiences. We operate at the intersection of mobility data, real-time decision systems, and AI-powered personalization, enabling advertisers to run high-impact campaigns with measurable outcomes.&lt;/p&gt; &lt;p&gt;We are seeking an &lt;strong&gt;Algorithms Scientist &lt;/strong&gt;&amp;nbsp;to help build the next generation of ads relevance, targeting, optimization, and measurement algorithms that power the Lyft Ads platform. In this role, you will work across large-scale datasets and complex real-time systems to design, prototype, and deploy production-grade machine learning models. You\u2019ll collaborate closely with Engineering, Product, Data Science, and Sales to translate ambiguous business and advertiser needs into rigorous algorithmic solutions that improve ad performance, enhance marketplace efficiency, and drive meaningful revenue growth.&lt;/p&gt; &lt;p&gt;This is a high-impact, highly technical role within a rapidly scaling business line. The ideal candidate brings strong applied machine learning intuition, hands-on modeling experience, and the ability to write clean, efficient production code. You will play a critical role in shaping how advertisers connect with Lyft riders\u2014pushing the boundaries of personalization, measurement, and real-time optimization in a dynamic marketplace.&lt;/p&gt; &lt;h2&gt;Responsibilities:&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Design, develop, and deploy production-grade machine learning models and algorithms that power core Lyft Ads cap",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Scientist, Algorithms, Optimization - Fulfillment",
-      "company": "Lyft",
-      "location": "Seattle, WA",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8335715002?gh_jid=8335715002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;Data Science is central to Lyft&#39;s products and decision-making. As a Data Scientist on the cross-functional team, you will work in a dynamic environment, tackling a variety of problems from shaping critical business decisions to building algorithms that power our products. We seek passionate, driven Data Scientists to address some of the most interesting and impactful problems in ridesharing.&lt;/p&gt; &lt;p&gt;As a Data Scientist specializing in Algorithms, you will develop mathematical models for the platform&#39;s core services, addressing diverse problems in optimization, prediction, machine learning, and inference. On the Fulfillment team, you will collaborate with cross-functional teammates and stakeholders to enhance algorithms for matching rideshare supply and demand in real time and develop product offerings to improve the experiences of Lyft Riders and Drivers.&lt;/p&gt; &lt;h2&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Leverage data and analytic frameworks to direct creations and improvements of algorithms and models underpinning the team\u2019s systems and products&lt;/li&gt; &lt;li&gt;Partner with Engineers, Product Managers, and Business Partners to frame problems, both mathematically and within the business context.&lt;/li&gt; &lt;li&gt;Perform exploratory data analysis to gain a deeper understanding of the problem&lt;/li&gt; &lt;li&gt;Construct and fit statistical, machine learning, or optimization models&lt;/li&gt; &lt;li&gt;Write production modeling code; collaborate with Software Engineers to implement algorithms in production&lt;/li&gt; &lt;li&gt;Design and implement both simulated and live traffic experiments&lt;/li&gt; &lt;li&gt;Analyze experimental and observational data; communicate findings; facilitate launch d",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Scientist, Decisions - Verticals",
-      "company": "Lyft",
-      "location": "Toronto, Canada",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8495862002?gh_jid=8495862002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;Data Science is at the heart of Lyft\u2019s products and decision-making. You will leverage data and rigorous, analytical thinking to shape our products and make business decisions. This will involve identifying and scoping opportunities, recommending and implementing technical solutions, designing experiments, shaping team priorities, and measuring the impact of new features.&lt;/p&gt; &lt;p&gt;The Verticals team encompasses 3 critical and unique products / marketplaces within Lyft: airports, scheduled rides, and events. Airports are one of the most important, impactful, and complex parts of Lyft\u2019s Rideshare business, as they are a key part of both the rider and driver Lyft experiences and have unique considerations and dynamics. Scheduled rides allow riders to book a ride in advance with high reliability, and enable drivers to add structure to their work schedule. Lastly, events such as concerts or sporting games require similar considerations of special operations to ensure a seamless experience for both riders and drivers.&amp;nbsp;&lt;/p&gt; &lt;p&gt;As a Data Scientist on the Verticals team, you will collaborate with engineering, product, design, and operations to think critically about the current rider and driver experience and implement product enhancements to facilitate market growth. The ideal candidate can apply strong business acumen to propose product changes, develop end-to-end technical solutions, and is comfortable working with a highly cross functional team. In this role, you will help us tackle problems such as:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;How can we efficiently match riders and drivers together in these unique marketplaces, to minimize ETAs and improve the driver experience?&amp;nbsp;&lt;/li&gt; &lt;li&gt;Are we able to forecast ride demand and implement ",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Scientist, Safety",
-      "company": "Lyft",
-      "location": "Toronto, Canada",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8509122002?gh_jid=8509122002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;The Safety &amp;amp; Customer Care (SCC) organization manages over 1.7 million monthly customer interactions and is responsible for ensuring the trust and safety of our riders and drivers. We work every day to build a trusted community, foster safe interactions, manage risky situations, and deliver best-in-class support. As part of this team, you will play a critical role in making transportation safer for all.&lt;/p&gt; &lt;p&gt;We are looking for an experienced and highly motivated Data Scientist to join the Community Safety Data team and lead key initiatives that enhance the safety of Lyft\u2019s community. You\u2019ll work cross-functionally with product management, engineering, design, legal, research, and operations teams to build impactful safety features, models, and systems. This high-impact role requires deep customer empathy, insatiable curiosity to uncover platform risks; and competencies to explore large datasets, develop statistical models, and design data-driven strategies for products that provide safe and engaging experiences for customers.&lt;/p&gt; &lt;p&gt;You\u2019ll report to the Director of Data Science for the SCC org.&lt;/p&gt; &lt;h2&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Leverage data and analytical frameworks to identify opportunities for improving community trust and safety&lt;/li&gt; &lt;li&gt;Partner with product managers, engineers, designers, marketers, and operators to translate insights into scalable, safety-forward decisions&lt;/li&gt; &lt;li&gt;Design and analyze online experiments; interpret and communicate results to influence product launch decisions&lt;/li&gt; &lt;li&gt;Build and monitor key metrics that reflect rider and driver safety, product health, and policy compliance&lt;/li&gt; &lt;li&gt;Develop ri",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Data Scientist, Supply and Operations Technology, Lyft Urban Solutions",
-      "company": "Lyft",
-      "location": "New York, NY",
-      "url": "https://app.careerpuck.com/job-board/lyft/job/8402782002?gh_jid=8402782002",
-      "posted": "2026-05-01T14:21:31-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;The Lyft Urban Solution team is developing the future of micromobility and is looking for a Data Scientist to inform and drive decision-making that charts the way. From New York\u2019s Citi Bike to San Francisco\u2019s Bay Wheels, our micromobility systems depend on smart data-informed decisions to operate efficiently and at scale. Analyses, insights, and algorithms guide both planning and operations, and we\u2019re looking for passionate, driven Data Scientists to take on some of the most interesting and impactful problems in micromobility.&amp;nbsp;&lt;/p&gt; &lt;p&gt;The set of problems tackled by the Lyft Urban Solutions Operations Technology Team is incredibly diverse. They cut across optimization, prediction, simulation, inference, transportation, analytics and mapping. We collaborate with and inform a wide range of stakeholders, from executives to hardware specialists to local market operations teams. We&#39;re looking for someone who is passionate about solving mathematical problems with data, and is excited about working in a fast-paced, innovative and collegial environment.&lt;/p&gt; &lt;h1&gt;&lt;strong&gt;Responsibilities:&lt;/strong&gt;&lt;/h1&gt; &lt;ul&gt; &lt;li&gt;Partner with Engineers, Product Managers, and Business Partners to frame problems, both mathematically and within the business context&lt;/li&gt; &lt;li&gt;Perform exploratory data analysis to gain a deeper understanding of the problem&lt;/li&gt; &lt;li&gt;Develop, calibrate, refine, and leverage numerical models (e.g., statistical, simulation)&lt;/li&gt; &lt;li&gt;Collaborate with Software Engineers to, refine, monitor and troubleshoot algorithms in production&lt;/li&gt; &lt;li&gt;Design and implement both simulated and live experiments&lt;/li&gt; &lt;li&gt;Analyze experimental and observational data; communic",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
+      "score": 6,
+      "match_reason": "Rule-based: 1 skill matches",
+      "skills_matched": [
+        "rag"
+      ]
     },
     {
       "title": "Machine Learning Engineer",
       "company": "Twilio",
       "location": "Remote - US",
-      "url": "https://job-boards.greenhouse.io/twilio/jobs/7059734",
-      "posted": "2026-04-30T04:46:22-04:00",
+      "url": "https://job-boards.greenhouse.io/twilio/jobs/7702644",
+      "posted": "2026-04-30T04:46:25-04:00",
       "source": "Greenhouse",
-      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;Who we are&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;At Twilio, we\u2019re shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to&lt;a class=&quot;c-link&quot; href=&quot;https://customers.twilio.com/&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://customers.twilio.com/&quot; data-sk=&quot;tooltip_parent&quot;&gt;&amp;nbsp;hundreds of thousands of businesses&amp;nbsp;&lt;/a&gt;and empower millions of developers worldwide to craft personalized customer experiences.&lt;/p&gt; &lt;p&gt;Our dedication to &lt;a class=&quot;c-link&quot; href=&quot;https://www.twilio.com/en-us/blog/open-work&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://www.twilio.com/en-us/blog/open-work&quot; data-sk=&quot;tooltip_parent&quot;&gt;remote-first work&lt;/a&gt;, and strong culture of connection and global inclusion means that no matter your location, you\u2019re part of a vibrant team with diverse experiences making a global impact each day. As we continue to revolutionize how the world interacts, we\u2019re acquiring new skills and experiences that make work feel truly rewarding. Your career at Twilio is in your hands.&lt;br&gt;&lt;br&gt;We use Artificial Intelligence (AI) to help make our hiring process efficient. That said, every hiring decision is made by real Twilions!&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;See yourself at Twilio&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Join the team as Twilio\u2019s next L3, Machine Learning Engineer, Trust Intelligence Platform.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;About the job&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Join Twilio\u2019s rapidly-growing AI &amp;amp; Data Platform team as an&amp;nbsp; Machine Learning Engineer. You will design, build, and operate the cloud-native data and ML infrastructure that powers every customer interaction",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;Who we are&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;At Twilio, we\u2019re shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to&lt;a class=&quot;c-link&quot; href=&quot;https://customers.twilio.com/&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://customers.twilio.com/&quot; data-sk=&quot;tooltip_parent&quot;&gt;&amp;nbsp;hundreds of thousands of businesses&amp;nbsp;&lt;/a&gt;and empower millions of developers worldwide to craft personalized customer experiences.&lt;/p&gt; &lt;p&gt;Our dedication to &lt;a class=&quot;c-link&quot; href=&quot;https://www.twilio.com/en-us/blog/open-work&quot; target=&quot;_blank&quot; data-stringify-link=&quot;https://www.twilio.com/en-us/blog/open-work&quot; data-sk=&quot;tooltip_parent&quot;&gt;remote-first work&lt;/a&gt;, and strong culture of connection and global inclusion means that no matter your location, you\u2019re part of a vibrant team with diverse experiences making a global impact each day. As we continue to revolutionize how the world interacts, we\u2019re acquiring new skills and experiences that make work feel truly rewarding. Your career at Twilio is in your hands.&lt;br&gt;&lt;br&gt;We use Artificial Intelligence (AI) to help make our hiring process efficient. That said, every hiring decision is made by real Twilions!&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;color: rgb(255, 255, 255);&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;See yourself at Twilio&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Join the team as Twilio\u2019s next Machine Learning Engineer.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;About the job&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;This position is needed&amp;nbsp;to drive innovation and the development of cutting-edge products that serve developers, builders, and operators within Twilio\u2019s Data &amp;amp; Observability Substrate organization.&lt;/p&gt; &lt;p&gt;This is a hands-on, bui",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
+      "score": 6,
+      "match_reason": "Rule-based: 1 skill matches",
+      "skills_matched": [
+        "machine learning"
+      ]
     },
     {
       "title": "Machine Learning Engineer, Core Engineering",
@@ -235,23 +266,11 @@
       "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt; &lt;p&gt;Discover a career where you ignite innovation for millions, transform passion into growth opportunities, celebrate each other\u2019s unique experiences and embrace the&amp;nbsp;&lt;a href=&quot;https://www.pinterestcareers.com/our-life/pinflex/&quot;&gt;flexibility&lt;/a&gt; to do your best work. Creating a career you love? It\u2019s Possible.&lt;/p&gt; &lt;p&gt;At Pinterest, AI isn&#39;t just a feature, it&#39;s a powerful partner that augments our creativity and amplifies our impact, and we\u2019re looking for candidates who are excited to be a part of that. To get a complete picture of your experience and abilities, we\u2019ll explore your foundational skills and how you collaborate with AI.&lt;/p&gt; &lt;p&gt;Through our interview process, what matters most is that you can always explain your approach, showing us not just what you know, but how you think. You can read more about our AI interview philosophy and how we use AI in our recruiting process &lt;a href=&quot;https://www.pinterestcareers.com/our-philosophy-on-ai-in-hiring/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;With more than 500 million users around the world and 300 billion ideas saved, Pinterest Machine Learning engineers build personalized experiences to help Pinners create a life they love. With just over 3,000 global employees, our teams are small, mighty, and still growing. At Pinterest, you\u2019ll experience hands-on access to an incredible vault of data and contribute large-scale recommendation systems in ways you won\u2019t fi",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
-    },
-    {
-      "title": "Machine Learning Engineer, Customer Support Engineering",
-      "company": "Airbnb",
-      "location": "Remote-USA",
-      "url": "https://careers.airbnb.com/positions/7826337?gh_jid=7826337",
-      "posted": "2026-04-23T13:44:57-04:00",
-      "source": "Greenhouse",
-      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-family: helvetica, arial, sans-serif; font-size: 12pt;&quot;&gt;Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible for guests to connect with communities in a more authentic way.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif; color: #000000;&quot;&gt;&lt;strong&gt;The Community You Will Join: &lt;/strong&gt;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;color: #000000; font-family: arial, helvetica, sans-serif;&quot;&gt;Machine Learning and Artificial Intelligence are at the heart of the Airbnb product. From Trust to Payments, and from Customer Service to Marketing we rely on ML to ensure that guests and hosts have the best possible experience with Airbnb.&amp;nbsp;&lt;br&gt;The Core ML team in Community Support is the team responsible for adopting the Agentic AI technologies to enable an intelligent, scalable and exceptional customer service experience. We are responsible for developing the Chat AI assistant, Voice AI Assistant and more! The team is constantly exploring the SOTA Agentic architecture, develops and enhances various AI models, ML services and leverages tools including SFT, Reinforcement learning, Distillation, RAG/Search, &amp;nbsp;LLM evaluation and testing automation, feedback-based learning and guardrail for a wide range of applications in Airbnb.&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;&lt;span style=&quot;font-family: arial, helvetica, sans-serif; color: #000000;&quot;&gt;&lt;strong&gt;The Difference You Will Make:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt; &lt;p&gt;We believe our current customer experiences in these domains are only scratching",
-      "h1b_status": "H1-B Sponsor \u2713",
-      "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
+      "score": 6,
+      "match_reason": "Rule-based: 1 skill matches",
+      "skills_matched": [
+        "machine learning"
+      ]
     },
     {
       "title": "Machine Learning Engineer, Lyft Business",
@@ -263,23 +282,57 @@
       "description": "&lt;p&gt;At Lyft, our purpose is to serve and connect. We aim to achieve this by cultivating a work environment where all team members belong and have the opportunity to thrive.&lt;/p&gt; &lt;p&gt;Machine Learning is at the heart of Lyft\u2019s products and decision-making. Machine Learning Engineers at Lyft operate in dynamic environments, moving quickly to build the world\u2019s best transportation solutions. We tackle a wide range of challenges, from pricing and marketplace frameworks that ensure reliability and competitiveness, to agentic AI platforms that automate analytical workflows, to behavioral detection systems that protect the integrity of our network. We operate at the intersection of applied ML and real business impact, shipping models that directly influence revenue, rider experience, and partner trust.&lt;/p&gt; &lt;p&gt;Lyft Business builds products that help organizations move the people who matter most\u2014employees, customers, patients, and guests\u2014easily and efficiently. Our offerings include Business Travel, Lyft Pass, and Concierge (for healthcare and non-healthcare rides), enabling companies to manage transportation at scale through APIs, integrations (e.g., Concur, Expensify), and dedicated tools. These platforms power high-impact B2B use cases across corporate travel, healthcare access, customer experience, and community programs.&lt;/p&gt; &lt;p&gt;We&#39;re looking for a Machine Learning Engineer to design, build, and deploy ML systems across Lyft Business. This is a high-scope role: you won&#39;t be siloed into one problem area. Instead, you&#39;ll move across pricing algorithms, fraud and behavior detection, agentic AI systems, and emerging ML applications as the business evolves. You&#39;ll write production-quality code, own models end-to-end from prototyping through deployment, and collaborate closely with Data Scientists, Product Managers, and Software Engineers to translate complex business problems into scalable ML solutions.&lt;/p&gt; &lt;p&gt;T",
       "h1b_status": "H1-B Sponsor \u2713",
       "h1b_sponsors": true,
-      "score": 5,
-      "match_reason": "Could not score",
+      "score": 6,
+      "match_reason": "Rule-based: 1 skill matches",
+      "skills_matched": [
+        "machine learning"
+      ]
+    },
+    {
+      "title": "Machine Learning Engineer, PhD Intern",
+      "company": "Instacart",
+      "location": "United States - Remote",
+      "url": "https://instacart.careers/job/?gh_jid=5917202",
+      "posted": "2026-05-01T13:52:05-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;We&#39;re transforming the grocery industry&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;&lt;span class=&quot;im&quot;&gt;At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work to deliver an essential service that customers rely on to get their groceries and household goods, while also offering safe and flexible earnings opportunities to Instacart Personal Shoppers.&lt;/span&gt;&lt;/p&gt; &lt;p&gt;Instacart has become a lifeline for millions of people, and we\u2019re building the team to help push our shopping cart forward. If you\u2019re ready to do the best work of your life, come join our table.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;Instacart is a Flex First team &lt;/strong&gt;&lt;/p&gt; &lt;p&gt;There\u2019s no one-size fits all approach to how we do our best work. Our employees have the flexibility to choose where they do their best work\u2014whether it\u2019s from home, an office, or your favorite coffee shop\u2014while staying connected and building community through regular in-person events. &lt;a href=&quot;https://www.instacart.careers/flex-first&quot; target=&quot;_blank&quot; data-saferedirecturl=&quot;https://www.google.com/url?q=https://instacart.careers/remote/&amp;amp;source=gmail&amp;amp;ust=1651869232122000&amp;amp;usg=AOvVaw37OlxP8hAKN7nq4YwHQH7e&quot;&gt;Learn more about our flexible approach to where we work.&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;OVERVIEW&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Since 2012, Instacart has been focused on making grocery delivery convenient, affordable, and accessible to everyone. We bring fresh groceries and everyday essentials to customers across the US and Canada from nearly 55,000 stores across 5,500 markets. Our missio",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 6,
+      "match_reason": "Rule-based: 0 skill matches",
       "skills_matched": []
     },
     {
-      "title": "AI/ML Engineer (Hybrid @ Bellevue, WA or Remote @ Florida)",
-      "company": "Offerup",
-      "location": "Hybrid @ Bellevue, WA ",
-      "url": "https://job-boards.greenhouse.io/offerup/jobs/7739995",
-      "posted": "2026-04-28T14:12:21-04:00",
+      "title": "Machine Learning Engineering Intern (PhD)",
+      "company": "Airbnb",
+      "location": "United States",
+      "url": "https://careers.airbnb.com/positions/7669906?gh_jid=7669906",
+      "posted": "2026-04-21T17:26:00-04:00",
       "source": "Greenhouse",
-      "description": "&lt;p&gt;&lt;strong&gt;Team Charter:&amp;nbsp;&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;The Data team is the engine of intelligence at OfferUp. Our mission is to transform massive amounts of marketplace data into seamless, safe, and personalized experiences that empower millions of people to connect and prosper. We bridge the gap between complex algorithms and real-world customer impact across search, trust &amp;amp; safety, and personalization.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;About the role:&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;AI is transforming how millions of people buy, sell, and connect on OfferUp - and this role is at the center of making that happen. As an AI Engineer on the Data team, you will own the production systems \u2014 from agentic workflows and RAG pipelines to LLM integrations - that turn our marketplace intelligence into real customer experiences. From enhancing search ranking and personalization to powering fraud detection and generative AI features, your work will have a company-wide impact and be felt by millions of users every day. The Data team reports into the broader engineering organization and directly influences OfferUp&#39;s most critical product surfaces.&lt;/p&gt; &lt;p&gt;We are looking for an &lt;strong&gt;AI Engineer&lt;/strong&gt; to join our &lt;strong&gt;Data team&lt;/strong&gt;. This team is tasked with building the core intelligence - supporting&amp;nbsp; search ranking, recommendation engines, fraud detection, and generative AI features - that is critical to OfferUp&#39;s success as the leading local marketplace. You will be part of a cross-functional team that includes Data Engineering and Data Science, serving as the bridge that turns research and models into shipped, production-grade AI systems.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;What we love about this role:&amp;nbsp;&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Breadth of Impact: You won&#39;t be siloed; you will build AI systems that drive results across Search &a",
-      "h1b_status": "Verify on myvisajobs.com",
-      "h1b_sponsors": false,
-      "score": 5,
-      "match_reason": "Could not score",
-      "skills_matched": []
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;span style=&quot;font-family: helvetica, arial, sans-serif; font-size: 12pt;&quot;&gt;Airbnb was born in 2007 when two hosts welcomed three guests to their San Francisco home, and has since grown to over 5 million hosts who have welcomed over 2 billion guest arrivals in almost every country across the globe. Every day, hosts offer unique stays and experiences that make it possible for guests to connect with communities in a more authentic way.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;The community you will join:&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Airbnb is seeking Software Engineering Interns for our &lt;strong&gt;2026 Summer Intern Program&lt;/strong&gt; from &lt;strong&gt;June 1, 2026 - August 21, 2026.&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Machine Learning at Airbnb is a diverse and dynamic field, with teams working on various aspects of the ML landscape. We are using ML to tackle various challenges in search ranking, payments, fraud prevention, discrimination, and growth all while maintaining a beautiful experience. We love to contribute to the community, by publishing blog posts and scientific papers at ML Conferences. Some of our publications can be found on Medium: &lt;a href=&quot;https://medium.com/airbnb-engineering/tagged/machine-learning&quot;&gt;https://medium.com/airbnb-engineering/tagged/machine-learning&lt;/a&gt;&lt;/p&gt; &lt;p&gt;Search Relevance and Personalization team is responsible for building search ranking algorithms and the personalization platform that serves multiple product surfaces. The team consists of 30+ ML Engineers working on different aspects of relevance and personalization. The team is very much experimentation oriented and runs frequent A/B tests to improve the relevance of the product surfaces they power. The team is also very much applied research oriented and regularly publishes work at KDD, CIKM and WSDM Conferences.&lt;/p&gt; &lt;p&gt;&amp;nbsp;&lt;/p&gt; &",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 6,
+      "match_reason": "Rule-based: 1 skill matches",
+      "skills_matched": [
+        "machine learning"
+      ]
+    },
+    {
+      "title": "Research Engineer, Machine Learning (RL Velocity)",
+      "company": "Anthropic",
+      "location": "Remote-Friendly (Travel-Required) | San Francisco, CA | New York City, NY",
+      "url": "https://job-boards.greenhouse.io/anthropic/jobs/5198108008",
+      "posted": "2026-04-23T10:35:56-04:00",
+      "source": "Greenhouse",
+      "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2&gt;&lt;strong&gt;About Anthropic&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;Anthropic\u2019s mission is to create reliable, interpretable, and steerable AI systems. We want AI to be safe and beneficial for our users and for society as a whole. Our team is a quickly growing group of committed researchers, engineers, policy experts, and business leaders working together to build beneficial AI systems.&lt;/p&gt;&lt;/div&gt;&lt;h2 class=&quot;heading&quot;&gt;&lt;strong&gt;About the role&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;The RL Velocity team owns the efficiency and reliability of our RL Science stack - the infrastructure, tooling, and systems that let researchers iterate quickly on training runs. As a Research Engineer on the team, you&#39;ll build and improve the core platform that underpins how we do RL at Anthropic, removing bottlenecks that slow down research and making it easier for the broader org to ship better models faster. This is high-leverage work: small improvements to velocity compound across every researcher and every run.&lt;/p&gt; &lt;h2 class=&quot;heading&quot;&gt;&lt;strong&gt;Responsibilities&lt;/strong&gt;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Build and improve the RL training infrastructure that researchers depend on day-to-day&lt;/li&gt; &lt;li&gt;Identify and remove bottlenecks across the RL stack: debugging, profiling, and rearchitecting where needed&lt;/li&gt; &lt;li&gt;Partner closely with researchers and with adjacent engineering teams (inference, sandboxing, and many more) to understand pain points and ship tooling that makes them faster&lt;/li&gt; &lt;li&gt;Own the reliability and performance of research runs end-to-end&lt;/li&gt; &lt;li&gt;Contribute to design decisions that shape how Anthropic does RL at scale&lt;/li&gt; &lt;/ul&gt; &lt;h2 class=&quot;heading&quot;&gt;&lt;strong&gt;You may be a good fit if you&lt;/strong&gt;&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Have strong software engineering fundamentals and ",
+      "h1b_status": "H1-B Sponsor \u2713",
+      "h1b_sponsors": true,
+      "score": 6,
+      "match_reason": "Rule-based: 1 skill matches",
+      "skills_matched": [
+        "rag"
+      ]
     }
   ]
 }
