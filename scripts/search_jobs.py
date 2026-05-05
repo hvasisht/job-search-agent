@@ -1,7 +1,7 @@
 """
 Job Search Agent for Harini Prasad Vasisht
 Runs daily via GitHub Actions — searches Adzuna Jobs API + Greenhouse ATS,
-checks H1-B sponsorship history, scores with Gemini, outputs top 20 jobs
+checks H1-B sponsorship history, scores with Claude AI, outputs top 20 jobs
 (score ≥ 5 only) to GitHub Pages.
 """
 
@@ -26,10 +26,10 @@ DATA_DIR.mkdir(exist_ok=True)
 DOCS_DIR.mkdir(exist_ok=True)
 
 # ── Config ────────────────────────────────────────────────────────────────────
-ADZUNA_APP_ID  = os.environ["ADZUNA_APP_ID"]
-ADZUNA_APP_KEY = os.environ["ADZUNA_APP_KEY"]
-GEMINI_KEY     = os.environ.get("GEMINI_API_KEY", "")
-ADZUNA_BASE    = "https://api.adzuna.com/v1/api/jobs/us/search"
+ADZUNA_APP_ID   = os.environ["ADZUNA_APP_ID"]
+ADZUNA_APP_KEY  = os.environ["ADZUNA_APP_KEY"]
+ANTHROPIC_KEY   = os.environ.get("ANTHROPIC_API_KEY", "")
+ADZUNA_BASE     = "https://api.adzuna.com/v1/api/jobs/us/search"
 
 SEARCH_QUERIES = [
     "data analyst entry level",
@@ -48,28 +48,45 @@ EXCLUDE_TITLE_WORDS = [
     "manager", "director", "vp ", "vice president", "head of",
     "architect", "distinguished", "fellow", "president", "cto",
     "cdo", "coo", "partner", "consultant",
+    " ii", " iii", " iv",   # intermediate/senior level indicators
+    "ios ", "android ", "mobile ", "frontend ", "front-end ",
+    "backend ", "back-end ", "devops", "infrastructure", "security ",
+    "embedded ", "firmware ", "hardware ", "network ",
 ]
 
 # ── Hard-exclude by DESCRIPTION — catches over-experienced roles ──────────────
-# These patterns look for experience requirements of 3+ years anywhere in the text.
 EXCLUDE_DESC_PATTERNS = [
-    # "X+ years of experience" (with plus sign)
+    # "X+ years of experience" (with plus sign, 3+)
     r"\b[3-9]\d*\s*\+\s*years?\s+(?:of\s+)?(?:relevant\s+|related\s+|industry\s+|professional\s+|work\s+)?experience",
-    # "X years of experience" (without plus, 4+ years to avoid matching "0-3 years")
+    # "X years of experience" (without plus, 4+ to avoid "0-3 years" ranges)
     r"\b[4-9]\d*\s+years?\s+(?:of\s+)?(?:relevant\s+|related\s+|industry\s+|professional\s+|work\s+)?experience",
     # "minimum X years" / "requires X years" / "at least X years"
     r"(?:minimum|requires?|must\s+have|at\s+least)\s+(?:\w+\s+)?[3-9]\d*\s+years?",
+    # "X+ years in [field]" — catches "7+ years in analytics"
+    r"\b[3-9]\d*\s*\+\s*years?\s+(?:in|of|with)\s+\w",
+    # "X years of [field]" without "experience" keyword
+    r"\b[4-9]\d*\s+years?\s+of\s+\w",
     # PhD required
     r"\b(?:ph\.?d\.?|doctorate)\s+(?:required|degree\s+required|preferred\s+required)",
     r"phd\s+required",
 ]
 
+# ── Data role keywords — title must contain at least one ─────────────────────
+DATA_ROLE_TITLE_KEYWORDS = [
+    "data analyst", "data scientist", "data engineer", "data science",
+    "analytics engineer", "machine learning", "ml engineer", "ai engineer",
+    "applied ai", "business intelligence", "bi analyst", "quantitative analyst",
+    "data analytics", "analytics", "intelligence analyst",
+]
+
 # ── Greenhouse companies ───────────────────────────────────────────────────────
+# Only data-specific role keywords — no generic "new grad" / "university grad"
+# which would match iOS, backend, and other non-data roles
 GREENHOUSE_KEYWORDS = [
     "data analyst", "data scientist", "machine learning", "ml engineer",
     "analytics engineer", "data engineer", "ai engineer", "business intelligence",
-    "bi analyst", "quantitative analyst", "new grad", "university grad",
-    "early career", "associate data", "junior data",
+    "bi analyst", "quantitative analyst", "associate data", "junior data",
+    "data analytics", "applied ai",
 ]
 
 GREENHOUSE_COMPANIES = [
@@ -89,6 +106,18 @@ GREENHOUSE_COMPANIES = [
 
 # Jobs older than this many days will be excluded from Greenhouse
 GREENHOUSE_MAX_AGE_DAYS = 14
+
+# ── Non-US location exclusion ─────────────────────────────────────────────────
+NON_US_LOCATIONS = [
+    "canada", "toronto", "montreal", "vancouver", "calgary", "ottawa",
+    "united kingdom", "london", "england", "scotland", "manchester",
+    "india", "bangalore", "bengaluru", "mumbai", "delhi", "hyderabad", "pune",
+    "australia", "sydney", "melbourne", "brisbane",
+    "germany", "berlin", "munich", "france", "paris",
+    "singapore", "ireland", "dublin", "netherlands", "amsterdam",
+    "israel", "tel aviv", "poland", "romania",
+]
+
 
 # ── Adzuna ────────────────────────────────────────────────────────────────────
 
@@ -117,8 +146,8 @@ def search_adzuna(query, page=1):
             "url":         item.get("redirect_url", ""),
             "posted":      item.get("created", ""),
             "source":      "Adzuna",
-            "description": desc[:2000],   # full text for filtering
-            "_desc_short": desc[:400],    # short version for Gemini
+            "description": desc[:2000],
+            "_desc_short": desc[:400],
         })
     return jobs
 
@@ -170,6 +199,7 @@ def search_greenhouse():
         time.sleep(0.1)
 
     print(f"    → {len(matched)} title matches within last {GREENHOUSE_MAX_AGE_DAYS} days — fetching descriptions...")
+    fetched = 0
     for job in matched:
         try:
             r = requests.get(
@@ -180,15 +210,17 @@ def search_greenhouse():
                 html = r.json().get("content", "")
                 plain = re.sub(r"<[^>]+>", " ", html)
                 plain = re.sub(r"\s+", " ", plain).strip()
-                job["description"] = plain[:2000]   # full text for filtering
-                job["_desc_short"] = plain[:400]    # short version for Gemini
+                if plain:
+                    job["description"] = plain[:2000]
+                    job["_desc_short"] = plain[:400]
+                    fetched += 1
         except Exception:
             pass
         time.sleep(0.1)
         job.pop("_gh_company", None)
         job.pop("_gh_id", None)
 
-    print(f"    → {len(matched)} Greenhouse jobs with descriptions")
+    print(f"    → {fetched}/{len(matched)} Greenhouse jobs with descriptions fetched")
     return matched
 
 
@@ -198,34 +230,35 @@ def is_relevant(job):
     title = (job.get("title") or "").lower()
     desc  = (job.get("description") or "").lower()
 
+    # Skip Greenhouse jobs where description fetch failed — can't verify requirements
+    if not desc and job.get("source") == "Greenhouse":
+        return False
+
+    # Must be a data/analytics/ML/AI role
+    if not any(kw in title for kw in DATA_ROLE_TITLE_KEYWORDS):
+        return False
+
     # Hard exclude by title
     for word in EXCLUDE_TITLE_WORDS:
         if word in title:
             return False
 
-    # Hard exclude by description — catches "7 years experience" etc.
+    # Hard exclude by description — catches "7 years experience" / "7+ years" etc.
     for pattern in EXCLUDE_DESC_PATTERNS:
         if re.search(pattern, desc, re.IGNORECASE):
             return False
 
-    # Must be US-based or remote — exclude known non-US locations first
+    # Exclude non-US locations explicitly first (avoids "ca" matching "canada")
     location = (job.get("location") or "").lower()
-    non_us = [
-        "canada", "toronto", "montreal", "vancouver", "calgary", "ottawa",
-        "united kingdom", "london", "england", "scotland", "manchester",
-        "india", "bangalore", "bengaluru", "mumbai", "delhi", "hyderabad", "pune",
-        "australia", "sydney", "melbourne", "brisbane",
-        "germany", "berlin", "munich", "france", "paris",
-        "singapore", "ireland", "dublin", "netherlands", "amsterdam",
-        "israel", "tel aviv", "poland", "romania",
-    ]
-    if any(kw in location for kw in non_us):
+    if any(kw in location for kw in NON_US_LOCATIONS):
         return False
+
+    # Must be US-based or remote
     if location and all(c not in location for c in [
         "us", "united states", "remote", "new york", "boston", "chicago",
         "seattle", "san francisco", "austin", "atlanta", "denver", "dallas",
-        "hybrid", "usa", "ny", ", ca", " ca,", " ca ", "tx", "cambridge",
-        "washington", "virginia", "maryland", "new jersey", "anywhere",
+        "hybrid", "usa", "ny", ", ca", " ca ", "tx", "cambridge", "washington",
+        "virginia", "maryland", "new jersey", "anywhere",
         "los angeles", "san jose", "philadelphia", "phoenix", "portland",
     ]):
         return False
@@ -249,7 +282,7 @@ def deduplicate(jobs):
     return out
 
 
-# ── Gemini Scoring ────────────────────────────────────────────────────────────
+# ── Candidate Profile ─────────────────────────────────────────────────────────
 
 HARINI_PROFILE = """
 Harini Prasad Vasisht — graduating May 2026, MS Data Analytics Engineering,
@@ -276,22 +309,22 @@ IDEAL: 0-2 years exp required, or explicitly "new grad"/"recent graduate".
 """
 
 
+# ── Rule-based fallback scorer ────────────────────────────────────────────────
+
 def rule_based_score(job):
-    """Score 1-10 using deterministic rules — used when Gemini is unavailable."""
+    """Score 1-10 using deterministic rules — fallback when Claude is unavailable."""
     title = (job.get("title") or "").lower()
     desc  = (job.get("description") or "").lower()
     score = 5
 
-    # Strong positive: explicit entry-level / new-grad signal
     entry_signals = [
         "entry level", "entry-level", "new grad", "new-grad", "recent grad",
         "junior", "associate", "early career", "university grad",
-        "0-1 year", "0-2 year", "0 to 1 year", "0 to 2 year",
+        "0-1 year", "0-2 year", "0 to 1", "0 to 2",
     ]
     if any(w in title or w in desc for w in entry_signals):
         score += 2
 
-    # Skill match bonus (up to +2 for breadth of match)
     harini_skills = [
         "python", "sql", "machine learning", "data science", "analytics",
         "langchain", "pytorch", "tensorflow", "tableau", "power bi",
@@ -299,29 +332,29 @@ def rule_based_score(job):
         "etl", "data pipeline", "visualization", "hugging face",
         "rag", "llm", "generative ai",
     ]
-    matched_skills = [s for s in harini_skills if s in desc]
-    if len(matched_skills) >= 5:
+    matched = [s for s in harini_skills if s in desc]
+    if len(matched) >= 5:
         score += 2
-    elif len(matched_skills) >= 2:
+    elif len(matched) >= 2:
         score += 1
 
-    # H1-B sponsor bonus
     if job.get("h1b_sponsors"):
         score += 1
 
-    # Slight penalty for very short/empty descriptions (can't verify fit)
     if len(desc) < 100:
         score -= 1
 
-    reason = f"Rule-based: {len(matched_skills)} skill matches"
+    reason = f"Rule-based: {len(matched)} skill matches"
     if any(w in title or w in desc for w in entry_signals):
         reason += ", entry-level signal found"
-    return max(1, min(10, score)), reason, matched_skills[:6]
+    return max(1, min(10, score)), reason, matched[:6]
 
 
-def score_with_gemini(jobs):
-    if not GEMINI_KEY or not jobs:
-        print("  ℹ No Gemini key — using rule-based scoring")
+# ── Claude AI Scoring ─────────────────────────────────────────────────────────
+
+def score_with_claude(jobs):
+    if not ANTHROPIC_KEY or not jobs:
+        print("  ℹ No Anthropic key — using rule-based scoring")
         for job in jobs:
             s, r, sk = rule_based_score(job)
             job.setdefault("score", s)
@@ -329,47 +362,51 @@ def score_with_gemini(jobs):
             job.setdefault("skills_matched", sk)
         return jobs
 
-    import google.generativeai as genai
-    genai.configure(api_key=GEMINI_KEY)
-    model = genai.GenerativeModel("gemini-2.0-flash")
-    gemini_ok = 0
+    import anthropic
+    client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
+    claude_ok = 0
 
     for job in jobs:
         desc_short = job.pop("_desc_short", job.get("description", "")[:400])
         prompt = (
-            f"Score this job 1-10 for fit with this candidate. "
-            f"RULES: score 1-3 if requires 3+ yrs exp, PhD, or senior level. "
-            f"Score 8-10 if entry-level/new-grad AND skills match. "
-            f"Score 5-7 if decent match, unclear level.\n\n"
-            f"CANDIDATE (summary):\n{HARINI_PROFILE}\n\n"
+            f"Score this job 1-10 for fit with this candidate.\n"
+            f"SCORING RULES:\n"
+            f"- Score 1-2: job is NOT data/analytics/ML/AI related (e.g. iOS, mobile, devops, backend)\n"
+            f"- Score 1-3: requires 3+ years experience, PhD required, or senior/lead level\n"
+            f"- Score 8-10: explicitly entry-level/new-grad AND strong skill match\n"
+            f"- Score 5-7: data role, decent skill overlap, experience level unclear\n"
+            f"- Score 4: data role but skills don't match well\n\n"
+            f"CANDIDATE:\n{HARINI_PROFILE}\n\n"
             f"JOB:\nTitle: {job.get('title')}\n"
             f"Company: {job.get('company')}\n"
             f"Location: {job.get('location')}\n"
             f"Description: {desc_short}\n\n"
-            f'Return ONLY JSON: {{"score":7,"reason":"one sentence","skills_matched":["Python"]}}'
+            f'Return ONLY JSON: {{"score":7,"reason":"one sentence","skills_matched":["Python","SQL"]}}'
         )
         try:
-            resp = model.generate_content(prompt)
-            raw = resp.text.strip()
-            # Extract the JSON object robustly — handles thinking tokens or extra text
+            msg = client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=150,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            raw = msg.content[0].text.strip()
             start = raw.find("{")
             end   = raw.rfind("}") + 1
             if start == -1 or end == 0:
-                raise ValueError("No JSON found in response")
+                raise ValueError("No JSON in response")
             data = json.loads(raw[start:end])
             job["score"]          = int(data.get("score", 5))
             job["match_reason"]   = data.get("reason", "")
             job["skills_matched"] = data.get("skills_matched", [])
-            gemini_ok += 1
+            claude_ok += 1
         except Exception as e:
-            print(f"    ⚠ Gemini {type(e).__name__} for '{job.get('title')}': {e}")
+            print(f"    ⚠ Claude {type(e).__name__} for '{job.get('title')}': {e}")
             s, r, sk = rule_based_score(job)
             job["score"]          = s
             job["match_reason"]   = r
             job["skills_matched"] = sk
-        time.sleep(4.5)  # Gemini free tier: 15 req/min → need >4s between calls
 
-    print(f"  ✓ Gemini scored {gemini_ok}/{len(jobs)} jobs (rest used rule-based fallback)")
+    print(f"  ✓ Claude scored {claude_ok}/{len(jobs)} jobs (rest used rule-based fallback)")
     return jobs
 
 
@@ -411,12 +448,12 @@ def main():
         job["h1b_status"]   = h1b_label(job.get("company", ""))
         job["h1b_sponsors"] = is_h1b_sponsor(job.get("company", ""))
 
-    # Score top 40 candidates with Gemini
+    # Score top 40 candidates with Claude
     all_jobs.sort(key=lambda j: j.get("title", ""))
-    print(f"\n🤖 Scoring top 40 with Gemini...")
-    all_jobs = score_with_gemini(all_jobs[:40])
+    print(f"\n🤖 Scoring top {min(40, len(all_jobs))} with Claude AI...")
+    all_jobs = score_with_claude(all_jobs[:40])
 
-    # Sort: H1-B sponsors first as tiebreaker, then by score
+    # Sort: score descending, H1-B sponsors as tiebreaker
     all_jobs.sort(key=lambda j: (j.get("score", 0), j.get("h1b_sponsors", False)), reverse=True)
 
     # Keep only score >= 5 and top 20
