@@ -39,17 +39,27 @@ IDEAL: 0–2 years experience required, or explicitly "new grad" / "recent gradu
 """
 
 SCORING_RUBRIC = """
-STRICT SCORING RULES:
-Score 1-2:  Role is NOT data/analytics/ML/AI at all (iOS, mobile, DevOps, security, etc.)
-Score 1-3:  Requires 3+ years exp, PhD required, senior/lead/staff/mid-level.
-Score 4:    Data/ML/AI role but poor skill overlap (Java/Scala only, no Python/SQL).
-Score 5-6:  Data/ML/AI role, decent overlap, experience level unclear or "1-3 years".
-Score 7:    Good skill match, entry-friendly, no strong seniority signals.
-Score 8-9:  Explicitly entry-level OR new-grad AND strong skill overlap.
-Score 10:   Perfect — entry-level/new-grad + near-complete skill match + OPT-friendly.
+STRICT SCORING RULES — read carefully before assigning a score:
 
-DEDUCTIONS:
-  -2 if role clearly targets 2+ years FT experience
+Score 1–2:  Role is NOT data/analytics/ML/AI at all (iOS, mobile, DevOps, security, etc.)
+Score 3:    Requires 3+ years exp explicitly, PhD required, or clearly senior/lead/staff level.
+Score 4:    Data/ML/AI role but poor skill overlap (e.g. Java/Scala-only stack, no Python/SQL).
+Score 5–6:  Data/ML/AI role, decent skill overlap, but experience level is UNSTATED or ambiguous.
+            This is the DEFAULT band when nothing confirms entry-level.
+Score 7:    Good skill match AND at least one soft entry-level signal
+            (e.g. "0–2 years", "recent grad preferred", company known for new-grad hiring).
+Score 8–9:  The words "entry-level", "entry level", "new grad", "new graduate",
+            "recent graduate", or "recent grad" EXPLICITLY APPEAR in the title or description,
+            AND there is strong skill overlap with the candidate profile.
+Score 10:   All of the above PLUS OPT/F-1 explicitly welcomed.
+
+CRITICAL RULE — DO NOT give 8+ unless one of these EXACT PHRASES literally appears:
+  "entry level", "entry-level", "new grad", "new graduate",
+  "recent graduate", "recent grad", "0-1 year", "0-2 years", "university grad"
+Unstated experience requirement is NOT the same as entry-level. Default to 5–6 if unclear.
+
+DEDUCTIONS (apply after base score):
+  -2 if role clearly targets 2+ years FT experience even without "senior" in title
   -2 if no Python or SQL anywhere in description for analytics/DS roles
   -1 if location is ambiguous or could be non-US
   +1 if role explicitly mentions OPT, CPT, or F-1 as acceptable
@@ -130,10 +140,10 @@ def _rule_based_score(job: dict) -> tuple:
     title     = (job.get("title") or "").lower()
     desc      = (job.get("description") or "").lower()
     exp_label = (job.get("_exp_label") or "").lower()
-    score     = 4
+    score     = 5
 
-    entry_title_signals = ["entry level", "entry-level", "new grad", "new-grad", "junior", "associate", "early career", "0-1 year", "0-2 year"]
-    entry_desc_signals  = ["recent graduate", "recent grad", "university grad", "0 to 2 years", "0-2 years", "new graduate"]
+    entry_title_signals = ["entry level", "entry-level", "new grad", "new-grad", "new graduate", "recent graduate", "recent grad", "university grad", "0-1 year", "0-2 year"]
+    entry_desc_signals  = ["recent graduate", "recent grad", "university grad", "0 to 2 years", "0-2 years", "new graduate", "entry level", "entry-level"]
 
     if any(w in title for w in entry_title_signals):
         score += 2
