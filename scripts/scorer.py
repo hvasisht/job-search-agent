@@ -9,32 +9,58 @@ ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 HARINI_PROFILE = """
 Harini Prasad Vasisht — MS Data Analytics Engineering, Northeastern University
-(graduating May 2026, GPA 3.8/4.0). BS Computer Science with Honors in AI/ML.
+(graduated May 2026, GPA 3.8/4.0). BS Computer Science with Honors in AI/ML.
+
+AVAILABILITY: OPT application in progress — available to start August–October 2026.
+WORK AUTH: F-1 OPT (STEM) — can work ~3 years without employer sponsorship.
+After OPT, needs H-1B. HARD blockers: role says "no OPT/CPT" OR requires start before August 2026.
 
 EXPERIENCE (~1 yr total):
 - Data Analyst & Customer Success Specialist, Phoenix Compliance (Aug 2022–Jun 2023):
+  Remote role supporting US healthcare clients from India on US business hours.
   Tableau/Power BI dashboards (DAX), UiPath RPA automation (800+ docs/month),
-  HIPAA-compliant patient records (1000+ records), Excel analytics, US healthcare teams.
+  HIPAA-compliant patient records (1000+ records), Excel analytics.
 - Teaching Assistant, GenAI in Practice DADS 5250, Northeastern (Feb–May 2026):
-  Co-designed full GenAI graduate course: Claude Code, LangChain, RAG, prompt engineering.
+  Co-designed full GenAI graduate course: Claude Code, LangChain, RAG, prompt engineering,
+  Gemini 2.5 Flash, agentic workflows. Graded assignments, held office hours.
 
-SKILLS: Python, SQL, R | PyTorch, TensorFlow, CNNs, YOLOv8, XGBoost, transformers |
-LangChain, LangGraph, RAG, ChromaDB, FAISS, GPT-4o, Hugging Face Transformers |
-Tableau, Power BI (DAX), Streamlit | ETL, PySpark, AWS (S3/Glue/Athena), GCP |
-Apache Airflow, DVC, Docker, Kubernetes, MLflow, GitHub Actions, TFDV |
-MySQL, PostgreSQL, MongoDB, SQLite | UiPath RPA | HIPAA compliance
+CERTIFICATIONS:
+- IBM Data Analyst Professional Certificate (Coursera, 2024)
+- Google Data Analytics Professional Certificate (Coursera, 2024)
 
-PROJECTS: Multi-agent RAG health assistant (LangGraph+GPT-4o+ChromaDB),
-MOMENT MLOps platform (Airflow+DVC+TFDV+Vertex AI, 896-dim embeddings),
-CNN/YOLOv8 attendance system (Flask, 91% accuracy), text-to-image (CLIP+Stable Diffusion),
-retail ETL (AWS S3/Glue/Athena/PySpark), stock sentiment agent (LangChain ReAct).
+SKILLS:
+Languages:    Python, SQL, R
+ML/DL:        PyTorch, TensorFlow, CNNs, YOLOv8, XGBoost, Scikit-learn, transformers,
+              Sentence-BERT, go-emotions, OpenCV
+GenAI/LLM:    LangChain, LangGraph, RAG, ChromaDB, FAISS, GPT-4o, Gemini 2.5 Flash,
+              Hugging Face Transformers, Claude API, prompt engineering
+Data Eng:     ETL, PySpark, Apache Airflow, DVC, TFDV, dbt (basics)
+Cloud/Infra:  AWS (S3, Glue, Athena), GCP (Vertex AI, BigQuery, Cloud Run, Cloud SQL),
+              Snowflake, Docker, Kubernetes, MLflow, GitHub Actions
+Databases:    MySQL, PostgreSQL, MongoDB, SQLite, BigQuery, Snowflake
+BI / Viz:     Tableau, Power BI (DAX), Streamlit, Matplotlib, Seaborn
+APIs / Web:   FastAPI, Flask, REST APIs
+RPA:          UiPath
 
-WORK AUTH: F-1 OPT (STEM) — can work ~3 years without employer sponsorship.
-After OPT, needs H-1B. Only HARD blocker: role explicitly says "no OPT/CPT".
+PROJECTS (10 total, all with code on GitHub):
+1. Multi-agent RAG health assistant — LangGraph + GPT-4o + ChromaDB; document retrieval + reasoning agents
+2. MOMENT MLOps platform — Airflow + DVC + TFDV + Vertex AI; 896-dim Sentence-BERT embeddings
+3. CNN/YOLOv8 attendance system — Flask, OpenCV, 91% accuracy
+4. Text-to-image — CLIP + Stable Diffusion fine-tuning
+5. Retail ETL pipeline — AWS S3/Glue/Athena/PySpark, automated data quality checks
+6. Stock sentiment agent — LangChain ReAct, go-emotions classifier, live market data
+7. Momento app — FastAPI + PostgreSQL + Firebase Auth + GCP Cloud Run (production-deployed)
+8. Crime pattern analysis — R, tidyverse, spatial clustering
+9. Healthcare dashboard — Power BI DAX, HIPAA-compliant data model
+10. GenAI course curriculum — Claude Code integration, agentic workflow labs
+
+POSITIONING: Early-career candidate with real production experience (deployed app,
+real client dashboards, published automation). NOT a training-program or bootcamp hire.
+Strongest in: Python/SQL data engineering, ML pipelines, LLM/GenAI applications, BI dashboards.
 
 TARGET: Entry-level / new-grad roles — Data Analyst, Data Scientist, ML Engineer,
 Analytics Engineer, AI Engineer, Data Engineer, BI Analyst.
-US-based or remote only. Start May/June 2026. Salary $80K–$105K.
+US-based or remote only. Start August–October 2026. Salary $80K–$105K.
 IDEAL: 0–2 years experience required, or explicitly "new grad" / "recent graduate".
 """
 
@@ -62,6 +88,8 @@ DEDUCTIONS (apply after base score):
   -2 if role clearly targets 2+ years FT experience even without "senior" in title
   -2 if no Python or SQL anywhere in description for analytics/DS roles
   -1 if location is ambiguous or could be non-US
+  -1 if role requires immediate start (before August 2026) — candidate's OPT is pending
+  -1 if role is pure reporting/dashboarding only with no data engineering or ML component
   +1 if role explicitly mentions OPT, CPT, or F-1 as acceptable
 """
 
@@ -142,13 +170,22 @@ def _rule_based_score(job: dict) -> tuple:
     exp_label = (job.get("_exp_label") or "").lower()
     score     = 5
 
-    entry_title_signals = ["entry level", "entry-level", "new grad", "new-grad", "new graduate", "recent graduate", "recent grad", "university grad", "0-1 year", "0-2 year"]
-    entry_desc_signals  = ["recent graduate", "recent grad", "university grad", "0 to 2 years", "0-2 years", "new graduate", "entry level", "entry-level"]
+    entry_title_signals = [
+        "entry level", "entry-level", "new grad", "new-grad", "new graduate",
+        "recent graduate", "recent grad", "university grad",
+        "junior", "associate", "early career", "0-1 year", "0-2 year",
+    ]
+    entry_desc_signals = [
+        "recent graduate", "recent grad", "university grad",
+        "0 to 2 years", "0-2 years", "new graduate", "new grad",
+        "entry level", "entry-level",
+    ]
 
     if any(w in title for w in entry_title_signals):
         score += 2
     elif any(w in desc for w in entry_desc_signals):
         score += 1
+
     if "entry" in exp_label or "junior" in exp_label:
         score += 1
 
@@ -158,6 +195,7 @@ def _rule_based_score(job: dict) -> tuple:
         "aws", "pyspark", "airflow", "mlflow", "docker", "nlp",
         "etl", "data pipeline", "visualization", "hugging face",
         "rag", "llm", "generative ai", "chromadb", "spark", "gcp", "dbt",
+        "snowflake", "bigquery", "fastapi", "flask", "opencv", "gemini",
     ]
     matched = [s for s in harini_skills if s in desc]
     if len(matched) >= 6:
@@ -168,6 +206,15 @@ def _rule_based_score(job: dict) -> tuple:
     if job.get("h1b_sponsors"):
         score += 1
     if len(desc) < 300:
+        score -= 1
+
+    # Penalise pure reporting roles with no engineering or ML component
+    engineering_signals = [
+        "pipeline", "etl", "machine learning", "model", "python", "sql",
+        "spark", "airflow", "dbt", "data engineering", "ml", "ai",
+        "automation", "api", "cloud", "warehouse",
+    ]
+    if not any(sig in desc for sig in engineering_signals):
         score -= 1
 
     reason = f"Rule-based: {len(matched)} skill matches"
