@@ -9,7 +9,7 @@ ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 HARINI_PROFILE = """
 Harini Prasad Vasisht — MS Data Analytics Engineering, Northeastern University
-(graduated May 2026, GPA 3.7/4.0). BS Computer Science & Engineering, 3.4/4.0.
+(graduated May 2026, GPA 3.8/4.0). BS Computer Science & Engineering, 3.4/4.0.
 
 AVAILABILITY: OPT application in progress — available to start August–October 2026.
 WORK AUTH: F-1 OPT (STEM) — can work ~3 years without employer sponsorship.
@@ -65,32 +65,40 @@ IDEAL: 0–2 years experience required, or explicitly "new grad" / "recent gradu
 """
 
 SCORING_RUBRIC = """
-STRICT SCORING RULES — read carefully before assigning a score:
+STRICT SCORING RULES:
 
-Score 1–2:  Role is NOT data/analytics/ML/AI at all (iOS, mobile, DevOps, security, etc.)
-Score 3:    Requires 3+ years exp explicitly, PhD required, or clearly senior/lead/staff level.
-Score 4:    Data/ML/AI role but poor skill overlap (e.g. Java/Scala-only stack, no Python/SQL).
-Score 5–6:  Data/ML/AI role, decent skill overlap, but experience level is UNSTATED or ambiguous.
-            This is the DEFAULT band when nothing confirms entry-level.
-Score 7:    Good skill match AND at least one soft entry-level signal
-            (e.g. "0–2 years", "recent grad preferred", company known for new-grad hiring).
-Score 8–9:  The words "entry-level", "entry level", "new grad", "new graduate",
-            "recent graduate", or "recent grad" EXPLICITLY APPEAR in the title or description,
-            AND there is strong skill overlap with the candidate profile.
-Score 10:   All of the above PLUS OPT/F-1 explicitly welcomed.
+Score 1-2:  Role is NOT data/analytics/ML/AI (mobile, security, DevOps, etc.)
+Score 3-4:  DEFAULT band. Use this when:
+            - The role is data/ML/AI but experience level is unstated/ambiguous
+            - The role is at a Big Tech company (Lyft, Pinterest, Airbnb, Stripe,
+              Robinhood, Dropbox, Discord, Coinbase, Brex, Twilio, Snowflake,
+              Databricks, Datadog, MongoDB) AND the title contains "Engineer" or
+              "Scientist" AND no explicit new-grad signal appears.
+Score 5-6:  Data/ML/AI role with decent skill overlap AND at least one soft
+            entry-level signal (e.g. "0-2 years", "early career", "recent grad
+            preferred", junior in title).
+Score 7:    All of the above PLUS strong skill match with candidate's stack
+            (Python + SQL + at least one of {ML, RAG, LangChain, MLOps, BI}).
+Score 8-9:  Title or description EXPLICITLY says one of: "entry level",
+            "entry-level", "new grad", "new graduate", "recent graduate",
+            "recent grad", "0-1 year", "0-2 years", "university grad",
+            AND strong skill overlap.
+Score 10:   All of the above PLUS OPT/F-1/CPT explicitly welcomed.
 
-CRITICAL RULE — DO NOT give 8+ unless one of these EXACT PHRASES literally appears:
-  "entry level", "entry-level", "new grad", "new graduate",
-  "recent graduate", "recent grad", "0-1 year", "0-2 years", "university grad"
-Unstated experience requirement is NOT the same as entry-level. Default to 5–6 if unclear.
+CRITICAL: Score 8+ requires one of these EXACT phrases in the title or
+description: "entry level", "entry-level", "new grad", "new graduate",
+"recent graduate", "recent grad", "0-1 year", "0-2 years", "university grad".
+Unstated experience is NOT entry-level. Default to 3-4 if unclear.
 
 DEDUCTIONS (apply after base score):
-  -2 if role clearly targets 2+ years FT experience even without "senior" in title
-  -2 if no Python or SQL anywhere in description for analytics/DS roles
-  -1 if location is ambiguous or could be non-US
-  -1 if role requires immediate start (before August 2026) — candidate's OPT is pending
-  -1 if role is pure reporting/dashboarding only with no data engineering or ML component
-  +1 if role explicitly mentions OPT, CPT, or F-1 as acceptable
+  -3 if "2+ years", "3+ years", or higher experience floor stated
+  -2 if Python AND SQL absent from description for analytics/DS roles
+  -2 if "Senior", "Staff", "Principal", "Lead" appear anywhere in description
+  -1 if location is ambiguous or non-US
+  -1 if start date required before August 2026 (candidate's OPT pending)
+  -1 if pure reporting/dashboarding only (no engineering or ML component)
+  +1 if OPT, CPT, or F-1 explicitly listed as acceptable
+  +1 if H-1B sponsorship explicitly offered
 """
 
 

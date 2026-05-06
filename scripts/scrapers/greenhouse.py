@@ -29,7 +29,7 @@ GREENHOUSE_COMPANIES = [
     "palantir", "mixpanel", "heap", "census", "hightouch", "metabase",
 ]
 
-MAX_AGE_DAYS    = 7
+MAX_AGE_DAYS    = 1
 MIN_DESC_LENGTH = 200
 
 

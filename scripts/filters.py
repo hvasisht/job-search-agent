@@ -45,6 +45,9 @@ EXCLUDE_DESC_PATTERNS = [
     r"(?:us\s+)?citizen(?:ship)?\s+(?:only|required|is\s+required)",
     r"security\s+clearance\s+required",
     r"active\s+(?:secret|ts|top\s+secret)\s+clearance",
+    r"\b2\s*\+\s*years?\s+(?:of\s+)?(?:full[-\s]?time|professional|relevant|industry|work)",
+    r"(?:requires?|must\s+have|need)\s+(?:at\s+least\s+)?2\+?\s+years",
+    r"\b(?:senior|staff|principal|lead)\s+(?:engineer|scientist|analyst)",
 ]
 
 DATA_ROLE_TITLE_KEYWORDS = [
@@ -92,6 +95,9 @@ EXCLUDE_COMPANIES = {
     "cognizant", "tech mahindra", "mphasis", "hexaware", "ltimindtree",
     "capgemini", "dice", "cybercoders", "revature",
     "kforce", "modis", "insight global", "apex systems",
+    "infotech", "software solutions", "global services", "systems llc",
+    "info systems", "diverse lynx", "compunnel", "talent4u", "net2source",
+    "akkodis",
 }
 
 MIN_DESC_LENGTH = 300
@@ -113,8 +119,11 @@ TECH_SKILL_SIGNALS = [
 
 def _is_staffing_company(company: str) -> bool:
     c = company.lower().strip()
-    if c in EXCLUDE_COMPANIES:
-        return True
+    if not c:
+        return False
+    for excluded in EXCLUDE_COMPANIES:
+        if excluded in c:
+            return True
     for pattern in EXCLUDE_COMPANY_PATTERNS:
         if re.search(pattern, c, re.IGNORECASE):
             return True

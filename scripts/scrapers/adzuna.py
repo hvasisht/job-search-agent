@@ -42,7 +42,7 @@ def scrape_adzuna() -> list:
                 "app_key":          ADZUNA_APP_KEY,
                 "results_per_page": 25,
                 "what":             query,
-                "max_days_old":     3,
+                "max_days_old":     1,
                 "sort_by":          "date",
             }
             r = requests.get(

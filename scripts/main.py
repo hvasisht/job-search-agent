@@ -96,8 +96,8 @@ def _save_seen_urls(jobs: list, existing: set) -> None:
 def _skip_apify() -> bool:
     if os.environ.get("SKIP_APIFY", "").lower() == "true":
         return True
-    hour = datetime.now(timezone.utc).hour
-    return hour not in (8, 9, 10)
+    now = datetime.now(timezone.utc)
+    return not (now.hour == 9 and now.minute < 5)
 
 
 def main():
@@ -168,7 +168,7 @@ def main():
     scored = score_jobs(all_jobs[:top_n])
 
     scored.sort(key=lambda j: (j.get("score", 0), j.get("h1b_sponsors", False)), reverse=True)
-    final = [j for j in scored if j.get("score", 0) >= 5][:20]
+    final = [j for j in scored if j.get("score", 0) >= 6][:20]
 
     with open(DATA_DIR / "latest_jobs.json", "w") as f:
         json.dump({"updated": datetime.now(timezone.utc).isoformat(), "jobs": final}, f, indent=2)

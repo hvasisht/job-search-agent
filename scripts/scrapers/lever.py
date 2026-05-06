@@ -7,7 +7,7 @@ import time
 import requests
 from datetime import datetime, timezone, timedelta
 
-LEVER_MAX_AGE_DAYS = 14
+LEVER_MAX_AGE_DAYS = 2
 
 LEVER_COMPANIES = [
     # Verified working slugs as of May 2026
