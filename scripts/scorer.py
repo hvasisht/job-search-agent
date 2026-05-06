@@ -7,6 +7,19 @@ import os
 
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
+RESPONSE_SCHEMA = """
+Return ONLY valid JSON, no extra text:
+{
+  "score": 7,
+  "reason": "one sentence max",
+  "skills_matched": ["Python", "SQL"],
+  "years_required": 2,
+  "opt_friendly": true,
+  "us_based": true,
+  "is_new_grad_explicit": false
+}
+"""
+
 HARINI_PROFILE = """
 Harini Prasad Vasisht — MS Data Analytics Engineering, Northeastern University
 (graduated May 2026, GPA 3.8/4.0). BS Computer Science & Engineering, 3.4/4.0.
@@ -102,6 +115,36 @@ DEDUCTIONS (apply after base score):
 """
 
 
+def _parse_structured(raw: str) -> dict:
+    start = raw.find("{")
+    end   = raw.rfind("}") + 1
+    if start == -1 or end == 0:
+        raise ValueError("No JSON in response")
+    return json.loads(raw[start:end])
+
+
+def _apply_structured_fields(job: dict, data: dict) -> None:
+    score = max(1, min(10, int(data.get("score", 5))))
+    if data.get("opt_friendly") is True:
+        score = min(10, score + 1)
+    job["score"]                = score
+    job["match_reason"]         = data.get("reason", "")
+    job["skills_matched"]       = data.get("skills_matched", [])
+    job["years_required"]       = data.get("years_required")
+    job["opt_friendly"]         = bool(data.get("opt_friendly"))
+    job["us_based"]             = data.get("us_based", True)
+    job["is_new_grad_explicit"] = bool(data.get("is_new_grad_explicit"))
+
+
+def _passes_hard_gates(job: dict) -> bool:
+    yrs = job.get("years_required")
+    if yrs is not None and isinstance(yrs, (int, float)) and yrs >= 2:
+        return False
+    if job.get("us_based") is False:
+        return False
+    return True
+
+
 def score_jobs(jobs: list) -> list:
     if not ANTHROPIC_KEY:
         print("  ℹ No Anthropic key — using rule-based scoring for all jobs")
@@ -118,7 +161,8 @@ def score_jobs(jobs: list) -> list:
         claude_ok = 0
 
         for job in jobs:
-            desc_slice = job.pop("_desc_short", "") or job.get("description", "")[:800]
+            desc_slice = (job.get("description") or "")[:4000]
+            job.pop("_desc_short", None)
             exp_label  = job.pop("_exp_label", "")
 
             prompt = (
@@ -132,24 +176,16 @@ def score_jobs(jobs: list) -> list:
                 f"Source:      {job.get('source', '')}\n"
                 f"Exp label:   {exp_label}\n"
                 f"Description (requirements section):\n{desc_slice}\n\n"
-                f'Return ONLY valid JSON, no extra text:\n'
-                f'{{"score": 7, "reason": "one sentence max", "skills_matched": ["Python", "SQL"]}}'
+                f"{RESPONSE_SCHEMA}"
             )
             try:
                 msg = client.messages.create(
                     model="claude-haiku-4-5-20251001",
-                    max_tokens=200,
+                    max_tokens=400,
                     messages=[{"role": "user", "content": prompt}],
                 )
-                raw   = msg.content[0].text.strip()
-                start = raw.find("{")
-                end   = raw.rfind("}") + 1
-                if start == -1 or end == 0:
-                    raise ValueError("No JSON in response")
-                data = json.loads(raw[start:end])
-                job["score"]          = max(1, min(10, int(data.get("score", 5))))
-                job["match_reason"]   = data.get("reason", "")
-                job["skills_matched"] = data.get("skills_matched", [])
+                data = _parse_structured(msg.content[0].text.strip())
+                _apply_structured_fields(job, data)
                 claude_ok += 1
             except Exception as e:
                 print(f"    ⚠ Claude error for '{job.get('title')}': {e}")
@@ -159,6 +195,12 @@ def score_jobs(jobs: list) -> list:
                 job["skills_matched"] = sk
 
         print(f"  ✓ Claude scored {claude_ok}/{len(jobs)} jobs")
+
+        before = len(jobs)
+        jobs = [j for j in jobs if _passes_hard_gates(j)]
+        dropped = before - len(jobs)
+        if dropped:
+            print(f"  🚪 Hard gates dropped {dropped} jobs (≥2 yrs required or non-US)")
     except ImportError:
         print("  ⚠ anthropic package not installed — using rule-based fallback")
         for job in jobs:
@@ -170,6 +212,56 @@ def score_jobs(jobs: list) -> list:
             job["skills_matched"] = sk
 
     return jobs
+
+
+def rescore_with_sonnet(jobs: list) -> list:
+    if os.environ.get("USE_SONNET_RESCORE", "").lower() != "true":
+        return jobs
+    if not ANTHROPIC_KEY:
+        print("  ⚠ Sonnet rescore requested but no ANTHROPIC_API_KEY — skipping")
+        return jobs
+
+    try:
+        import anthropic
+    except ImportError:
+        print("  ⚠ anthropic package not installed — skipping Sonnet rescore")
+        return jobs
+
+    sorted_jobs = sorted(jobs, key=lambda j: j.get("score", 0), reverse=True)
+    top, rest = sorted_jobs[:30], sorted_jobs[30:]
+    client = anthropic.Anthropic(api_key=ANTHROPIC_KEY)
+    rescored_ok = 0
+
+    for job in top:
+        desc_slice = (job.get("description") or "")[:6000]
+        prompt = (
+            f"Score this job listing 1-10 for fit with the candidate.\n\n"
+            f"CANDIDATE:\n{HARINI_PROFILE}\n\n"
+            f"{SCORING_RUBRIC}\n\n"
+            f"JOB:\n"
+            f"Title:       {job.get('title', '')}\n"
+            f"Company:     {job.get('company', '')}\n"
+            f"Location:    {job.get('location', '')}\n"
+            f"Source:      {job.get('source', '')}\n"
+            f"Description (full):\n{desc_slice}\n\n"
+            f"{RESPONSE_SCHEMA}"
+        )
+        try:
+            msg = client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=500,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            data = _parse_structured(msg.content[0].text.strip())
+            _apply_structured_fields(job, data)
+            rescored_ok += 1
+        except Exception as e:
+            print(f"    ⚠ Sonnet error for '{job.get('title')}': {e}")
+
+    print(f"  ✓ Sonnet rescored {rescored_ok}/{len(top)} top jobs")
+
+    top = [j for j in top if _passes_hard_gates(j)]
+    return top + rest
 
 
 def _rule_based_score(job: dict) -> tuple:

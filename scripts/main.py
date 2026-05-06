@@ -7,10 +7,19 @@ Paid / Apify (9 AM UTC only): LinkedIn, Indeed
 """
 
 import os
+import re
 import sys
 import json
 from datetime import datetime, timezone
 from pathlib import Path
+
+PRE_SCORE_BLOCKERS = [
+    r"\b[2-9]\d*\s*\+\s*years?\b",
+    r"\b(?:senior|staff|principal|lead|director|vp|head\s+of)\b",
+    r"phd\s+(?:required|preferred)",
+    r"clearance\s+required",
+]
+PRE_SCORE_BLOCKER_REGEXES = [re.compile(p, re.IGNORECASE) for p in PRE_SCORE_BLOCKERS]
 
 REPO_ROOT = Path(__file__).parent.parent
 DATA_DIR  = REPO_ROOT / "data"
@@ -169,9 +178,21 @@ def main():
         job["h1b_status"]   = h1b_label(company)
         job["h1b_sponsors"] = is_h1b_sponsor(company)
 
+    before_blockers = len(all_jobs)
+    all_jobs = [
+        j for j in all_jobs
+        if not any(rgx.search(j.get("description") or "") for rgx in PRE_SCORE_BLOCKER_REGEXES)
+    ]
+    print(f"🚧 Pre-score blockers dropped {before_blockers - len(all_jobs)} jobs ({len(all_jobs)} remain)")
+
     top_n = min(60, len(all_jobs))
     print(f"\n🤖 Scoring top {top_n} jobs with Claude AI...")
     scored = score_jobs(all_jobs[:top_n])
+
+    if os.environ.get("USE_SONNET_RESCORE", "").lower() == "true":
+        print("\n🎯 Peak run — rescoring top 30 with Sonnet...")
+        from scorer import rescore_with_sonnet
+        scored = rescore_with_sonnet(scored)
 
     scored.sort(key=lambda j: (j.get("score", 0), j.get("h1b_sponsors", False)), reverse=True)
     final = [j for j in scored if j.get("score", 0) >= 6][:20]
