@@ -96,6 +96,20 @@ EXCLUDE_COMPANIES = {
 
 MIN_DESC_LENGTH = 300
 
+# At least one of these must appear in the description — blocks pure
+# Excel-only or reporting-only roles with no technical stack.
+TECH_SKILL_SIGNALS = [
+    "python", "sql", "pyspark", "spark", "pandas", "numpy",
+    "tableau", "power bi", "powerbi",
+    "machine learning", "deep learning", "pytorch", "tensorflow",
+    "scikit", "xgboost", "nlp", "llm", "rag", "langchain",
+    "etl", "data pipeline", "pipeline", "airflow", "dbt", "mlflow",
+    "bigquery", "snowflake", "redshift", "databricks",
+    "aws", "gcp", "azure", "cloud", "docker", "kubernetes",
+    "r programming", "r language", "rstudio", "tidyverse",
+    "statistical model", "regression", "classification", "clustering",
+]
+
 
 def _is_staffing_company(company: str) -> bool:
     c = company.lower().strip()
@@ -130,6 +144,9 @@ def is_relevant(job: dict) -> bool:
     if any(kw in location for kw in NON_US_LOCATIONS):
         return False
     if location and not any(sig in location for sig in US_LOCATION_SIGNALS):
+        return False
+    # Require at least one technical skill — filters pure Excel/reporting roles
+    if not any(skill in desc for skill in TECH_SKILL_SIGNALS):
         return False
     return True
 

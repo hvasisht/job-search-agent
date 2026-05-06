@@ -2,7 +2,7 @@
 Job Search Agent — Harini Prasad Vasisht
 Runs every 5 hours via GitHub Actions.
 
-Free sources (every run):   Jobright, Greenhouse, Lever, Adzuna, RemoteOK
+Free sources (every run):   Greenhouse, Lever, Adzuna, RemoteOK
 Paid / Apify (9 AM UTC only): LinkedIn, Indeed
 """
 
@@ -20,7 +20,6 @@ DOCS_DIR.mkdir(exist_ok=True)
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from scrapers.jobright   import scrape_jobright
 from scrapers.greenhouse import scrape_greenhouse
 from scrapers.lever      import scrape_lever
 from scrapers.adzuna     import scrape_adzuna
@@ -39,27 +38,59 @@ GREENHOUSE_COMPANIES = [
     "databricks", "snowflake", "confluent", "fivetran", "dbt-labs",
     "dataiku", "weights-biases", "huggingface", "scale-ai", "cohere",
     "anthropic", "openai",
+    # Analytics & BI
+    "mixpanel", "amplitude", "heap", "census", "metabase", "hightouch",
+    "segment", "datadog", "braze", "klaviyo", "pendo",
     # Fintech
     "stripe", "plaid", "brex", "robinhood", "coinbase", "chime",
-    "affirm", "marqeta", "rippling", "gusto",
+    "affirm", "marqeta", "rippling", "gusto", "adyen", "sofi", "block",
     # Social / consumer
     "airbnb", "lyft", "pinterest", "reddit", "discord", "duolingo",
-    "dropbox", "squarespace", "canva",
-    # SaaS
+    "dropbox", "squarespace", "canva", "nextdoor",
+    # SaaS / enterprise
     "zendesk", "hubspot", "intercom", "asana", "notion", "figma",
-    "miro", "airtable", "segment", "amplitude", "hightouch",
+    "miro", "airtable", "okta", "docusign", "atlassian", "gitlab",
+    "toast-tab", "esri",
     # Infrastructure / DevTools
     "cloudflare", "grafana", "sentry", "postman", "hashicorp",
     "elastic", "mongodb",
+    # AI / ML infra
+    "palantir",
     # Health / bio
     "tempus", "flatiron", "benchling", "veeva",
     # E-commerce / marketplace
     "doordash", "instacart", "faire", "offerup", "wayfair-tech",
     # Other tech
-    "twilio", "atlassian", "docusign", "okta", "toast-tab",
+    "twilio",
 ]
 
 _gh_module.GREENHOUSE_COMPANIES = GREENHOUSE_COMPANIES
+
+
+SEEN_JOBS_FILE = DATA_DIR / "seen_jobs.json"
+SEEN_MAX       = 600   # keep last ~3 runs × 20 jobs per run
+
+
+def _load_seen_urls() -> set:
+    """Load URLs that were already shown in recent runs."""
+    if SEEN_JOBS_FILE.exists():
+        try:
+            data = json.loads(SEEN_JOBS_FILE.read_text())
+            return set(data.get("seen", [])[-SEEN_MAX:])
+        except Exception:
+            pass
+    return set()
+
+
+def _save_seen_urls(jobs: list, existing: set) -> None:
+    new_urls = [
+        j.get("url", "").split("?")[0].rstrip("/")
+        for j in jobs if j.get("url")
+    ]
+    combined = list(existing) + new_urls
+    SEEN_JOBS_FILE.write_text(
+        json.dumps({"seen": combined[-SEEN_MAX:]}, indent=0)
+    )
 
 
 def _skip_apify() -> bool:
@@ -80,7 +111,6 @@ def main():
     all_jobs = []
 
     free_sources = [
-        ("Jobright",   scrape_jobright),
         ("Greenhouse", scrape_greenhouse),
         ("Lever",      scrape_lever),
         ("Adzuna",     scrape_adzuna),
@@ -114,6 +144,16 @@ def main():
     all_jobs = deduplicate(all_jobs)
     print(f"🧹 After dedup: {len(all_jobs)}")
 
+    # Remove jobs already shown in recent runs to guarantee freshness
+    seen_urls = _load_seen_urls()
+    if seen_urls:
+        before = len(all_jobs)
+        all_jobs = [
+            j for j in all_jobs
+            if j.get("url", "").split("?")[0].rstrip("/") not in seen_urls
+        ]
+        print(f"🔄 After cross-run dedup: {len(all_jobs)} (removed {before - len(all_jobs)} already-seen)")
+
     if not all_jobs:
         print("⚠️  No jobs passed filtering — nothing to publish.")
         return
@@ -136,6 +176,8 @@ def main():
     html = build_html(final)
     with open(DOCS_DIR / "index.html", "w") as f:
         f.write(html)
+
+    _save_seen_urls(final, seen_urls)
 
     h1b_count  = sum(1 for j in final if j.get("h1b_sponsors"))
     high_score = sum(1 for j in final if j.get("score", 0) >= 8)

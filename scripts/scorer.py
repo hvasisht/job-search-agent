@@ -9,7 +9,7 @@ ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 HARINI_PROFILE = """
 Harini Prasad Vasisht — MS Data Analytics Engineering, Northeastern University
-(graduated May 2026, GPA 3.8/4.0). BS Computer Science with Honors in AI/ML.
+(graduated May 2026, GPA 3.7/4.0). BS Computer Science & Engineering, 3.4/4.0.
 
 AVAILABILITY: OPT application in progress — available to start August–October 2026.
 WORK AUTH: F-1 OPT (STEM) — can work ~3 years without employer sponsorship.
@@ -20,7 +20,7 @@ EXPERIENCE (~1 yr total):
   Remote role supporting US healthcare clients from India on US business hours.
   Tableau/Power BI dashboards (DAX), UiPath RPA automation (800+ docs/month),
   HIPAA-compliant patient records (1000+ records), Excel analytics.
-- Teaching Assistant, GenAI in Practice DADS 5250, Northeastern (Feb–May 2026):
+- Teaching Assistant, GenAI in Practice DADS 5250, Northeastern (Feb–Apr 2026):
   Co-designed full GenAI graduate course: Claude Code, LangChain, RAG, prompt engineering,
   Gemini 2.5 Flash, agentic workflows. Graded assignments, held office hours.
 
