@@ -36,12 +36,17 @@ ENDPOINTS = [
 
 def scrape_jobright() -> list:
     all_jobs = []
+    failures = 0
     for query in QUERIES:
         print(f"  Jobright: '{query}'")
         jobs = _try_query(query)
+        if not jobs:
+            failures += 1
         print(f"    → {len(jobs)} results")
         all_jobs.extend(jobs)
         time.sleep(0.8)
+    if failures == len(QUERIES):
+        print("  ⚠ Jobright API appears down — all endpoints failed. Returning empty list.")
     return all_jobs
 
 

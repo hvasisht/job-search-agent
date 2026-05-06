@@ -10,6 +10,8 @@ SOURCE_COLORS = {
     "Greenhouse": "#3dba4e",
     "Jobright":   "#6f42c1",
     "Adzuna":     "#e05c2d",
+    "Workday":    "#0875e1",
+    "Ashby":      "#ff5630",
 }
 
 SCORE_COLORS = {

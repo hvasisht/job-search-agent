@@ -26,6 +26,9 @@ from scrapers.adzuna     import scrape_adzuna
 from scrapers.remoteok   import scrape_remoteok
 from scrapers.linkedin   import scrape_linkedin
 from scrapers.indeed     import scrape_indeed
+from scrapers.jobright   import scrape_jobright
+from scrapers.workday    import scrape_workday
+from scrapers.ashby      import scrape_ashby
 from filters             import is_relevant, deduplicate
 from scorer              import score_jobs
 from h1b_check           import is_h1b_sponsor, h1b_label
@@ -115,6 +118,9 @@ def main():
         ("Lever",      scrape_lever),
         ("Adzuna",     scrape_adzuna),
         ("RemoteOK",   scrape_remoteok),
+        ("Jobright",   scrape_jobright),
+        ("Workday",    scrape_workday),
+        ("Ashby",      scrape_ashby),
     ]
 
     for name, fn in free_sources:
