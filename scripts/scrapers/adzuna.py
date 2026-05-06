@@ -14,13 +14,17 @@ ADZUNA_BASE    = "https://api.adzuna.com/v1/api/jobs/us/search"
 
 SEARCH_QUERIES = [
     "data analyst entry level",
+    "data analyst new grad",
+    "data scientist entry level",
     "data scientist new grad",
     "machine learning engineer entry level",
-    "analytics engineer entry level",
+    "analytics engineer new grad",
     "AI engineer entry level",
     "data engineer entry level",
-    "business intelligence analyst entry level",
-    "ML engineer new grad",
+    "business intelligence analyst new grad",
+    "ML engineer entry level",
+    "junior data analyst",
+    "junior data scientist",
 ]
 
 
@@ -38,7 +42,7 @@ def scrape_adzuna() -> list:
                 "app_key":          ADZUNA_APP_KEY,
                 "results_per_page": 25,
                 "what":             query,
-                "max_days_old":     1,
+                "max_days_old":     3,
                 "sort_by":          "date",
             }
             r = requests.get(

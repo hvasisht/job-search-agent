@@ -10,23 +10,16 @@ from datetime import datetime, timezone, timedelta
 LEVER_MAX_AGE_DAYS = 14
 
 LEVER_COMPANIES = [
-    # Data / ML platforms
-    "amplitude", "mixpanel", "retool", "domo",
-    # Fintech
-    "ramp", "carta", "nerdwallet", "betterment",
-    # Health tech
-    "benchling", "veeva",
-    # SaaS / productivity
-    "notion", "figma", "lattice", "zapier", "canva", "monday",
-    # EdTech
-    "duolingo", "coursera", "khan-academy",
-    # Infrastructure / dev tools
-    "mongodb", "elastic", "hashicorp", "datadog", "grafana",
-    "sentry", "postman", "netlify",
-    # AI / ML
-    "scale-ai", "cohere-ai", "together-ai",
-    # Other tech
-    "twitch", "squarespace-2", "etsy", "wayfair",
+    # Verified working slugs as of May 2026
+    "veeva",       # large: data analyst, data engineer, analytics engineer
+    "metabase",    # analytics engineer
+    "mistral",     # data engineer, data scientist, applied AI
+    "palantir",    # forward deployed AI engineer
+    "contentsquare",
+    "frontify",
+    "cloudinary",
+    "neon",
+    "wpromote",
 ]
 
 LEVER_KEYWORDS = [
@@ -49,7 +42,12 @@ def scrape_lever() -> list:
                 timeout=10,
             )
             if r.status_code != 200:
+                print(f"    [{company}] HTTP {r.status_code} — skipping")
                 continue
+            jobs_found = [j for j in r.json() if any(kw in (j.get("text") or "").lower()
+                          for kw in LEVER_KEYWORDS)]
+            if jobs_found:
+                print(f"    [{company}] {len(jobs_found)} matching jobs")
             for job in r.json():
                 title = (job.get("text") or "").lower()
                 if not any(kw in title for kw in LEVER_KEYWORDS):

@@ -31,6 +31,13 @@ def build_html(jobs: list) -> str:
     updated = datetime.now(timezone.utc).strftime("%B %d, %Y at %H:%M UTC")
     cards   = "\n".join(_job_card(j, i) for i, j in enumerate(jobs))
 
+    active_sources = sorted(set(j.get("source", "") for j in jobs if j.get("source")))
+    source_buttons = "\n    ".join(
+        f'<button class="filter-btn" onclick="filterSource(\'{s}\', event)">{s}</button>'
+        for s in active_sources
+    )
+    source_summary = ", ".join(active_sources) if active_sources else "None"
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,14 +77,11 @@ def build_html(jobs: list) -> str:
 <body>
   <header>
     <h1>🎯 Harini's Job Board</h1>
-    <p>Updated {updated} · {len(jobs)} curated entry-level roles · Sources: LinkedIn, Indeed, Greenhouse, Jobright</p>
+    <p>Updated {updated} · {len(jobs)} curated entry-level roles · Sources: {source_summary}</p>
   </header>
   <div class="filters">
     <button class="filter-btn active" onclick="filterSource('all', event)">All</button>
-    <button class="filter-btn" onclick="filterSource('LinkedIn', event)">LinkedIn</button>
-    <button class="filter-btn" onclick="filterSource('Indeed', event)">Indeed</button>
-    <button class="filter-btn" onclick="filterSource('Greenhouse', event)">Greenhouse</button>
-    <button class="filter-btn" onclick="filterSource('Jobright', event)">Jobright</button>
+    {source_buttons}
     <button class="filter-btn" onclick="filterH1b(event)">H1-B Sponsors Only</button>
   </div>
   <div class="grid" id="grid">

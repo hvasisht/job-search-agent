@@ -2,6 +2,7 @@
 Unified job filter — applied to ALL sources after normalization.
 """
 
+import html
 import re
 
 EXCLUDE_TITLE_WORDS = [
@@ -27,6 +28,16 @@ EXCLUDE_DESC_PATTERNS = [
     r"\b(?:ph\.?d\.?|doctorate)\s+(?:required|degree\s+required)",
     r"phd\s+required",
     r"\b(?:mid[- ]level|intermediate\s+(?:engineer|analyst|scientist))\b",
+    # Catch HTML-entity encoded plus signs (&#43; = +)
+    r"\b[3-9]\d*\s*(?:\+|&#43;)\s*years?",
+    # Catch "X or more years"
+    r"\b[3-9]\d*\s+or\s+more\s+years?",
+    # Catch "X to Y years" where X >= 3
+    r"\b[3-9]\s*(?:to|-)\s*\d+\s+years?\s+of",
+    # Catch "at least X years"
+    r"at\s+least\s+[3-9]\d*\s+years?",
+    # Catch "X years+" format (reversed)
+    r"\b[3-9]\d*\s+years?\s*\+",
     # OPT / citizenship hard filters
     r"\bno\s+(?:opt|cpt|f-?1)\b",
     r"(?:opt|cpt|f-?1)\s+(?:not\s+accepted|not\s+eligible|not\s+supported|ineligible)",
@@ -98,7 +109,8 @@ def _is_staffing_company(company: str) -> bool:
 
 def is_relevant(job: dict) -> bool:
     title    = (job.get("title") or "").lower()
-    desc     = (job.get("description") or "").lower()
+    raw_desc = html.unescape(job.get("description") or "")
+    desc     = raw_desc.lower()
     location = (job.get("location") or "").lower()
 
     if not job.get("url"):
